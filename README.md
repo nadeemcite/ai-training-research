@@ -1,8 +1,21 @@
 # ai-training-research
 
-A personal AI-research classroom built around one excellent free course. It has short Hinglish readings and a runnable CPU code lab for each concept.
+A personal AI-research classroom built around one excellent free course. It has short readings and a runnable CPU code lab for each concept.
 
-**Start here → [`study/README.md`](study/README.md)**
+> [!IMPORTANT]
+> **🗣️ Language: the study notes are in Hinglish, not English.**
+>
+> Hinglish is Hindi written in the Roman (English) alphabet and mixed with English technical words. Here is a real sentence from the notes:
+>
+> *"Har layer se pehle vector ka size 1 kar do. Vector ki **direction** (pattern/meaning) wahi rehti hai, sirf uska overall **size** fix ho jaata hai."*
+>
+> **If you can read that comfortably, you're in the right place. 🎉** If not, the notes probably won't work well for you. Please don't spend time on them; go straight to the original English course instead:
+> - 📺 [The video](https://www.youtube.com/watch?v=-gfgQfw2g_E) (English, by Vuk Rosić on freeCodeCamp)
+> - 💻 [The original code, slides and reports](https://github.com/vukrosic/glm-5.3-flash-from-scratch) (English)
+>
+> What *is* language-independent here: the **code labs** (`study/*/lab_*.py`) are plain Python with English code. Only their comments and printed labels are in Hinglish. The [`SLIDES_VS_TRANSCRIPT.md`](sources/SLIDES_VS_TRANSCRIPT.md) analysis and this README are in English.
+
+**Start here → [`study/README.md`](study/README.md)** *(Hinglish)*
 
 ---
 
@@ -91,7 +104,7 @@ sources/
   SLIDES_VS_TRANSCRIPT.md   which slide deck matches the video, and the gaps between them
 scripts/
   fetch_transcript.py       uv run scripts/fetch_transcript.py <url> [out_dir]
-study/          chapters 01–07: tokens → embeddings → RMSNorm → RoPE → linear/sparse attention → MoE
+study/          (Hinglish) chapters 01–07: tokens → embeddings → RMSNorm → RoPE → linear/sparse attention → MoE
 ```
 
 ## Setup

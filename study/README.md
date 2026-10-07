@@ -1,5 +1,9 @@
 # 🎓 GLM-5.3-Flash Classroom — AI Research seekho, chhote steps me
 
+> [!NOTE]
+> **🗣️ Language: Hinglish (Hindi in Roman script + English technical terms), not English.**
+> The notes are written for Hindi/Urdu speakers. If you're looking for English material, please use the [original video](https://www.youtube.com/watch?v=-gfgQfw2g_E) and [repo](https://github.com/vukrosic/glm-5.3-flash-from-scratch) instead.
+
 **Main source:** [Build & Train GLM-5.3-Flash From Scratch](https://www.youtube.com/watch?v=-gfgQfw2g_E) by **Vuk Rosić** ([@vukrosic](https://www.youtube.com/@vukrosic)), published free by **[freeCodeCamp.org](https://www.freecodecamp.org)** 🙏 (full credits in the [root README](../README.md))
 **Code:** `sources/repo/` (submodule) · **Transcript:** `sources/transcript/` · **Video:** `sources/video/` (download separately, see root README)
 **Slides vs transcript check:** `sources/SLIDES_VS_TRANSCRIPT.md`
