@@ -71,7 +71,7 @@ This is an **unofficial, personal study companion**, not affiliated with or endo
 | Video | Topic (from the official chapter list) | Study chapter |
 |---|---|---|
 | [00:00](https://www.youtube.com/watch?v=-gfgQfw2g_E&t=0s) | Introduction & What We're Building | — |
-| [01:02](https://www.youtube.com/watch?v=-gfgQfw2g_E&t=62s) | Modern AI Researcher Role & Asking Research Questions | — |
+| [01:02](https://www.youtube.com/watch?v=-gfgQfw2g_E&t=62s) | Modern AI Researcher Role & Asking Research Questions | [11 · Data experiments](study/11-research-data-experiments/) |
 | [04:50](https://www.youtube.com/watch?v=-gfgQfw2g_E&t=290s) | Tokenization: Byte-Level Vocabulary | [01 · Tokens](study/01-tokens-aur-tokenizer/) |
 | [07:01](https://www.youtube.com/watch?v=-gfgQfw2g_E&t=421s) | Embeddings & Transformer Forward Pass | [02 · Embeddings](study/02-embeddings-aur-output-head/) |
 | [08:53](https://www.youtube.com/watch?v=-gfgQfw2g_E&t=533s) | GLM-5.3 Architecture Overview & Model Specifications | — |
@@ -82,11 +82,11 @@ This is an **unofficial, personal study companion**, not affiliated with or endo
 | [15:10](https://www.youtube.com/watch?v=-gfgQfw2g_E&t=910s) | Positional Encodings (RoPE vs. NoPE) & Sparse Attention Indexer | [04 · RoPE](study/04-rope-position/) |
 | [18:30](https://www.youtube.com/watch?v=-gfgQfw2g_E&t=1110s) | Linear Attention vs. Sparse Attention | [05 · Linear](study/05-attention-aur-linear-attention/), [06 · Sparse](study/06-sparse-attention-aur-hybrid-rhythm/) |
 | [20:46](https://www.youtube.com/watch?v=-gfgQfw2g_E&t=1246s) | Mixture of Experts & Shared Experts | [07 · MoE](study/07-mixture-of-experts/) |
-| [23:06](https://www.youtube.com/watch?v=-gfgQfw2g_E&t=1386s) | Adding Vision: Patch Embeddings & 2D RoPE | 09 (coming) |
-| [26:14](https://www.youtube.com/watch?v=-gfgQfw2g_E&t=1574s) | Pre-Training Pipeline, Loss & AdamW | 10 (coming) |
-| [28:05](https://www.youtube.com/watch?v=-gfgQfw2g_E&t=1685s) | Pre-Training Experiments: Diversity, Interleaving, Curriculum | 11 (coming) |
-| [30:27](https://www.youtube.com/watch?v=-gfgQfw2g_E&t=1827s) | Post-Training & Reinforcement Learning Setup | 12 (coming) |
-| [34:44](https://www.youtube.com/watch?v=-gfgQfw2g_E&t=2084s) | Reward Functions & GRPO | 12–13 (coming) |
+| [23:06](https://www.youtube.com/watch?v=-gfgQfw2g_E&t=1386s) | Adding Vision: Patch Embeddings & 2D RoPE | [09 · Vision](study/09-vision-image-to-tokens/) |
+| [26:14](https://www.youtube.com/watch?v=-gfgQfw2g_E&t=1574s) | Pre-Training Pipeline, Loss & AdamW | [10 · Pretraining](study/10-pretraining-loop/) |
+| [28:05](https://www.youtube.com/watch?v=-gfgQfw2g_E&t=1685s) | Pre-Training Experiments: Diversity, Interleaving, Curriculum | [11 · Data experiments](study/11-research-data-experiments/) |
+| [30:27](https://www.youtube.com/watch?v=-gfgQfw2g_E&t=1827s) | Post-Training & Reinforcement Learning Setup | [12 · RL rewards](study/12-rl-executable-rewards/) |
+| [34:44](https://www.youtube.com/watch?v=-gfgQfw2g_E&t=2084s) | Reward Functions & GRPO | [12 · RL rewards](study/12-rl-executable-rewards/), 13 (coming) |
 | [37:37](https://www.youtube.com/watch?v=-gfgQfw2g_E&t=2257s) | Parameter-Efficient RL Updates & Freezing Layers | 13 (coming) |
 | [39:35](https://www.youtube.com/watch?v=-gfgQfw2g_E&t=2375s) | Evaluating RL Results: Task Gains & Regression Risks | 14 (coming) |
 | [40:47](https://www.youtube.com/watch?v=-gfgQfw2g_E&t=2447s) | RL Hyperparameter Experiments: Group Size, Temperature & Seeds | 14 (coming) |
@@ -105,7 +105,7 @@ sources/
 scripts/
   fetch_transcript.py       uv run scripts/fetch_transcript.py <url> [out_dir]
   build_nav.py              uv run scripts/build_nav.py   (re-run after adding a chapter or reading)
-study/          (Hinglish) chapters 01–07: tokens → embeddings → RMSNorm → RoPE → linear/sparse attention → MoE
+study/          (Hinglish) chapters 01–07, 09–12: tokens → … → MoE → vision → pretraining → data experiments → RL rewards
 ```
 
 ## Setup

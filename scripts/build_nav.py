@@ -41,6 +41,7 @@ def main() -> None:
             (ch / "00-overview.md").rename(ch / "README.md")
 
     home = STUDY / "README.md"
+    planned = len(re.findall(r"^\| \d\d \|", home.read_text(), flags=re.M))  # syllabus rows
     pages = [home]
     for ch in chapters:
         pages += [ch / "README.md", *sorted(ch.glob("[0-9][0-9]-*.md"))]
@@ -49,10 +50,10 @@ def main() -> None:
         ch = page.parent
         readings = sorted(ch.glob("[0-9][0-9]-*.md"))
         overview = ch / "README.md"
-        num = chapters.index(ch) + 1
+        num = int(ch.name[:2])  # folder prefix, so gaps in the syllabus are fine
         crumbs = [link(page, home, "🏠 Course")]
         if page == overview:
-            crumbs.append(f"**Topic {num:02d} / {len(chapters):02d}**")
+            crumbs.append(f"**Topic {num:02d} / {planned:02d}**")
             crumbs.append("▶️ " + link(page, readings[0], "Pehli reading shuru karo"))
         else:
             crumbs.append(link(page, overview, title(overview)))
@@ -76,7 +77,8 @@ def main() -> None:
 
     # Course home: link finished chapters in the syllabus + a start button.
     text = SYLLABUS.sub("", home.read_text())
-    for num, ch in enumerate(chapters, start=1):
+    for ch in chapters:
+        num = int(ch.name[:2])
         text = re.sub(rf"^\| {num:02d} \| (?!\[)([^|]+?) \|",
                       lambda m, ch=ch: f"| {num:02d} | [{m.group(1)}]({ch.name}/) |", text, flags=re.M)
     start = (f"<!-- nav:start -->\n▶️ **Shuru karo:** {link(home, chapters[0] / 'README.md', title(chapters[0] / 'README.md'))}"

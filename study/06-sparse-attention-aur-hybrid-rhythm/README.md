@@ -1,5 +1,5 @@
 <!-- nav:top -->
-[🏠 Course](../README.md) › **Topic 06 / 07** › ▶️ [Pehli reading shuru karo](01-concept-sparse.md)
+[🏠 Course](../README.md) › **Topic 06 / 14** › ▶️ [Pehli reading shuru karo](01-concept-sparse.md)
 <!-- /nav:top -->
 
 # Topic 06 — Sparse attention + 3:1 hybrid rhythm

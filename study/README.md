@@ -35,6 +35,10 @@ uv run study/04-rope-position/lab_rope.py
 uv run study/05-attention-aur-linear-attention/lab_linear_attention.py
 uv run study/06-sparse-attention-aur-hybrid-rhythm/lab_sparse_attention.py
 uv run study/07-mixture-of-experts/lab_moe.py
+uv run study/09-vision-image-to-tokens/lab_vision.py
+uv run study/10-pretraining-loop/lab_pretrain.py                 # ~2 min
+uv run study/11-research-data-experiments/lab_experiments.py     # --run se khud experiment (~90 sec)
+uv run study/12-rl-executable-rewards/lab_rewards.py
 ```
 
 ## Syllabus (✅ ready · ⏳ review ke baad)
@@ -49,11 +53,11 @@ uv run study/07-mixture-of-experts/lab_moe.py
 | 06 | [Sparse attention + the 3:1 hybrid rhythm](06-sparse-attention-aur-hybrid-rhythm/) | 18:38 | ✅ |
 | 07 | [Mixture of Experts (router, top-k, shared expert)](07-mixture-of-experts/) | 20:00 | ✅ |
 | 08 | Hyper-connections (4 residual streams) | 11:30, 21:30 | ⏳ |
-| 09 | Vision: image → 16 tokens | 23:07 | ⏳ |
-| 10 | Pretraining loop: cross-entropy, AdamW, grad clipping | 26:14 | ⏳ |
-| 11 | Research skill: data diversity, ordering, curriculum | 28:26 | ⏳ |
-| 12 | RL with executable rewards + verifier | 30:30 | ⏳ |
+| 09 | [Vision: image → 16 tokens](09-vision-image-to-tokens/) | 23:07 | ✅ |
+| 10 | [Pretraining loop: cross-entropy, AdamW, grad clipping](10-pretraining-loop/) | 26:14 | ✅ |
+| 11 | [Research skill: data diversity, ordering, curriculum](11-research-data-experiments/) | 28:26 | ✅ |
+| 12 | [RL with executable rewards + verifier](12-rl-executable-rewards/) | 30:30 | ✅ |
 | 13 | RLOO / advantage, last-block training | 36:59 | ⏳ |
 | 14 | Evaluation: train/dev/confirm, pass@k, seeds, significance | 38:00–44:00 | ⏳ |
 
-> Topics 08 onwards tumhare review ke baad banenge. Format, length, Hinglish ka level ya code labs me kuch change chahiye to batao.
+> Topic 08 (Hyper-connections), 13 aur 14 tumhare review ke baad banenge. Format, length, Hinglish ka level ya code labs me kuch change chahiye to batao.

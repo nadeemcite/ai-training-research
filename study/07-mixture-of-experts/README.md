@@ -1,5 +1,5 @@
 <!-- nav:top -->
-[🏠 Course](../README.md) › **Topic 07 / 07** › ▶️ [Pehli reading shuru karo](01-concept.md)
+[🏠 Course](../README.md) › **Topic 07 / 14** › ▶️ [Pehli reading shuru karo](01-concept.md)
 <!-- /nav:top -->
 
 # Topic 07 — Mixture of Experts (MoE)

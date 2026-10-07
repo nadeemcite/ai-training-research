@@ -44,5 +44,5 @@
 
 | ⬅️ Pichla | 📚 Topic | Agla ➡️ |
 |:--|:-:|--:|
-| ⬅️ [05 · Code Lab — `lab_moe.py`](05-lab-guide.md) | 📚 [Topic 07 overview](README.md) | [Course home](../README.md) 🏁 *(agle topics jald aa rahe hain)* |
+| ⬅️ [05 · Code Lab — `lab_moe.py`](05-lab-guide.md) | 📚 [Topic 07 overview](README.md) | [Topic 09 — Vision: image ko tokens me badalna](../09-vision-image-to-tokens/README.md) ➡️ |
 <!-- /nav:bottom -->
