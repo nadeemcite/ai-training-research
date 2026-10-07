@@ -1,0 +1,51 @@
+# 🎓 GLM-5.3-Flash Classroom — AI Research seekho, chhote steps me
+
+**Main source:** [Build & Train GLM-5.3-Flash From Scratch](https://www.youtube.com/watch?v=-gfgQfw2g_E) by Vuk Rosić
+**Code:** `sources/repo/` (submodule) · **Transcript:** `sources/transcript/` · **Video:** `sources/video/` (download separately, see root README)
+**Slides vs transcript check:** `sources/SLIDES_VS_TRANSCRIPT.md`
+
+## Is classroom ka rule
+
+- Har file **1–2 page** ki hai. Ek baar me ek hi file padho.
+- Har topic me same pattern hai:
+  1. **Concept** — idea kya hai, analogy ke saath
+  2. **Definitions** — exact words ka matlab
+  3. **Practical knowledge** — real models me ye kaise use hota hai
+  4. **Real-life example**
+  5. **Code lab** — khud run karo, khud todo
+  6. **Recap + Quiz** — khud ko test karo
+- Har reading ke end me `🎬 Video:` timestamp diya hai, us part ko video me dekh lo.
+
+## Kaise run karein
+
+```bash
+uv sync                                                   # ek baar
+uv run study/01-tokens-aur-tokenizer/lab_tokenizer.py
+uv run study/02-embeddings-aur-output-head/lab_embeddings.py
+uv run study/03-rmsnorm/lab_rmsnorm.py
+uv run study/04-rope-position/lab_rope.py
+uv run study/05-attention-aur-linear-attention/lab_linear_attention.py
+uv run study/06-sparse-attention-aur-hybrid-rhythm/lab_sparse_attention.py
+uv run study/07-mixture-of-experts/lab_moe.py
+```
+
+## Syllabus (✅ ready · ⏳ review ke baad)
+
+| # | Topic | Video | Status |
+|---|---|---|---|
+| 01 | Tokens aur Tokenizer (BPE vs Byte) | 05:00–07:00 | ✅ |
+| 02 | Embeddings, Output Head aur Weight Tying | 07:00–08:30, 10:47–14:30 | ✅ |
+| 03 | RMSNorm: numbers ko control me rakhna | 14:27 | ✅ |
+| 04 | RoPE: position ka pata kaise chalta hai | 15:10 | ✅ |
+| 05 | Attention basics → Linear attention (running memory) | 16:00–19:00 | ✅ |
+| 06 | Sparse attention + the 3:1 hybrid rhythm | 18:38 | ✅ |
+| 07 | Mixture of Experts (router, top-k, shared expert) | 20:00 | ✅ |
+| 08 | Hyper-connections (4 residual streams) | 11:30, 21:30 | ⏳ |
+| 09 | Vision: image → 16 tokens | 23:07 | ⏳ |
+| 10 | Pretraining loop: cross-entropy, AdamW, grad clipping | 26:14 | ⏳ |
+| 11 | Research skill: data diversity, ordering, curriculum | 28:26 | ⏳ |
+| 12 | RL with executable rewards + verifier | 30:30 | ⏳ |
+| 13 | RLOO / advantage, last-block training | 36:59 | ⏳ |
+| 14 | Evaluation: train/dev/confirm, pass@k, seeds, significance | 38:00–44:00 | ⏳ |
+
+> Topics 08 onwards tumhare review ke baad banenge. Format, length, Hinglish ka level ya code labs me kuch change chahiye to batao.

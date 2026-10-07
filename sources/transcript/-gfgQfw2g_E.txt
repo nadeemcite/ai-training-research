@@ -1,0 +1,1041 @@
+[00:00:00] Learn how to build and train a 25
+[00:00:02] million parameter GLM 5.3 flash model
+[00:00:06] from scratch using just a standard CPU.
+[00:00:09] This tutorial covers core pre-training
+[00:00:11] and reinforcement learning techniques,
+[00:00:14] teaching you how to design effective
+[00:00:16] experiments and think like a modern AI
+[00:00:19] researcher. Let's build and train GLM
+[00:00:22] 5.3 flesh which is ox alpha which is the
+[00:00:25] latest best viral model from Drupal AI.
+[00:00:29] We will do both pre-training and
+[00:00:31] post-training as well as building
+[00:00:33] everything from scratch. So you will
+[00:00:35] learn how to do everything GLM
+[00:00:38] researchers everything researchers at
+[00:00:40] OpenAI Anthropic do just on a simpler
+[00:00:42] scale. And AI researcher job has
+[00:00:45] dramatically changed in just a few
+[00:00:47] months. So this is the latest up-to-date
+[00:00:50] uh course that you're going to need if
+[00:00:52] you want to become AI researcher. All of
+[00:00:54] the code is in the GitHub. Uh these are
+[00:00:57] the experiments. We will reproduce
+[00:00:58] everything you see the charts. So it's
+[00:01:00] below the video. This is the latest job
+[00:01:03] posting for Anthropic and this job
+[00:01:05] posting describes 95% of AI researcher
+[00:01:08] roles. First you will understand the
+[00:01:11] architectures and the algorithms in this
+[00:01:13] course. Then I will show you how to do
+[00:01:16] uh actual AI research with designing
+[00:01:18] environments reinforcement learning
+[00:01:20] asking questions. So right now cloud
+[00:01:23] code codex AI is coding all of the
+[00:01:26] experiments and it can do them
+[00:01:27] autonomously. Your job as AI researcher
+[00:01:30] is just to have highlevel idea which
+[00:01:32] experiments to do. So even though
+[00:01:34] anthropic and open AAI could actually be
+[00:01:36] inventing new algorithms right now it's
+[00:01:39] transformers it's reinforcement learning
+[00:01:40] I think they are focusing 99% or more of
+[00:01:44] their efforts in just designing uh data
+[00:01:47] uh environments and then optimizing
+[00:01:48] these algorithms that you're going to
+[00:01:50] understand in this video and thinking
+[00:01:53] for the future AI researcher job is
+[00:01:55] mainly going to become highlevel ideas
+[00:01:58] and not coding AI models are going to do
+[00:02:00] all of the coding and experiments So but
+[00:02:03] you still need to understand how the
+[00:02:05] algorithms work. You don't need to write
+[00:02:07] the code manually but still people
+[00:02:10] humans are ones who can invent better
+[00:02:13] faster concepts f faster algorithms and
+[00:02:16] create better designs for the system and
+[00:02:18] then AI can implement experiment try out
+[00:02:21] etc. This is why we will still go over
+[00:02:23] the code and understand how it works
+[00:02:25] even though we don't necessarily need to
+[00:02:27] write everything from scratch manually.
+[00:02:30] But if you want to invent new algorithms
+[00:02:32] as AI researcher, you need to understand
+[00:02:34] how the current algorithms work. So even
+[00:02:37] though the original model is insane,
+[00:02:39] billions of parameters, our model is
+[00:02:41] just going to have 25 million and it can
+[00:02:43] be trained on a CPU, GPU, MacBook,
+[00:02:46] anything. I made it very simple. And
+[00:02:48] this is what you want to do. You can
+[00:02:50] still do so much research here. You can
+[00:02:52] learn how to ask questions, how to set
+[00:02:54] goals, topics, research directions from
+[00:02:57] for the AI. Even if you have a lot of
+[00:03:00] compute, there is nothing more you can
+[00:03:02] do with it than with just a CPU. I don't
+[00:03:05] think unless you want to build a model
+[00:03:07] that other people use, but here we're
+[00:03:09] trying to learn. So, we want to learn
+[00:03:11] how to ask questions mainly and AI can
+[00:03:14] help answer those questions very easily.
+[00:03:16] And AI will become more and more capable
+[00:03:18] of answering questions and humans are
+[00:03:21] going to be asking questions for now. Of
+[00:03:23] course, we don't know what's going to
+[00:03:24] happen in a year. Super intelligence,
+[00:03:26] whatever. Then humans will be useless.
+[00:03:28] Then AI will do everything. So for now,
+[00:03:30] we are just focusing on learning how to
+[00:03:32] ask questions, ask research questions,
+[00:03:34] setting goals, directions. Here are some
+[00:03:36] example questions we will be asking and
+[00:03:38] answering in this uh research. So this
+[00:03:41] is real stuff you can do. You can learn
+[00:03:43] how to research on just CPU. So let's
+[00:03:45] say you are training some reinforcement
+[00:03:47] learning uh reasoning. So should you
+[00:03:50] reward imperfect score, partial score?
+[00:03:53] Should you not? Well, we will try out,
+[00:03:55] we will see which one works better. How
+[00:03:58] strong should you punish invalid code?
+[00:04:00] And then temperature or randomness of
+[00:04:03] next word generation in reinforcement
+[00:04:05] learning. So it's exploration versus
+[00:04:07] exploitation with what it already knows.
+[00:04:11] So these are like a bunch of examples
+[00:04:13] and just asking these questions is your
+[00:04:15] job. This is what distinguish
+[00:04:17] distinguishes experienced good
+[00:04:18] researcher uh versus novel inexperienced
+[00:04:22] and AI can do all of these experiments
+[00:04:24] by itself right now. Even soul opus and
+[00:04:26] then Astra fable everybody can do these
+[00:04:28] experiments. By the way if you need help
+[00:04:31] answering asking these questions you
+[00:04:32] want to join a real AI research lab uh
+[00:04:35] join our school community where we
+[00:04:37] simulate a real AI research lab. You
+[00:04:39] will be either setting your own research
+[00:04:40] goals or using ours answering our
+[00:04:43] questions and helping us figure out
+[00:04:45] questions. We are simulating teaching
+[00:04:47] people, coaching people how to do real
+[00:04:49] AI research. Okay, so let's start. We
+[00:04:52] know that LLMs are going to predict next
+[00:04:54] word or next token or next character in
+[00:04:57] our case because we are going to build
+[00:05:00] and you are also going to build a small
+[00:05:01] model. As I said, we just need small
+[00:05:03] models with fast iteration. So in this
+[00:05:06] example input will be returned X plus
+[00:05:09] and the model is going to predict one
+[00:05:11] depending on the task depending on the
+[00:05:13] prompt. This is the next token. So the
+[00:05:16] real real LLMs use BP tokenizers by
+[00:05:21] pairing coded tokenizers. So they would
+[00:05:23] if you have some text like this they
+[00:05:26] would split that into subword tokens or
+[00:05:28] word tokens.
+[00:05:31] Usually uh they have 150,000 or 300,000
+[00:05:35] of these subword tokens and they can
+[00:05:38] then encode any text any text is
+[00:05:40] contained in uh with this vocab in in
+[00:05:43] this vocabulary. But to make it simpler
+[00:05:46] to understand to train we are going to
+[00:05:49] make each asy character. So each letter
+[00:05:52] is going to be its own token. Here if we
+[00:05:55] have this function defaf uh int whatever
+[00:05:58] each of them is its own token so we just
+[00:06:01] have 260 uh tokens in our vocabulary so
+[00:06:06] we don't need to do tokenizer training
+[00:06:08] it's simpler also big problem that would
+[00:06:12] happen later so some of you may already
+[00:06:15] know uh transformer architecture LLM
+[00:06:18] architecture and you know that there is
+[00:06:20] embedding layer there is output head
+[00:06:22] layer and both of those weight matrices
+[00:06:26] use token vocabulary as one of their
+[00:06:29] dimensions. So if we have massive
+[00:06:31] tokens, massive vocabular is 250,000
+[00:06:35] then on a very small model those
+[00:06:38] matrices would be majority 95% of
+[00:06:41] parameters would just go into the
+[00:06:44] vocabulary conversion and other 5% of
+[00:06:47] parameters would go into actual layers
+[00:06:50] and the model itself. So if you did not
+[00:06:53] understand what I said, it's okay. Just
+[00:06:55] for a small models, you also need small
+[00:06:57] small vocabulary. 260 token vocabulary
+[00:07:00] is good. So this is how uh next token
+[00:07:04] gets generated within the transformer.
+[00:07:06] So let's say we have some input. So it
+[00:07:09] can be some number, some prompt,
+[00:07:11] whatever. And each of those tokens in
+[00:07:14] the input uh each of them have
+[00:07:16] corresponding uh vector embedding that
+[00:07:19] represents them. So each of them gets
+[00:07:22] replaced with its own vector embedding
+[00:07:24] and vector embedding is like a sequence
+[00:07:26] of numbers that encodes the meaning of
+[00:07:30] that token. So uh token A has some
+[00:07:34] numbers, token B has some numbers, plus
+[00:07:37] has some minus has some and then the
+[00:07:40] vector for plus would kind of explain or
+[00:07:43] contain how addition is done and what is
+[00:07:45] the purpose what is the functionality of
+[00:07:47] token plus.
+[00:07:49] So every token in the prompt gets
+[00:07:52] replaced with its corresponding vector
+[00:07:55] that describes its meaning. These
+[00:07:57] vectors are learned by the LLM. When we
+[00:08:01] train the LM, these vectors are learned.
+[00:08:04] So LLM learns how to represent uh
+[00:08:07] concept of a plus with some numbers.
+[00:08:11] And then we have sequence of vectors.
+[00:08:14] That's our prompt that goes into the
+[00:08:16] transformer into the layers. it gets
+[00:08:18] processed through the transformer and
+[00:08:20] then at the end we want to predict the
+[00:08:24] next token. So it's going to it's going
+[00:08:27] to just transform whatever was processed
+[00:08:29] the entire prompt was processed. It's
+[00:08:31] going to transform whatever is at the
+[00:08:33] end into probability distribution over
+[00:08:37] entire vocabulary. So, so based on the
+[00:08:40] prompt you will get uh for each token in
+[00:08:44] vocabulary how likely it is to be the
+[00:08:46] next token.
+[00:08:48] That's roughly how it works. So that's
+[00:08:51] the very basic idea of transformer. Now
+[00:08:53] uh GLM 5.3 flesh has some uh new
+[00:08:56] architectures, new parts that we didn't
+[00:08:59] learn about before on my channel. So uh
+[00:09:02] linear and sparse attention hybrid and
+[00:09:04] then mixture of experts. We talked about
+[00:09:06] this. It's very famous. And then uh deep
+[00:09:09] six manifold constrained residual
+[00:09:12] connections hyperconnections and then
+[00:09:15] this one is quite famous and old uh it's
+[00:09:18] to use the same matrix for input and
+[00:09:22] output uh vocabulary into embedded
+[00:09:25] conversion. So input and output these
+[00:09:28] are the specifications of our model. So
+[00:09:31] original is huge but our is tiny. Uh
+[00:09:34] these are the layers. A lot fewer
+[00:09:36] layers, a lot fewer experts
+[00:09:39] and the context is just 192 tokens while
+[00:09:44] GLM has 1 million tokens. And you will
+[00:09:46] see that in our experiments before
+[00:09:49] reinforcement learning it will not do
+[00:09:51] any of the tasks successfully and after
+[00:09:54] reinforcement learning it will do uh 16
+[00:09:57] out of 24 tasks successfully. Those
+[00:10:00] tasks will be very simple like write
+[00:10:02] some Python function that multiplies
+[00:10:04] input by two but you will see the
+[00:10:07] difference uh before and after RL
+[00:10:09] training and you will learn how to ask
+[00:10:12] questions how to design ideas and
+[00:10:15] environments for the uh model to learn.
+[00:10:18] You can see also during training how the
+[00:10:20] model is learning during this is the
+[00:10:22] graph that shows how it's learning
+[00:10:23] during the training. Let's look at the
+[00:10:26] code now. So we are going to understand
+[00:10:28] the algorithms how they work but
+[00:10:30] nobody's going to be coding this. So but
+[00:10:32] it's up to humans to understand
+[00:10:34] algorithms and then improve them tell
+[00:10:35] the AI what to try what to and then AI
+[00:10:38] is going to just try many ideas based on
+[00:10:40] your idea but you need to know the
+[00:10:42] direction. So this is what we're going
+[00:10:45] to be understanding this part of code uh
+[00:10:47] now. So first you have uh embedding and
+[00:10:51] then passing input ID. Let's say this is
+[00:10:54] our token [clears throat] ID. This will
+[00:10:57] just look into vocabulary and pick the
+[00:11:00] vector that I mentioned earlier.
+[00:11:03] And so this could be a huge matrix if
+[00:11:05] you have huge vocabulary. And this could
+[00:11:07] be huge uh weight matrix. And if you
+[00:11:10] have a small model, then this would be
+[00:11:12] 95% of parameters. This is why for small
+[00:11:15] model we use small vocabulary bytes.
+[00:11:18] So then it's just going to retrieve uh
+[00:11:21] this tokens vector and this is at the
+[00:11:24] beginning when it's processing the
+[00:11:26] prompt.
+[00:11:28] So then we have num. So we after we
+[00:11:31] convert all of these vectors we we're
+[00:11:33] going to have like this is the dimension
+[00:11:35] of the vector and then this is the
+[00:11:37] number of tokens. So number of tokens,
+[00:11:39] token dimension and batch is like how
+[00:11:42] many independent conversations you have
+[00:11:45] in this huge x vector x u tensor. You
+[00:11:49] see how it will just take this x vector
+[00:11:52] and create array of these x uh vectors.
+[00:11:56] These will be the residual connections.
+[00:11:59] So later each of the residual
+[00:12:01] connections so these are manifold
+[00:12:03] constrained hyperconnections by deepseek
+[00:12:05] and bite dense and each of them is going
+[00:12:08] to uh carry different information
+[00:12:10] forward without that information uh
+[00:12:13] being processed through the attention
+[00:12:16] and u so it's going to be mixed up it's
+[00:12:18] going to be like carried through forward
+[00:12:19] so it's like uh some highways where you
+[00:12:22] pass four different types of information
+[00:12:25] so I think I will not go into too much
+[00:12:27] detail here if you are interested here
+[00:12:29] uh I made some videos and you can read
+[00:12:31] paper because I feel like it does get
+[00:12:35] boring if and I cannot help you too much
+[00:12:37] around this you need to practice this
+[00:12:39] yourself read this understand it try
+[00:12:41] this out if I just explain you will not
+[00:12:44] be able to follow maybe so let's just go
+[00:12:46] through these things those
+[00:12:48] hyperconnections are going to get mixed
+[00:12:50] into each other depending on some
+[00:12:52] weights and ways of mixing so they are
+[00:12:54] sharing information between each other
+[00:12:56] between the attention uh feed forward
+[00:12:59] networks and all of this and at the end
+[00:13:01] they're going to get merged into a
+[00:13:03] single hidden dimension vector. This way
+[00:13:06] with these hyperconnections you don't
+[00:13:08] just have one residual connection you
+[00:13:10] allow the transformer to form and to
+[00:13:14] pass many different types of data
+[00:13:15] through it while processing and then
+[00:13:18] that hidden state gets uh transformed
+[00:13:21] into probability distribution over
+[00:13:23] entire vocabulary
+[00:13:25] with some weight matrix. So distribution
+[00:13:28] of which uh token is likely to be next
+[00:13:32] that fits in into that context and uh
+[00:13:35] this is the other part that can be
+[00:13:37] absolutely huge compared to the rest of
+[00:13:40] the model if the vocabulary is big and
+[00:13:43] the model is small. So this weight
+[00:13:44] matrix that transforms that's hidden
+[00:13:46] state times
+[00:13:49] um vocabulary can be big and if you
+[00:13:52] remember at the beginning of the
+[00:13:53] transformer we also had vocabulary times
+[00:13:56] hidden state or hidden state is actually
+[00:13:58] vector embedding. So you can actually
+[00:14:00] use uh this same weight matrix for both
+[00:14:03] of them. So the vocabulary the picking
+[00:14:06] the uh vector for each token and at the
+[00:14:10] end here generating
+[00:14:13] probability distribution you can use the
+[00:14:16] exact same matrix and it works well
+[00:14:19] depending on the architecture um they
+[00:14:21] use it here and then you save a lot of
+[00:14:24] parameters that you can use at different
+[00:14:26] places.
+[00:14:27] Another part is RMS norm. So this is
+[00:14:31] just going to normalize a vector. So you
+[00:14:34] see how we have like a a very different
+[00:14:36] number here than these and neural
+[00:14:38] networks and ma the way neural networks
+[00:14:41] back propagate and do math calculations
+[00:14:43] uh this can mess with the calculations
+[00:14:46] make the weights explode make them very
+[00:14:49] tiny or uh this can carry all of the
+[00:14:52] weight and then make these irrelevant
+[00:14:54] because this is so much bigger. So
+[00:14:56] usually you want to make the numbers
+[00:14:58] around 1 minus one zero uh and uh
+[00:15:02] similar in scale and then these numbers
+[00:15:05] will not go crazy when you multiply so
+[00:15:07] many of them in a row.
+[00:15:10] So this is positional encoding. So how
+[00:15:13] does transformer know which token comes
+[00:15:16] after which one? Because in attention in
+[00:15:19] attention mechanism uh you have tokens
+[00:15:23] multiplied by other tokens but you don't
+[00:15:25] know the order of tokens in the prompt.
+[00:15:29] So each of the token vectors is rotated.
+[00:15:33] For example, if you have some vector,
+[00:15:36] you take pairs of dimensions and rotate
+[00:15:38] each pair and depending on where
+[00:15:42] uh the number of like where in the
+[00:15:45] sequence that pair is and where the
+[00:15:48] token is in the sequence of tokens,
+[00:15:50] you're going to have a bit different
+[00:15:51] rotations. So, transformer will learn
+[00:15:54] based on how rotated these vectors are
+[00:15:58] uh their position.
+[00:16:00] So in GLM they are using nope that's a
+[00:16:04] version of rope in main model and then
+[00:16:07] rope in the sparse indexer. This sparse
+[00:16:10] indexer uh is checking in the attention
+[00:16:13] which part we should it should attend to
+[00:16:15] which part it should not attend to
+[00:16:17] because the way attention works here is
+[00:16:20] it's not going to attend to everything
+[00:16:23] uh entire attent.
+[00:16:25] So this token will just attend to most
+[00:16:27] relevant tokens. So this indexer is
+[00:16:31] going to search for the most relevant
+[00:16:32] tokens for this token to attend to and
+[00:16:36] indexer is also attention mechanism but
+[00:16:39] a lot lighter a lot cheaper a lot faster
+[00:16:41] attention mechanism and it just looks
+[00:16:44] for relevance and it doesn't need to do
+[00:16:47] so much computation that regular
+[00:16:49] attention does. So it picks most
+[00:16:51] relevant tokens and then only those
+[00:16:53] tokens are computed with the full
+[00:16:55] regular attention.
+[00:16:58] So for each token in the attention
+[00:17:01] mechanism, it's going to pick uh n most
+[00:17:04] relevant tokens. It can be 2,000 most
+[00:17:06] relevant tokens or thousand most
+[00:17:08] relevant tokens and then do attention
+[00:17:10] with that. And then here the attention
+[00:17:13] is just scaling based on this small
+[00:17:15] indexer. So this small indexer, so
+[00:17:18] instead of scaling like this, it's going
+[00:17:20] to scale a lot slower because because
+[00:17:23] the attention size is always fixed. it
+[00:17:25] doesn't scale but the indexer scales
+[00:17:27] with the sequence length sequence
+[00:17:29] length.
+[00:17:31] So I'm talking about how compute scales
+[00:17:34] with sequence length and uh it's going
+[00:17:37] to scale a lot slower with sequence
+[00:17:40] length a lot less compute because this
+[00:17:44] sparse indexer is a lot lighter type of
+[00:17:46] attention and does a lot less
+[00:17:48] computation just needs to find relevant
+[00:17:50] tokens.
+[00:17:52] So as you can see uh so the linear
+[00:17:55] attention it's different from this
+[00:17:58] standard quadratic attention
+[00:18:01] it keeps so not to confuse you let me
+[00:18:04] first explain that their attention
+[00:18:07] mechanism does not contain positional
+[00:18:09] encodings
+[00:18:12] and uh only the sparse indexer contains
+[00:18:14] positional encodings
+[00:18:17] and so so nope means uh no positional
+[00:18:21] encoding things. So we apply rope in
+[00:18:25] attention and indexer just to make it
+[00:18:27] simpler for our model
+[00:18:30] and linear attention is just KDA linear
+[00:18:33] attention. So this is state space model.
+[00:18:35] I'll explain this. So we have linear
+[00:18:38] linear linear spars. So linears are
+[00:18:40] cheap. They always keep a constant
+[00:18:43] vector. So imagine that you have tokens.
+[00:18:46] You have this like state like a matrix
+[00:18:49] that that's like a memory of all of the
+[00:18:52] tokens and all of the tokens that as
+[00:18:55] they come they get fed into this state
+[00:18:57] into this memory and it's always same
+[00:18:59] size. It's like just adding it in there.
+[00:19:02] And so linears are going to remember
+[00:19:04] recent tokens. They're not going to
+[00:19:05] remember past tokens because the further
+[00:19:08] away token is, the more it's been
+[00:19:10] modified. has been messed up by the
+[00:19:12] newer tokens. So this is for the recent
+[00:19:15] tokens and these are so fast a lot
+[00:19:18] faster than attention and attention is
+[00:19:20] for uh long range any tokens anywhere in
+[00:19:24] the context window.
+[00:19:26] So by my experience this trains a lot
+[00:19:28] faster and inferences a lot faster
+[00:19:31] as opposed to attention. That's why this
+[00:19:33] is optimized for inference.
+[00:19:36] So linear layers carry compressed
+[00:19:39] history cheaply memory. Sparse layers
+[00:19:42] periodically recover exact distant
+[00:19:45] details.
+[00:19:48] Here is the code for the layers and
+[00:19:50] attention. So let me show you. It's very
+[00:19:52] simple. So you're just going to take
+[00:19:55] every fourth layer and set it a sparse
+[00:19:58] attention.
+[00:20:00] And this is linear attention. So you
+[00:20:02] have some tokens and they all get into
+[00:20:04] this matrix memory matrix. They call
+[00:20:07] this running key value state.
+[00:20:11] So as context grows, sequence length
+[00:20:13] grows, this state stays fixed. So this
+[00:20:17] is a way to remember stuff without
+[00:20:20] scaling quadratically.
+[00:20:22] The trade-off is you lose some
+[00:20:24] information because you are compressing
+[00:20:25] it. So sparse attention usually in
+[00:20:28] sparse attention you look at fixed
+[00:20:30] window of last n tokens last 2,000
+[00:20:34] tokens and then you can uh look at
+[00:20:37] regular
+[00:20:38] spaces or you can search for relevant
+[00:20:42] tokens uh behind
+[00:20:45] and then we have mixture of experts. For
+[00:20:47] example,
+[00:20:49] uh in GLM, you uh you have 288
+[00:20:53] uh chosen experts and it's going to
+[00:20:56] choose each token will pass through
+[00:20:58] eight out of 288 and there is one shared
+[00:21:02] expert.
+[00:21:04] Every token passes through the shared
+[00:21:06] expert and that expert will uh learn
+[00:21:09] some common information for every token.
+[00:21:11] So other experts don't need to waste
+[00:21:13] capacity on that. So we may have uh
+[00:21:17] eight routed and two uh two out of eight
+[00:21:21] chosen and then one shared in our small
+[00:21:23] model. I also had I can have a model
+[00:21:26] with just two experts and one routed. I
+[00:21:29] mean one chosen. Here I show you the
+[00:21:31] model configuration for our training
+[00:21:34] model. We already mentioned uh this. So
+[00:21:37] eight experts 12 layers etc. So there
+[00:21:42] are these four hyper connections. Then
+[00:21:44] you have uh inside of attention. So
+[00:21:48] between attention and
+[00:21:50] so they kind of merge into attention.
+[00:21:52] Then they expand back and then merge
+[00:21:54] back intoe. And then so so here they are
+[00:21:57] connected like residuals and here they
+[00:22:00] are also connected like residuals. So
+[00:22:02] they passe and they go through as well.
+[00:22:07] So attention moves information between
+[00:22:09] token positions. Moe applies specialist
+[00:22:13] transformations to each position.
+[00:22:15] Residual attentions preserve the
+[00:22:17] previous representation while adding
+[00:22:19] both updates and multiple connections
+[00:22:22] preserve different type of information.
+[00:22:24] So input and output share one matrix. So
+[00:22:28] the output weights and embedding weights
+[00:22:30] are the same matrix as I mentioned
+[00:22:33] earlier. So read by tokens and predict
+[00:22:37] next bite the same weight matrix. one
+[00:22:40] matrix learns both token embeddings and
+[00:22:42] output logits or I should say the weight
+[00:22:45] matrix that transforms them into those.
+[00:22:48] So weight tying this is how it's called
+[00:22:51] removes second large matrix and makes
+[00:22:55] reading and predicting bytes use the
+[00:22:57] same learn geometry. So maybe there is
+[00:23:00] some benefit there as well. I don't know
+[00:23:02] if there is research probably there is
+[00:23:04] maybe you also can do some so there is
+[00:23:07] also vision in uh GLM flash and uh it so
+[00:23:12] there is image it's going to convert
+[00:23:14] that image into some patch embeddings
+[00:23:16] convert those into tokens and then mix
+[00:23:19] them into uh the main model for images
+[00:23:23] it's going to get divided to patches
+[00:23:25] each patch is a token so uh it has uh
+[00:23:29] this 2D positional
+[00:23:32] rotary embeddings
+[00:23:35] similar to rope is just 2D. So let's say
+[00:23:38] you have image number eight. It's 32x 32
+[00:23:41] RGB image and it's going to get divided
+[00:23:44] into 8 by8 patches in this case.
+[00:23:50] So uh there are two vision blocks in our
+[00:23:53] small version that we coded that all of
+[00:23:56] this code is in the GitHub by the way.
+[00:23:59] all of the code right here in the
+[00:24:01] GitHub. So you can check it. These are
+[00:24:03] the experiments.
+[00:24:05] So each of those patches, four patches
+[00:24:08] are going to become one vector, one
+[00:24:11] token embedding vector.
+[00:24:14] So 2x2 merge
+[00:24:16] and so we will get 4x4 at the end which
+[00:24:20] is 16 tokens from this 32x32 image. So
+[00:24:25] if you have some other image that's not
+[00:24:27] 32x 32, it must be resized into this
+[00:24:30] shape and padded or or cropped. So this
+[00:24:34] is just for our encoder. GPT has uh any
+[00:24:37] image encoder you know these uh other
+[00:24:40] models and we can also make any I just
+[00:24:42] made this one very quickly. So image
+[00:24:45] tokens are going to have some mark like
+[00:24:48] image starts here and then all of the 16
+[00:24:51] image tokens and then image ends here.
+[00:24:54] So this is how they get added into the
+[00:24:56] context window. There are these marks
+[00:25:00] and you may have a uh text around. So
+[00:25:03] this beginning of sequence by the way I
+[00:25:05] didn't mention this is special token uh
+[00:25:08] in the vocabulary it just shows this is
+[00:25:11] beginning of sequence of a conversation.
+[00:25:14] And then you can append text to all of
+[00:25:17] these tokens.
+[00:25:18] And then the next here the next one
+[00:25:20] would be for example number seven
+[00:25:22] predicted token. if this image is of uh
+[00:25:26] image is a digit seven. So we trained a
+[00:25:29] small transformer to look at the image
+[00:25:32] of a digit and tell us which digit it
+[00:25:34] is. So if you are interested more about
+[00:25:38] the nitty-gritty details, you just tell
+[00:25:41] your codeex or cloud code to clone this
+[00:25:43] repository. You can ask it about the
+[00:25:45] code, about everything, how everything
+[00:25:47] works. You can also tell it to draw
+[00:25:49] these graphs like I did here. So these
+[00:25:52] are examples. Now, of course, it's very
+[00:25:54] visible to us. It's very easy for us to
+[00:25:56] see. Anyways, our vision encoder, our
+[00:25:59] vision transformer was successfully
+[00:26:01] recognizing digits using this method
+[00:26:04] that I explained. If you want do some
+[00:26:06] research, you can make this a lot harder
+[00:26:09] and then try to see at which point it's
+[00:26:12] not able to recognize them. So, let's
+[00:26:14] look at the pre-training. So we have
+[00:26:17] some prompt that is a Python function
+[00:26:20] and then we have this completion which
+[00:26:22] is model generated uh because the task
+[00:26:25] is return x + one. Now uh in
+[00:26:29] pre-training it's not uh thinking of
+[00:26:32] this answer. It's just repeating what
+[00:26:34] the data is. So it's just repeating uh
+[00:26:37] these. That's how it's learning. It
+[00:26:39] already has all of these. So it's
+[00:26:41] similar to imitation learning. It's
+[00:26:43] imitating. Now, in pre-training, it's
+[00:26:45] imitating to write. It's learning what
+[00:26:47] all of these tokens, all of these
+[00:26:48] characters mean, so it can generate
+[00:26:50] them. And then in reinforcement
+[00:26:53] learning, it's going to learn to
+[00:26:54] generate to think about which answers
+[00:26:57] are actually correct. So, it's learning
+[00:27:01] in uh post training. It's learning to be
+[00:27:04] intelligent more. So, you have red, it
+[00:27:07] predicts you, it you have return,
+[00:27:09] predicts the space. You have so many
+[00:27:11] training examples just from one prompt.
+[00:27:15] This is the classic pre-training
+[00:27:16] pipeline. Probabilities, cross entropy,
+[00:27:19] assigned weights and then optimizer is
+[00:27:22] going to update all the parameters based
+[00:27:24] on um result next token correctness. Uh
+[00:27:28] so Adam W most of people are using muon
+[00:27:32] but I just did it for simplicity. So we
+[00:27:35] don't use both we just use W. You see
+[00:27:38] how gradients go from wrong probability
+[00:27:41] distribution to more correct one. They
+[00:27:43] are literally moving the choice. It's
+[00:27:46] going to change millions of weights. So
+[00:27:48] correct bite becomes a bit more likely
+[00:27:50] each time. You see how in the beginning
+[00:27:53] before pre-training it was just
+[00:27:55] generating some random uh characters if
+[00:27:59] this is this is the prompt
+[00:28:02] but later it learned to generate this.
+[00:28:05] Now let's see some research questions
+[00:28:07] and experiments I did. So this is how
+[00:28:10] they do research. This is very standard
+[00:28:13] example. So you see if you have less uh
+[00:28:16] data and you repeat the data it's going
+[00:28:18] to learn faster in the beginning but
+[00:28:22] later more data will just overtake.
+[00:28:26] So diversity is not useful if you do
+[00:28:28] like just a few steps but then at 200
+[00:28:31] steps it becomes more and more useful.
+[00:28:34] Okay. Now let's say you have uh three
+[00:28:36] different types of data type A, type B
+[00:28:39] and type C. Is it better to uh first
+[00:28:43] train on type A then type B then type C
+[00:28:45] or interle them? So uh you will see that
+[00:28:50] if you train it like this then as it
+[00:28:53] starts to learn C it's going to start
+[00:28:54] forgetting A and B.
+[00:28:58] So it's better to interle them. And you
+[00:29:01] can show this with an experiment as
+[00:29:02] well. So you can do this experiment if
+[00:29:05] you want. So interle data will improve
+[00:29:08] generation as well as well as prevent
+[00:29:10] catastrophic forgetting of previously
+[00:29:12] learned data. So homogeneous uh blocks
+[00:29:16] likely increased recency bias or
+[00:29:18] forgetting. But you need to know what
+[00:29:20] your experiment is measuring here. We're
+[00:29:22] just measuring performance. We're not
+[00:29:24] I'm not measuring if it's increasing
+[00:29:26] recency bias or forgetting. So I cannot
+[00:29:28] make those claims. I can just suggest
+[00:29:30] that might be the case. How about this?
+[00:29:32] What if we first teach it repeated
+[00:29:35] patterns, simple patterns and then after
+[00:29:38] uh teach it more diverse data? So maybe
+[00:29:40] in the beginning it's simpler things to
+[00:29:43] learn and then later uh more complex. So
+[00:29:46] we are comparing that to only simple
+[00:29:48] things and only complex things. And so
+[00:29:51] we already know that uh simple things
+[00:29:54] they underperform only simple only same
+[00:29:56] data it overfits. And here curriculum
+[00:29:59] did not uh make substantial progress as
+[00:30:03] opposed to just training for the comp
+[00:30:05] the complex data from the start. Maybe
+[00:30:07] this complex data was also too simple.
+[00:30:10] So I need to think carefully about my
+[00:30:11] experiment setup. Also this difference
+[00:30:14] may not be statistically significant
+[00:30:16] depending on how many times I measured,
+[00:30:18] how I measured. I need to think about
+[00:30:20] all of these things and AI can help you
+[00:30:22] understand and think about all of these
+[00:30:24] uh things and setup of your experiment.
+[00:30:27] Now let's take a look at the
+[00:30:28] reinforcement learning. So here
+[00:30:30] reinforcement learning is different than
+[00:30:32] pre-training. Pre-training is just
+[00:30:33] learning to repeat text and it's
+[00:30:35] learning what each token means. In
+[00:30:38] reinforcement learning it's trying to
+[00:30:39] generate answers and then we reward
+[00:30:42] correct answers. So in some way I don't
+[00:30:46] know how but it's learning to think
+[00:30:47] somehow and if you can figure out how
+[00:30:49] you'll be the most famous AI researcher.
+[00:30:51] But in reinforcement learning it's
+[00:30:54] learning to use its thinking throughout
+[00:30:56] transformer to figure out correct
+[00:30:58] answer. Right now reinforcement learning
+[00:31:02] traces single roll out single task
+[00:31:04] completion is taking maybe even days in
+[00:31:07] frontier labs like open aanthropic.
+[00:31:10] If you want the model, if you want to
+[00:31:12] teach the model to work for days, you're
+[00:31:14] going to during the training, you're
+[00:31:17] going to let it um try to complete tasks
+[00:31:21] that take days. So, this is just by the
+[00:31:24] way if you are if you want to help these
+[00:31:28] labs, you can also work on inference.
+[00:31:29] Faster inference means you are
+[00:31:32] generating data faster. You are you can
+[00:31:34] train faster. So generate code, run
+[00:31:38] tests, score which is correct, which is
+[00:31:40] incorrect. Now different ways of
+[00:31:42] scoring. You can score only correct or
+[00:31:44] partial results for example and then
+[00:31:46] update the model weights. You will not
+[00:31:48] show tests to the model. You will just
+[00:31:50] evaluate its result because if you show
+[00:31:53] test it can uh reward hack which means
+[00:31:56] like maybe reading the results instead
+[00:31:58] of learning how to solve them. uh
+[00:32:00] learning how to hack into hugging face
+[00:32:01] or different systems what happened and
+[00:32:04] uh in our post training of a small
+[00:32:06] example we went from 4% correct answers
+[00:32:10] to 45% correct answers after the
+[00:32:12] training so uh usually you can just tell
+[00:32:16] fable op fable and opus and soul to do
+[00:32:20] this post training for you uh this is
+[00:32:22] what you need to learn what oppus and
+[00:32:24] fable they don't know is get the
+[00:32:27] experiment direction get the experiment
+[00:32:29] experiment ideas. So they can do
+[00:32:32] reinforcement learning train uh training
+[00:32:34] simply because it's been done so many
+[00:32:36] times on the internet. They know how to
+[00:32:37] do it. But your judgment right now your
+[00:32:40] judgment for experiments is what you
+[00:32:42] need to practice what kind of ideas and
+[00:32:44] then it can do the experiments.
+[00:32:46] So before reinforcement learning zero
+[00:32:49] out of 24 after reinforcement learning
+[00:32:51] 16 out of 24 uh questions pass at one
+[00:32:54] means you just give it one try and then
+[00:32:57] judge if it's correct or incorrect when
+[00:32:59] you are testing it. If you have pass at
+[00:33:01] eight it means you are giving it eight
+[00:33:04] tries and if any one of eight is correct
+[00:33:07] so you take it as correctly answered. I
+[00:33:10] mean you just give it same question let
+[00:33:11] it try to answer multiple times but here
+[00:33:15] we just let it answer once and then see
+[00:33:17] if it's correct or incorrect. Of course
+[00:33:19] you will always need to see how you are
+[00:33:21] measuring your results. For example in
+[00:33:24] this case uh we are testing it on
+[00:33:27] similar tasks that it learned uh during
+[00:33:31] training. It's not same but similar
+[00:33:33] because then it's going to learn
+[00:33:35] templates. is going to learn how to do
+[00:33:36] these tasks and then it's just going to
+[00:33:38] learn to apply to different numbers
+[00:33:40] maybe different operations. Now the more
+[00:33:43] diversity you want, the more uh
+[00:33:45] generality you want, you need to scale
+[00:33:46] the model, more parameters, more
+[00:33:48] compute, more data, and then it's going
+[00:33:50] to become more general, more more
+[00:33:52] diverse.
+[00:33:53] But don't worry about that. You can
+[00:33:55] always do research. I think you can do
+[00:33:57] good research even on a CPU. I feel like
+[00:34:00] um if you want to get a job at OpenAI
+[00:34:03] Anthropic, you don't need GPUs. You want
+[00:34:05] to learn, you want to teach yourself how
+[00:34:08] to construct environments for
+[00:34:10] reinforcement learning, how to think
+[00:34:11] about them. Check if model is learning
+[00:34:13] in those environments. That's important.
+[00:34:15] It's not important that you uh scale
+[00:34:18] unless you are working explicitly on
+[00:34:20] scaling or pre-training. If the task is
+[00:34:24] return 2 * x before reinforcement
+[00:34:27] learning, it would return x and after
+[00:34:30] reinforcement learning, it would return
+[00:34:32] x * 2. So here it generated correctly.
+[00:34:35] It learned. So what reinforcement
+[00:34:37] learning did is increase probability
+[00:34:39] that the correct answer will generate
+[00:34:41] based on all of the parameters.
+[00:34:44] There are many ways in which you can uh
+[00:34:46] structure rewards. For example, you can
+[00:34:48] say plus one for all tests passed uh
+[00:34:52] zero for valid format but wrong number
+[00:34:57] and maybe minus one for invalid Python
+[00:35:00] syntax. So this is just one way you can
+[00:35:02] just give zero for invalid
+[00:35:05] uh or wrong and then one all tests. You
+[00:35:08] can also give one if it writes a correct
+[00:35:11] format as well. If it writes correct
+[00:35:13] Python you can reward. So there are many
+[00:35:15] different ways and this is
+[00:35:17] experimentation empirical evidence um in
+[00:35:21] but I also think like it's a lot more
+[00:35:24] data is a lot more important than the
+[00:35:26] structure of these algorithms. So you
+[00:35:29] will find a good enough algorithm and
+[00:35:31] then you will uh have a diminishing
+[00:35:34] returns on thinking about the algorithm
+[00:35:36] as opposed to thinking about data. You
+[00:35:38] will improve the model a lot more if you
+[00:35:40] are thinking about what am I teaching
+[00:35:42] it? What is the environment? What is it
+[00:35:44] trying to do? Can it do it? Can it learn
+[00:35:46] it? So setting up question for the
+[00:35:48] environment for the data and what is it
+[00:35:50] learning is more important
+[00:35:53] is the most important thing once you
+[00:35:55] have good enough algorithm. This is why
+[00:35:57] deepseek is no longer uh putting
+[00:36:00] substantial effort into gRPO. GRPO their
+[00:36:03] reinforcement learning algorithm is good
+[00:36:05] enough. If they put more effort, it will
+[00:36:08] not yield as good returns as if they put
+[00:36:11] more effort into data training post-
+[00:36:13] training environments.
+[00:36:15] The verifier is going to run hidden
+[00:36:17] tests. Now you don't show these tests to
+[00:36:19] the model. Now you have like GPT, Fable,
+[00:36:22] Astra. they are going to they are
+[00:36:24] possibly going to hack and see your uh
+[00:36:28] verifiers. So this is something that's
+[00:36:30] happening right now. So there are
+[00:36:32] different ways you can do this. So for
+[00:36:34] example uh in gRPO and other algorithms
+[00:36:37] you can give the same question and let
+[00:36:42] model generate 16 answers and then you
+[00:36:44] can reward each answer based on if it's
+[00:36:46] correct, incorrect, wrong, Python etc.
+[00:36:50] And then we want to calculate how much
+[00:36:53] each of the answers is better or worse
+[00:36:56] than other answers than the average.
+[00:36:59] So they call this advantage. So reward
+[00:37:02] is just your one zero or minus 0.1.
+[00:37:06] That's your reward minus mean of other
+[00:37:09] rewards.
+[00:37:11] So it's just going to calculate is this
+[00:37:14] better than average and how much is it
+[00:37:15] better or worse than average. So better
+[00:37:18] ones are going to become more likely and
+[00:37:19] worse ones will become less likely. This
+[00:37:22] is good because you don't need separate
+[00:37:25] critic like separate model to uh review
+[00:37:28] the results and score the results. You
+[00:37:30] don't need humans to do it. You can just
+[00:37:33] let it generate multiple times and
+[00:37:34] compare them to each other.
+[00:37:37] So I'm not going to update the entire
+[00:37:39] model with these reinforcement learning
+[00:37:42] signals. I'm just going to update last
+[00:37:44] block final normalization layer and the
+[00:37:48] output head. Those are tied weights
+[00:37:50] between input and output as I mentioned
+[00:37:52] earlier. But just the end because this
+[00:37:55] way first of all we are not changing
+[00:37:57] previous layers that have some other
+[00:37:59] knowledge and then they might be they
+[00:38:02] might experience forgetting of other
+[00:38:03] knowledge because now we are just
+[00:38:05] changing on this new data. We are not
+[00:38:07] training it on the old data. We so it
+[00:38:10] might change stuff too much. And this is
+[00:38:12] also faster updating less weights. So
+[00:38:16] you can also use Lora, you can use
+[00:38:18] different techniques, you can update the
+[00:38:20] whole model. So there are different
+[00:38:22] techniques here. Um you are going to
+[00:38:24] look into this if you want. You can also
+[00:38:27] do research and experiments and try
+[00:38:28] different ways of updating a few blocks
+[00:38:31] and try to understand why. So so try to
+[00:38:35] when you do experiments uh use toy
+[00:38:37] examples. And this is what MIT says. MIT
+[00:38:40] says you need to use start from small
+[00:38:41] toy examples so you can understand
+[00:38:43] what's going on. It's better than doing
+[00:38:45] huge experiments complex that you don't
+[00:38:47] know what's going on.
+[00:38:50] R L is the algorithm I'm using. So
+[00:38:53] algorithms as I said doesn't matter too
+[00:38:55] much. Data is what matters. What is it
+[00:38:57] going to learn is based on which data we
+[00:38:59] give it. So because our model was small
+[00:39:03] we are able to improve it only around
+[00:39:05] similar tasks that we train it on.
+[00:39:09] But on the other hand, if you have big
+[00:39:11] models like OpenAI, they are also going
+[00:39:13] to train it on all of the different
+[00:39:15] tasks. So you could say that they might
+[00:39:18] also only improve it on tasks they
+[00:39:20] trained on, but they train on
+[00:39:22] everything. And this is a joke uh that
+[00:39:25] people complain that LLMs only learn
+[00:39:29] what it's is in training data and then
+[00:39:32] the other guy says then we'll put
+[00:39:33] everything into training data. So we had
+[00:39:35] these operations, Python operations. So
+[00:39:38] increment double even u these are just
+[00:39:41] some Python tasks and it improved on
+[00:39:43] these now interestingly it didn't
+[00:39:45] improve on this one I don't know why I
+[00:39:47] need to maybe check it so so here maybe
+[00:39:50] it's a bug in my code or bug that AI
+[00:39:52] generated or bug in my experiment or
+[00:39:54] something or if it's not a bug then it's
+[00:39:57] even more interesting but it's probably
+[00:39:59] a bug and then ones that it didn't train
+[00:40:02] on it uh didn't improve it may even have
+[00:40:07] regressed
+[00:40:08] Now depending on how we calculated the
+[00:40:10] statistical significance, you need to
+[00:40:12] always be careful. Did it actually
+[00:40:14] regress? Do you have enough samples? Did
+[00:40:16] you calculate it properly? Did you
+[00:40:18] sample maybe multiple times to see the
+[00:40:20] average around different uh percentages?
+[00:40:25] So two previously strong families
+[00:40:27] regressed because only a narrow
+[00:40:29] parameter surface was optimized for the
+[00:40:32] practice reward distribution.
+[00:40:35] But it did improve in the things we
+[00:40:38] trained it based on our environment. And
+[00:40:40] this means that you can teach it
+[00:40:42] whatever you want to teach it and know
+[00:40:44] how to construct environments. So when
+[00:40:48] experimenting, you want to change just
+[00:40:50] one variable at a time. So let's say you
+[00:40:53] have all of these different variables
+[00:40:54] like reward uh how you're rewarding the
+[00:40:57] group size, how many uh answers you are
+[00:41:00] generating at once, for example, eight
+[00:41:02] per prompt. temperature is randomness or
+[00:41:04] penalty negative rewards. So you want to
+[00:41:07] just if you're doing research, you want
+[00:41:09] to do one uh experiment, one variable
+[00:41:12] per time.
+[00:41:14] Here I did a bunch of different
+[00:41:16] experiments. You see if I set for
+[00:41:19] example group size four, it performs
+[00:41:21] very well, better than group size 16.
+[00:41:24] Then temperature 0.2 is more
+[00:41:28] deterministic, less random, performs
+[00:41:29] better than more random temperature. And
+[00:41:32] then uh here in these experiments about
+[00:41:34] reward binary like 01 or other partial
+[00:41:38] rewards or no invalid penalty, hard
+[00:41:40] invalid penalty, they all perform same
+[00:41:42] on my data set. Now you don't want to
+[00:41:45] just have five. You want to have like
+[00:41:46] 500 or 5,000 of these to get better
+[00:41:50] insights.
+[00:41:52] But check out this horror.
+[00:41:55] You see group size four one over group
+[00:41:58] size eight on this seed. but lost on
+[00:42:02] this seed and lost on this seed. Okay,
+[00:42:04] so this is this means that first of all
+[00:42:07] this doesn't have much influence based
+[00:42:09] on my setup my training data. Secondly,
+[00:42:11] we yeah we need to train more to see
+[00:42:13] actual statistical significance. Um and
+[00:42:17] then also it could be that it's not so
+[00:42:20] important
+[00:42:22] but if you are training huge models then
+[00:42:25] even small differences could mean a lot
+[00:42:28] of money saved. your model is training a
+[00:42:30] bit faster which is going to save a lot
+[00:42:31] of money. So this is why when people are
+[00:42:34] reviewing your papers they will tell you
+[00:42:36] to test on three seats and all three
+[00:42:38] seeds should have a clear conclusion
+[00:42:41] like all three seats you should say that
+[00:42:43] group four is better than group eight.
+[00:42:46] So none of my experiments produce
+[00:42:48] statistically significant improvements.
+[00:42:50] Maybe my experiments are very small.
+[00:42:52] Maybe as you probably as you train
+[00:42:54] bigger models, you're going to have uh
+[00:42:58] clearer and clearer exact setup of
+[00:43:01] parameters that's going to be best. And
+[00:43:03] here we can review each part. So
+[00:43:06] pre-training is going to teach it to
+[00:43:08] write Python. Vision is going to teach
+[00:43:11] it to add recognize images into the
+[00:43:14] transformer into the language model. and
+[00:43:16] reinforcement learning will uh in our
+[00:43:19] case improved increment and double
+[00:43:20] operations.
+[00:43:22] So I encourage you to just go talk to
+[00:43:25] codeex or cloud code. You can tell it
+[00:43:28] which kind of experiments can I do here
+[00:43:31] and don't be so concerned about scaling.
+[00:43:33] I just want you to learn how to do some
+[00:43:34] experiments, how to learn scientific
+[00:43:37] thinking, how to measure properly, how
+[00:43:39] to conclude properly. So you can post
+[00:43:41] your experiments on social media as
+[00:43:43] well. If you want to become AI
+[00:43:45] researcher, I recommend you just keep
+[00:43:46] posting your experiments every day or
+[00:43:48] every week on social media. Consistency
+[00:43:51] is more important than intensity.
+[00:43:54] So if you post five days in a row, but
+[00:43:57] then you stop, it's not good. If you
+[00:43:58] post once a week forever, it's a lot
+[00:44:01] better. And it's better to just do
+[00:44:04] experiments and train
+[00:44:06] model for a few seconds. You don't want
+[00:44:08] to wait a few minutes, a few hours
+[00:44:10] because it's wasted time. You need to be
+[00:44:12] thinking how to need to be practicing
+[00:44:15] how to design experiments, environments,
+[00:44:17] questions. You don't need to wait for
+[00:44:18] the model because you you cannot train a
+[00:44:21] model that's going to outco compete
+[00:44:22] these companies that people are going to
+[00:44:24] use.

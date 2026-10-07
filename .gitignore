@@ -1,0 +1,27 @@
+# Python-generated files
+__pycache__/
+*.py[oc]
+build/
+dist/
+wheels/
+*.egg-info
+
+# Virtual environments
+.venv
+
+# Tooling / caches
+.pytest_cache/
+.DS_Store
+
+# Local Claude Code state (per-machine)
+.claude/
+
+# Downloaded video + yt-dlp metadata (large, third-party content).
+# Re-download with the command in README.md.
+sources/video/
+
+# Secrets (never commit)
+.env
+.env.*
+*.pem
+*.key

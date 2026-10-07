@@ -1,0 +1,3 @@
+[submodule "sources/repo"]
+	path = sources/repo
+	url = https://github.com/vukrosic/glm-5.3-flash-from-scratch

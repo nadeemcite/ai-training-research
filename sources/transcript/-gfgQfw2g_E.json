@@ -1,0 +1,5207 @@
+[
+  {
+    "text": "Learn how to build and train a 25",
+    "start": 0.16,
+    "duration": 6.24
+  },
+  {
+    "text": "million parameter GLM 5.3 flash model",
+    "start": 2.639,
+    "duration": 7.121
+  },
+  {
+    "text": "from scratch using just a standard CPU.",
+    "start": 6.4,
+    "duration": 5.52
+  },
+  {
+    "text": "This tutorial covers core pre-training",
+    "start": 9.76,
+    "duration": 4.879
+  },
+  {
+    "text": "and reinforcement learning techniques,",
+    "start": 11.92,
+    "duration": 5.04
+  },
+  {
+    "text": "teaching you how to design effective",
+    "start": 14.639,
+    "duration": 4.881
+  },
+  {
+    "text": "experiments and think like a modern AI",
+    "start": 16.96,
+    "duration": 6.0
+  },
+  {
+    "text": "researcher. Let's build and train GLM",
+    "start": 19.52,
+    "duration": 6.32
+  },
+  {
+    "text": "5.3 flesh which is ox alpha which is the",
+    "start": 22.96,
+    "duration": 6.559
+  },
+  {
+    "text": "latest best viral model from Drupal AI.",
+    "start": 25.84,
+    "duration": 5.92
+  },
+  {
+    "text": "We will do both pre-training and",
+    "start": 29.519,
+    "duration": 3.841
+  },
+  {
+    "text": "post-training as well as building",
+    "start": 31.76,
+    "duration": 3.6
+  },
+  {
+    "text": "everything from scratch. So you will",
+    "start": 33.36,
+    "duration": 4.719
+  },
+  {
+    "text": "learn how to do everything GLM",
+    "start": 35.36,
+    "duration": 4.719
+  },
+  {
+    "text": "researchers everything researchers at",
+    "start": 38.079,
+    "duration": 4.8
+  },
+  {
+    "text": "OpenAI Anthropic do just on a simpler",
+    "start": 40.079,
+    "duration": 5.361
+  },
+  {
+    "text": "scale. And AI researcher job has",
+    "start": 42.879,
+    "duration": 4.321
+  },
+  {
+    "text": "dramatically changed in just a few",
+    "start": 45.44,
+    "duration": 4.88
+  },
+  {
+    "text": "months. So this is the latest up-to-date",
+    "start": 47.2,
+    "duration": 4.96
+  },
+  {
+    "text": "uh course that you're going to need if",
+    "start": 50.32,
+    "duration": 4.32
+  },
+  {
+    "text": "you want to become AI researcher. All of",
+    "start": 52.16,
+    "duration": 4.96
+  },
+  {
+    "text": "the code is in the GitHub. Uh these are",
+    "start": 54.64,
+    "duration": 4.16
+  },
+  {
+    "text": "the experiments. We will reproduce",
+    "start": 57.12,
+    "duration": 3.759
+  },
+  {
+    "text": "everything you see the charts. So it's",
+    "start": 58.8,
+    "duration": 4.48
+  },
+  {
+    "text": "below the video. This is the latest job",
+    "start": 60.879,
+    "duration": 4.481
+  },
+  {
+    "text": "posting for Anthropic and this job",
+    "start": 63.28,
+    "duration": 5.519
+  },
+  {
+    "text": "posting describes 95% of AI researcher",
+    "start": 65.36,
+    "duration": 6.0
+  },
+  {
+    "text": "roles. First you will understand the",
+    "start": 68.799,
+    "duration": 4.64
+  },
+  {
+    "text": "architectures and the algorithms in this",
+    "start": 71.36,
+    "duration": 4.72
+  },
+  {
+    "text": "course. Then I will show you how to do",
+    "start": 73.439,
+    "duration": 4.801
+  },
+  {
+    "text": "uh actual AI research with designing",
+    "start": 76.08,
+    "duration": 4.079
+  },
+  {
+    "text": "environments reinforcement learning",
+    "start": 78.24,
+    "duration": 5.12
+  },
+  {
+    "text": "asking questions. So right now cloud",
+    "start": 80.159,
+    "duration": 5.921
+  },
+  {
+    "text": "code codex AI is coding all of the",
+    "start": 83.36,
+    "duration": 4.079
+  },
+  {
+    "text": "experiments and it can do them",
+    "start": 86.08,
+    "duration": 3.92
+  },
+  {
+    "text": "autonomously. Your job as AI researcher",
+    "start": 87.439,
+    "duration": 5.04
+  },
+  {
+    "text": "is just to have highlevel idea which",
+    "start": 90.0,
+    "duration": 4.799
+  },
+  {
+    "text": "experiments to do. So even though",
+    "start": 92.479,
+    "duration": 4.241
+  },
+  {
+    "text": "anthropic and open AAI could actually be",
+    "start": 94.799,
+    "duration": 4.241
+  },
+  {
+    "text": "inventing new algorithms right now it's",
+    "start": 96.72,
+    "duration": 4.16
+  },
+  {
+    "text": "transformers it's reinforcement learning",
+    "start": 99.04,
+    "duration": 4.96
+  },
+  {
+    "text": "I think they are focusing 99% or more of",
+    "start": 100.88,
+    "duration": 6.239
+  },
+  {
+    "text": "their efforts in just designing uh data",
+    "start": 104.0,
+    "duration": 4.88
+  },
+  {
+    "text": "uh environments and then optimizing",
+    "start": 107.119,
+    "duration": 3.441
+  },
+  {
+    "text": "these algorithms that you're going to",
+    "start": 108.88,
+    "duration": 4.16
+  },
+  {
+    "text": "understand in this video and thinking",
+    "start": 110.56,
+    "duration": 5.199
+  },
+  {
+    "text": "for the future AI researcher job is",
+    "start": 113.04,
+    "duration": 5.679
+  },
+  {
+    "text": "mainly going to become highlevel ideas",
+    "start": 115.759,
+    "duration": 5.201
+  },
+  {
+    "text": "and not coding AI models are going to do",
+    "start": 118.719,
+    "duration": 5.201
+  },
+  {
+    "text": "all of the coding and experiments So but",
+    "start": 120.96,
+    "duration": 4.799
+  },
+  {
+    "text": "you still need to understand how the",
+    "start": 123.92,
+    "duration": 3.839
+  },
+  {
+    "text": "algorithms work. You don't need to write",
+    "start": 125.759,
+    "duration": 4.64
+  },
+  {
+    "text": "the code manually but still people",
+    "start": 127.759,
+    "duration": 5.601
+  },
+  {
+    "text": "humans are ones who can invent better",
+    "start": 130.399,
+    "duration": 6.321
+  },
+  {
+    "text": "faster concepts f faster algorithms and",
+    "start": 133.36,
+    "duration": 5.599
+  },
+  {
+    "text": "create better designs for the system and",
+    "start": 136.72,
+    "duration": 4.96
+  },
+  {
+    "text": "then AI can implement experiment try out",
+    "start": 138.959,
+    "duration": 4.961
+  },
+  {
+    "text": "etc. This is why we will still go over",
+    "start": 141.68,
+    "duration": 4.16
+  },
+  {
+    "text": "the code and understand how it works",
+    "start": 143.92,
+    "duration": 3.6
+  },
+  {
+    "text": "even though we don't necessarily need to",
+    "start": 145.84,
+    "duration": 4.479
+  },
+  {
+    "text": "write everything from scratch manually.",
+    "start": 147.52,
+    "duration": 4.799
+  },
+  {
+    "text": "But if you want to invent new algorithms",
+    "start": 150.319,
+    "duration": 3.841
+  },
+  {
+    "text": "as AI researcher, you need to understand",
+    "start": 152.319,
+    "duration": 4.801
+  },
+  {
+    "text": "how the current algorithms work. So even",
+    "start": 154.16,
+    "duration": 4.88
+  },
+  {
+    "text": "though the original model is insane,",
+    "start": 157.12,
+    "duration": 4.16
+  },
+  {
+    "text": "billions of parameters, our model is",
+    "start": 159.04,
+    "duration": 4.24
+  },
+  {
+    "text": "just going to have 25 million and it can",
+    "start": 161.28,
+    "duration": 5.12
+  },
+  {
+    "text": "be trained on a CPU, GPU, MacBook,",
+    "start": 163.28,
+    "duration": 5.52
+  },
+  {
+    "text": "anything. I made it very simple. And",
+    "start": 166.4,
+    "duration": 4.16
+  },
+  {
+    "text": "this is what you want to do. You can",
+    "start": 168.8,
+    "duration": 3.76
+  },
+  {
+    "text": "still do so much research here. You can",
+    "start": 170.56,
+    "duration": 4.399
+  },
+  {
+    "text": "learn how to ask questions, how to set",
+    "start": 172.56,
+    "duration": 4.8
+  },
+  {
+    "text": "goals, topics, research directions from",
+    "start": 174.959,
+    "duration": 5.121
+  },
+  {
+    "text": "for the AI. Even if you have a lot of",
+    "start": 177.36,
+    "duration": 4.879
+  },
+  {
+    "text": "compute, there is nothing more you can",
+    "start": 180.08,
+    "duration": 5.36
+  },
+  {
+    "text": "do with it than with just a CPU. I don't",
+    "start": 182.239,
+    "duration": 4.961
+  },
+  {
+    "text": "think unless you want to build a model",
+    "start": 185.44,
+    "duration": 3.84
+  },
+  {
+    "text": "that other people use, but here we're",
+    "start": 187.2,
+    "duration": 3.92
+  },
+  {
+    "text": "trying to learn. So, we want to learn",
+    "start": 189.28,
+    "duration": 4.72
+  },
+  {
+    "text": "how to ask questions mainly and AI can",
+    "start": 191.12,
+    "duration": 5.44
+  },
+  {
+    "text": "help answer those questions very easily.",
+    "start": 194.0,
+    "duration": 4.8
+  },
+  {
+    "text": "And AI will become more and more capable",
+    "start": 196.56,
+    "duration": 4.56
+  },
+  {
+    "text": "of answering questions and humans are",
+    "start": 198.8,
+    "duration": 4.799
+  },
+  {
+    "text": "going to be asking questions for now. Of",
+    "start": 201.12,
+    "duration": 3.6
+  },
+  {
+    "text": "course, we don't know what's going to",
+    "start": 203.599,
+    "duration": 3.041
+  },
+  {
+    "text": "happen in a year. Super intelligence,",
+    "start": 204.72,
+    "duration": 3.519
+  },
+  {
+    "text": "whatever. Then humans will be useless.",
+    "start": 206.64,
+    "duration": 4.08
+  },
+  {
+    "text": "Then AI will do everything. So for now,",
+    "start": 208.239,
+    "duration": 4.401
+  },
+  {
+    "text": "we are just focusing on learning how to",
+    "start": 210.72,
+    "duration": 3.68
+  },
+  {
+    "text": "ask questions, ask research questions,",
+    "start": 212.64,
+    "duration": 4.239
+  },
+  {
+    "text": "setting goals, directions. Here are some",
+    "start": 214.4,
+    "duration": 4.399
+  },
+  {
+    "text": "example questions we will be asking and",
+    "start": 216.879,
+    "duration": 4.481
+  },
+  {
+    "text": "answering in this uh research. So this",
+    "start": 218.799,
+    "duration": 4.241
+  },
+  {
+    "text": "is real stuff you can do. You can learn",
+    "start": 221.36,
+    "duration": 4.56
+  },
+  {
+    "text": "how to research on just CPU. So let's",
+    "start": 223.04,
+    "duration": 4.559
+  },
+  {
+    "text": "say you are training some reinforcement",
+    "start": 225.92,
+    "duration": 4.64
+  },
+  {
+    "text": "learning uh reasoning. So should you",
+    "start": 227.599,
+    "duration": 6.0
+  },
+  {
+    "text": "reward imperfect score, partial score?",
+    "start": 230.56,
+    "duration": 4.959
+  },
+  {
+    "text": "Should you not? Well, we will try out,",
+    "start": 233.599,
+    "duration": 4.72
+  },
+  {
+    "text": "we will see which one works better. How",
+    "start": 235.519,
+    "duration": 5.28
+  },
+  {
+    "text": "strong should you punish invalid code?",
+    "start": 238.319,
+    "duration": 4.881
+  },
+  {
+    "text": "And then temperature or randomness of",
+    "start": 240.799,
+    "duration": 4.561
+  },
+  {
+    "text": "next word generation in reinforcement",
+    "start": 243.2,
+    "duration": 4.64
+  },
+  {
+    "text": "learning. So it's exploration versus",
+    "start": 245.36,
+    "duration": 5.68
+  },
+  {
+    "text": "exploitation with what it already knows.",
+    "start": 247.84,
+    "duration": 5.28
+  },
+  {
+    "text": "So these are like a bunch of examples",
+    "start": 251.04,
+    "duration": 4.64
+  },
+  {
+    "text": "and just asking these questions is your",
+    "start": 253.12,
+    "duration": 4.0
+  },
+  {
+    "text": "job. This is what distinguish",
+    "start": 255.68,
+    "duration": 2.88
+  },
+  {
+    "text": "distinguishes experienced good",
+    "start": 257.12,
+    "duration": 5.359
+  },
+  {
+    "text": "researcher uh versus novel inexperienced",
+    "start": 258.56,
+    "duration": 5.76
+  },
+  {
+    "text": "and AI can do all of these experiments",
+    "start": 262.479,
+    "duration": 4.241
+  },
+  {
+    "text": "by itself right now. Even soul opus and",
+    "start": 264.32,
+    "duration": 4.4
+  },
+  {
+    "text": "then Astra fable everybody can do these",
+    "start": 266.72,
+    "duration": 4.64
+  },
+  {
+    "text": "experiments. By the way if you need help",
+    "start": 268.72,
+    "duration": 4.24
+  },
+  {
+    "text": "answering asking these questions you",
+    "start": 271.36,
+    "duration": 4.24
+  },
+  {
+    "text": "want to join a real AI research lab uh",
+    "start": 272.96,
+    "duration": 4.32
+  },
+  {
+    "text": "join our school community where we",
+    "start": 275.6,
+    "duration": 3.599
+  },
+  {
+    "text": "simulate a real AI research lab. You",
+    "start": 277.28,
+    "duration": 3.68
+  },
+  {
+    "text": "will be either setting your own research",
+    "start": 279.199,
+    "duration": 4.56
+  },
+  {
+    "text": "goals or using ours answering our",
+    "start": 280.96,
+    "duration": 4.64
+  },
+  {
+    "text": "questions and helping us figure out",
+    "start": 283.759,
+    "duration": 3.601
+  },
+  {
+    "text": "questions. We are simulating teaching",
+    "start": 285.6,
+    "duration": 3.52
+  },
+  {
+    "text": "people, coaching people how to do real",
+    "start": 287.36,
+    "duration": 4.88
+  },
+  {
+    "text": "AI research. Okay, so let's start. We",
+    "start": 289.12,
+    "duration": 5.519
+  },
+  {
+    "text": "know that LLMs are going to predict next",
+    "start": 292.24,
+    "duration": 5.679
+  },
+  {
+    "text": "word or next token or next character in",
+    "start": 294.639,
+    "duration": 5.361
+  },
+  {
+    "text": "our case because we are going to build",
+    "start": 297.919,
+    "duration": 4.0
+  },
+  {
+    "text": "and you are also going to build a small",
+    "start": 300.0,
+    "duration": 3.84
+  },
+  {
+    "text": "model. As I said, we just need small",
+    "start": 301.919,
+    "duration": 4.961
+  },
+  {
+    "text": "models with fast iteration. So in this",
+    "start": 303.84,
+    "duration": 5.52
+  },
+  {
+    "text": "example input will be returned X plus",
+    "start": 306.88,
+    "duration": 5.039
+  },
+  {
+    "text": "and the model is going to predict one",
+    "start": 309.36,
+    "duration": 4.16
+  },
+  {
+    "text": "depending on the task depending on the",
+    "start": 311.919,
+    "duration": 4.801
+  },
+  {
+    "text": "prompt. This is the next token. So the",
+    "start": 313.52,
+    "duration": 7.84
+  },
+  {
+    "text": "real real LLMs use BP tokenizers by",
+    "start": 316.72,
+    "duration": 7.12
+  },
+  {
+    "text": "pairing coded tokenizers. So they would",
+    "start": 321.36,
+    "duration": 5.04
+  },
+  {
+    "text": "if you have some text like this they",
+    "start": 323.84,
+    "duration": 4.96
+  },
+  {
+    "text": "would split that into subword tokens or",
+    "start": 326.4,
+    "duration": 4.96
+  },
+  {
+    "text": "word tokens.",
+    "start": 328.8,
+    "duration": 6.72
+  },
+  {
+    "text": "Usually uh they have 150,000 or 300,000",
+    "start": 331.36,
+    "duration": 7.119
+  },
+  {
+    "text": "of these subword tokens and they can",
+    "start": 335.52,
+    "duration": 5.28
+  },
+  {
+    "text": "then encode any text any text is",
+    "start": 338.479,
+    "duration": 5.28
+  },
+  {
+    "text": "contained in uh with this vocab in in",
+    "start": 340.8,
+    "duration": 5.6
+  },
+  {
+    "text": "this vocabulary. But to make it simpler",
+    "start": 343.759,
+    "duration": 5.28
+  },
+  {
+    "text": "to understand to train we are going to",
+    "start": 346.4,
+    "duration": 6.0
+  },
+  {
+    "text": "make each asy character. So each letter",
+    "start": 349.039,
+    "duration": 6.321
+  },
+  {
+    "text": "is going to be its own token. Here if we",
+    "start": 352.4,
+    "duration": 6.48
+  },
+  {
+    "text": "have this function defaf uh int whatever",
+    "start": 355.36,
+    "duration": 6.559
+  },
+  {
+    "text": "each of them is its own token so we just",
+    "start": 358.88,
+    "duration": 7.28
+  },
+  {
+    "text": "have 260 uh tokens in our vocabulary so",
+    "start": 361.919,
+    "duration": 6.4
+  },
+  {
+    "text": "we don't need to do tokenizer training",
+    "start": 366.16,
+    "duration": 6.08
+  },
+  {
+    "text": "it's simpler also big problem that would",
+    "start": 368.319,
+    "duration": 7.281
+  },
+  {
+    "text": "happen later so some of you may already",
+    "start": 372.24,
+    "duration": 5.92
+  },
+  {
+    "text": "know uh transformer architecture LLM",
+    "start": 375.6,
+    "duration": 4.879
+  },
+  {
+    "text": "architecture and you know that there is",
+    "start": 378.16,
+    "duration": 4.4
+  },
+  {
+    "text": "embedding layer there is output head",
+    "start": 380.479,
+    "duration": 5.521
+  },
+  {
+    "text": "layer and both of those weight matrices",
+    "start": 382.56,
+    "duration": 6.479
+  },
+  {
+    "text": "use token vocabulary as one of their",
+    "start": 386.0,
+    "duration": 5.12
+  },
+  {
+    "text": "dimensions. So if we have massive",
+    "start": 389.039,
+    "duration": 6.241
+  },
+  {
+    "text": "tokens, massive vocabular is 250,000",
+    "start": 391.12,
+    "duration": 7.68
+  },
+  {
+    "text": "then on a very small model those",
+    "start": 395.28,
+    "duration": 6.4
+  },
+  {
+    "text": "matrices would be majority 95% of",
+    "start": 398.8,
+    "duration": 5.519
+  },
+  {
+    "text": "parameters would just go into the",
+    "start": 401.68,
+    "duration": 6.16
+  },
+  {
+    "text": "vocabulary conversion and other 5% of",
+    "start": 404.319,
+    "duration": 6.0
+  },
+  {
+    "text": "parameters would go into actual layers",
+    "start": 407.84,
+    "duration": 5.68
+  },
+  {
+    "text": "and the model itself. So if you did not",
+    "start": 410.319,
+    "duration": 5.6
+  },
+  {
+    "text": "understand what I said, it's okay. Just",
+    "start": 413.52,
+    "duration": 4.399
+  },
+  {
+    "text": "for a small models, you also need small",
+    "start": 415.919,
+    "duration": 4.801
+  },
+  {
+    "text": "small vocabulary. 260 token vocabulary",
+    "start": 417.919,
+    "duration": 6.4
+  },
+  {
+    "text": "is good. So this is how uh next token",
+    "start": 420.72,
+    "duration": 5.68
+  },
+  {
+    "text": "gets generated within the transformer.",
+    "start": 424.319,
+    "duration": 5.201
+  },
+  {
+    "text": "So let's say we have some input. So it",
+    "start": 426.4,
+    "duration": 5.28
+  },
+  {
+    "text": "can be some number, some prompt,",
+    "start": 429.52,
+    "duration": 5.04
+  },
+  {
+    "text": "whatever. And each of those tokens in",
+    "start": 431.68,
+    "duration": 5.2
+  },
+  {
+    "text": "the input uh each of them have",
+    "start": 434.56,
+    "duration": 4.96
+  },
+  {
+    "text": "corresponding uh vector embedding that",
+    "start": 436.88,
+    "duration": 5.92
+  },
+  {
+    "text": "represents them. So each of them gets",
+    "start": 439.52,
+    "duration": 4.88
+  },
+  {
+    "text": "replaced with its own vector embedding",
+    "start": 442.8,
+    "duration": 4.0
+  },
+  {
+    "text": "and vector embedding is like a sequence",
+    "start": 444.4,
+    "duration": 6.16
+  },
+  {
+    "text": "of numbers that encodes the meaning of",
+    "start": 446.8,
+    "duration": 8.0
+  },
+  {
+    "text": "that token. So uh token A has some",
+    "start": 450.56,
+    "duration": 6.56
+  },
+  {
+    "text": "numbers, token B has some numbers, plus",
+    "start": 454.8,
+    "duration": 5.44
+  },
+  {
+    "text": "has some minus has some and then the",
+    "start": 457.12,
+    "duration": 6.16
+  },
+  {
+    "text": "vector for plus would kind of explain or",
+    "start": 460.24,
+    "duration": 5.359
+  },
+  {
+    "text": "contain how addition is done and what is",
+    "start": 463.28,
+    "duration": 4.0
+  },
+  {
+    "text": "the purpose what is the functionality of",
+    "start": 465.599,
+    "duration": 3.681
+  },
+  {
+    "text": "token plus.",
+    "start": 467.28,
+    "duration": 5.68
+  },
+  {
+    "text": "So every token in the prompt gets",
+    "start": 469.28,
+    "duration": 5.759
+  },
+  {
+    "text": "replaced with its corresponding vector",
+    "start": 472.96,
+    "duration": 4.48
+  },
+  {
+    "text": "that describes its meaning. These",
+    "start": 475.039,
+    "duration": 6.481
+  },
+  {
+    "text": "vectors are learned by the LLM. When we",
+    "start": 477.44,
+    "duration": 6.56
+  },
+  {
+    "text": "train the LM, these vectors are learned.",
+    "start": 481.52,
+    "duration": 6.079
+  },
+  {
+    "text": "So LLM learns how to represent uh",
+    "start": 484.0,
+    "duration": 7.68
+  },
+  {
+    "text": "concept of a plus with some numbers.",
+    "start": 487.599,
+    "duration": 6.72
+  },
+  {
+    "text": "And then we have sequence of vectors.",
+    "start": 491.68,
+    "duration": 5.04
+  },
+  {
+    "text": "That's our prompt that goes into the",
+    "start": 494.319,
+    "duration": 4.481
+  },
+  {
+    "text": "transformer into the layers. it gets",
+    "start": 496.72,
+    "duration": 4.24
+  },
+  {
+    "text": "processed through the transformer and",
+    "start": 498.8,
+    "duration": 5.44
+  },
+  {
+    "text": "then at the end we want to predict the",
+    "start": 500.96,
+    "duration": 6.4
+  },
+  {
+    "text": "next token. So it's going to it's going",
+    "start": 504.24,
+    "duration": 5.6
+  },
+  {
+    "text": "to just transform whatever was processed",
+    "start": 507.36,
+    "duration": 4.32
+  },
+  {
+    "text": "the entire prompt was processed. It's",
+    "start": 509.84,
+    "duration": 4.079
+  },
+  {
+    "text": "going to transform whatever is at the",
+    "start": 511.68,
+    "duration": 5.76
+  },
+  {
+    "text": "end into probability distribution over",
+    "start": 513.919,
+    "duration": 6.641
+  },
+  {
+    "text": "entire vocabulary. So, so based on the",
+    "start": 517.44,
+    "duration": 6.959
+  },
+  {
+    "text": "prompt you will get uh for each token in",
+    "start": 520.56,
+    "duration": 6.0
+  },
+  {
+    "text": "vocabulary how likely it is to be the",
+    "start": 524.399,
+    "duration": 4.321
+  },
+  {
+    "text": "next token.",
+    "start": 526.56,
+    "duration": 4.64
+  },
+  {
+    "text": "That's roughly how it works. So that's",
+    "start": 528.72,
+    "duration": 4.72
+  },
+  {
+    "text": "the very basic idea of transformer. Now",
+    "start": 531.2,
+    "duration": 5.44
+  },
+  {
+    "text": "uh GLM 5.3 flesh has some uh new",
+    "start": 533.44,
+    "duration": 5.68
+  },
+  {
+    "text": "architectures, new parts that we didn't",
+    "start": 536.64,
+    "duration": 5.44
+  },
+  {
+    "text": "learn about before on my channel. So uh",
+    "start": 539.12,
+    "duration": 5.44
+  },
+  {
+    "text": "linear and sparse attention hybrid and",
+    "start": 542.08,
+    "duration": 4.4
+  },
+  {
+    "text": "then mixture of experts. We talked about",
+    "start": 544.56,
+    "duration": 5.279
+  },
+  {
+    "text": "this. It's very famous. And then uh deep",
+    "start": 546.48,
+    "duration": 5.76
+  },
+  {
+    "text": "six manifold constrained residual",
+    "start": 549.839,
+    "duration": 5.361
+  },
+  {
+    "text": "connections hyperconnections and then",
+    "start": 552.24,
+    "duration": 6.0
+  },
+  {
+    "text": "this one is quite famous and old uh it's",
+    "start": 555.2,
+    "duration": 7.36
+  },
+  {
+    "text": "to use the same matrix for input and",
+    "start": 558.24,
+    "duration": 7.12
+  },
+  {
+    "text": "output uh vocabulary into embedded",
+    "start": 562.56,
+    "duration": 5.92
+  },
+  {
+    "text": "conversion. So input and output these",
+    "start": 565.36,
+    "duration": 6.479
+  },
+  {
+    "text": "are the specifications of our model. So",
+    "start": 568.48,
+    "duration": 6.4
+  },
+  {
+    "text": "original is huge but our is tiny. Uh",
+    "start": 571.839,
+    "duration": 4.801
+  },
+  {
+    "text": "these are the layers. A lot fewer",
+    "start": 574.88,
+    "duration": 4.88
+  },
+  {
+    "text": "layers, a lot fewer experts",
+    "start": 576.64,
+    "duration": 7.36
+  },
+  {
+    "text": "and the context is just 192 tokens while",
+    "start": 579.76,
+    "duration": 7.199
+  },
+  {
+    "text": "GLM has 1 million tokens. And you will",
+    "start": 584.0,
+    "duration": 5.2
+  },
+  {
+    "text": "see that in our experiments before",
+    "start": 586.959,
+    "duration": 4.481
+  },
+  {
+    "text": "reinforcement learning it will not do",
+    "start": 589.2,
+    "duration": 4.88
+  },
+  {
+    "text": "any of the tasks successfully and after",
+    "start": 591.44,
+    "duration": 5.6
+  },
+  {
+    "text": "reinforcement learning it will do uh 16",
+    "start": 594.08,
+    "duration": 6.0
+  },
+  {
+    "text": "out of 24 tasks successfully. Those",
+    "start": 597.04,
+    "duration": 5.04
+  },
+  {
+    "text": "tasks will be very simple like write",
+    "start": 600.08,
+    "duration": 4.72
+  },
+  {
+    "text": "some Python function that multiplies",
+    "start": 602.08,
+    "duration": 5.28
+  },
+  {
+    "text": "input by two but you will see the",
+    "start": 604.8,
+    "duration": 4.96
+  },
+  {
+    "text": "difference uh before and after RL",
+    "start": 607.36,
+    "duration": 5.28
+  },
+  {
+    "text": "training and you will learn how to ask",
+    "start": 609.76,
+    "duration": 5.36
+  },
+  {
+    "text": "questions how to design ideas and",
+    "start": 612.64,
+    "duration": 5.52
+  },
+  {
+    "text": "environments for the uh model to learn.",
+    "start": 615.12,
+    "duration": 5.44
+  },
+  {
+    "text": "You can see also during training how the",
+    "start": 618.16,
+    "duration": 4.08
+  },
+  {
+    "text": "model is learning during this is the",
+    "start": 620.56,
+    "duration": 3.36
+  },
+  {
+    "text": "graph that shows how it's learning",
+    "start": 622.24,
+    "duration": 4.08
+  },
+  {
+    "text": "during the training. Let's look at the",
+    "start": 623.92,
+    "duration": 4.32
+  },
+  {
+    "text": "code now. So we are going to understand",
+    "start": 626.32,
+    "duration": 4.0
+  },
+  {
+    "text": "the algorithms how they work but",
+    "start": 628.24,
+    "duration": 4.719
+  },
+  {
+    "text": "nobody's going to be coding this. So but",
+    "start": 630.32,
+    "duration": 4.0
+  },
+  {
+    "text": "it's up to humans to understand",
+    "start": 632.959,
+    "duration": 2.88
+  },
+  {
+    "text": "algorithms and then improve them tell",
+    "start": 634.32,
+    "duration": 4.24
+  },
+  {
+    "text": "the AI what to try what to and then AI",
+    "start": 635.839,
+    "duration": 5.041
+  },
+  {
+    "text": "is going to just try many ideas based on",
+    "start": 638.56,
+    "duration": 4.24
+  },
+  {
+    "text": "your idea but you need to know the",
+    "start": 640.88,
+    "duration": 4.48
+  },
+  {
+    "text": "direction. So this is what we're going",
+    "start": 642.8,
+    "duration": 4.8
+  },
+  {
+    "text": "to be understanding this part of code uh",
+    "start": 645.36,
+    "duration": 6.32
+  },
+  {
+    "text": "now. So first you have uh embedding and",
+    "start": 647.6,
+    "duration": 7.2
+  },
+  {
+    "text": "then passing input ID. Let's say this is",
+    "start": 651.68,
+    "duration": 5.599
+  },
+  {
+    "text": "our token [clears throat] ID. This will",
+    "start": 654.8,
+    "duration": 5.84
+  },
+  {
+    "text": "just look into vocabulary and pick the",
+    "start": 657.279,
+    "duration": 6.321
+  },
+  {
+    "text": "vector that I mentioned earlier.",
+    "start": 660.64,
+    "duration": 5.199
+  },
+  {
+    "text": "And so this could be a huge matrix if",
+    "start": 663.6,
+    "duration": 4.08
+  },
+  {
+    "text": "you have huge vocabulary. And this could",
+    "start": 665.839,
+    "duration": 4.24
+  },
+  {
+    "text": "be huge uh weight matrix. And if you",
+    "start": 667.68,
+    "duration": 5.279
+  },
+  {
+    "text": "have a small model, then this would be",
+    "start": 670.079,
+    "duration": 5.281
+  },
+  {
+    "text": "95% of parameters. This is why for small",
+    "start": 672.959,
+    "duration": 5.921
+  },
+  {
+    "text": "model we use small vocabulary bytes.",
+    "start": 675.36,
+    "duration": 6.479
+  },
+  {
+    "text": "So then it's just going to retrieve uh",
+    "start": 678.88,
+    "duration": 5.6
+  },
+  {
+    "text": "this tokens vector and this is at the",
+    "start": 681.839,
+    "duration": 4.961
+  },
+  {
+    "text": "beginning when it's processing the",
+    "start": 684.48,
+    "duration": 3.919
+  },
+  {
+    "text": "prompt.",
+    "start": 686.8,
+    "duration": 5.039
+  },
+  {
+    "text": "So then we have num. So we after we",
+    "start": 688.399,
+    "duration": 5.201
+  },
+  {
+    "text": "convert all of these vectors we we're",
+    "start": 691.839,
+    "duration": 3.601
+  },
+  {
+    "text": "going to have like this is the dimension",
+    "start": 693.6,
+    "duration": 4.0
+  },
+  {
+    "text": "of the vector and then this is the",
+    "start": 695.44,
+    "duration": 4.399
+  },
+  {
+    "text": "number of tokens. So number of tokens,",
+    "start": 697.6,
+    "duration": 5.359
+  },
+  {
+    "text": "token dimension and batch is like how",
+    "start": 699.839,
+    "duration": 5.521
+  },
+  {
+    "text": "many independent conversations you have",
+    "start": 702.959,
+    "duration": 6.721
+  },
+  {
+    "text": "in this huge x vector x u tensor. You",
+    "start": 705.36,
+    "duration": 6.719
+  },
+  {
+    "text": "see how it will just take this x vector",
+    "start": 709.68,
+    "duration": 7.2
+  },
+  {
+    "text": "and create array of these x uh vectors.",
+    "start": 712.079,
+    "duration": 7.521
+  },
+  {
+    "text": "These will be the residual connections.",
+    "start": 716.88,
+    "duration": 4.56
+  },
+  {
+    "text": "So later each of the residual",
+    "start": 719.6,
+    "duration": 3.919
+  },
+  {
+    "text": "connections so these are manifold",
+    "start": 721.44,
+    "duration": 4.16
+  },
+  {
+    "text": "constrained hyperconnections by deepseek",
+    "start": 723.519,
+    "duration": 4.641
+  },
+  {
+    "text": "and bite dense and each of them is going",
+    "start": 725.6,
+    "duration": 4.96
+  },
+  {
+    "text": "to uh carry different information",
+    "start": 728.16,
+    "duration": 5.119
+  },
+  {
+    "text": "forward without that information uh",
+    "start": 730.56,
+    "duration": 5.519
+  },
+  {
+    "text": "being processed through the attention",
+    "start": 733.279,
+    "duration": 5.12
+  },
+  {
+    "text": "and u so it's going to be mixed up it's",
+    "start": 736.079,
+    "duration": 3.841
+  },
+  {
+    "text": "going to be like carried through forward",
+    "start": 738.399,
+    "duration": 4.321
+  },
+  {
+    "text": "so it's like uh some highways where you",
+    "start": 739.92,
+    "duration": 5.44
+  },
+  {
+    "text": "pass four different types of information",
+    "start": 742.72,
+    "duration": 4.559
+  },
+  {
+    "text": "so I think I will not go into too much",
+    "start": 745.36,
+    "duration": 4.4
+  },
+  {
+    "text": "detail here if you are interested here",
+    "start": 747.279,
+    "duration": 4.081
+  },
+  {
+    "text": "uh I made some videos and you can read",
+    "start": 749.76,
+    "duration": 5.36
+  },
+  {
+    "text": "paper because I feel like it does get",
+    "start": 751.36,
+    "duration": 6.4
+  },
+  {
+    "text": "boring if and I cannot help you too much",
+    "start": 755.12,
+    "duration": 4.719
+  },
+  {
+    "text": "around this you need to practice this",
+    "start": 757.76,
+    "duration": 4.0
+  },
+  {
+    "text": "yourself read this understand it try",
+    "start": 759.839,
+    "duration": 4.161
+  },
+  {
+    "text": "this out if I just explain you will not",
+    "start": 761.76,
+    "duration": 4.56
+  },
+  {
+    "text": "be able to follow maybe so let's just go",
+    "start": 764.0,
+    "duration": 4.24
+  },
+  {
+    "text": "through these things those",
+    "start": 766.32,
+    "duration": 4.0
+  },
+  {
+    "text": "hyperconnections are going to get mixed",
+    "start": 768.24,
+    "duration": 4.08
+  },
+  {
+    "text": "into each other depending on some",
+    "start": 770.32,
+    "duration": 4.16
+  },
+  {
+    "text": "weights and ways of mixing so they are",
+    "start": 772.32,
+    "duration": 4.16
+  },
+  {
+    "text": "sharing information between each other",
+    "start": 774.48,
+    "duration": 4.64
+  },
+  {
+    "text": "between the attention uh feed forward",
+    "start": 776.48,
+    "duration": 5.12
+  },
+  {
+    "text": "networks and all of this and at the end",
+    "start": 779.12,
+    "duration": 4.48
+  },
+  {
+    "text": "they're going to get merged into a",
+    "start": 781.6,
+    "duration": 5.039
+  },
+  {
+    "text": "single hidden dimension vector. This way",
+    "start": 783.6,
+    "duration": 4.72
+  },
+  {
+    "text": "with these hyperconnections you don't",
+    "start": 786.639,
+    "duration": 4.32
+  },
+  {
+    "text": "just have one residual connection you",
+    "start": 788.32,
+    "duration": 6.0
+  },
+  {
+    "text": "allow the transformer to form and to",
+    "start": 790.959,
+    "duration": 4.961
+  },
+  {
+    "text": "pass many different types of data",
+    "start": 794.32,
+    "duration": 3.759
+  },
+  {
+    "text": "through it while processing and then",
+    "start": 795.92,
+    "duration": 5.2
+  },
+  {
+    "text": "that hidden state gets uh transformed",
+    "start": 798.079,
+    "duration": 5.521
+  },
+  {
+    "text": "into probability distribution over",
+    "start": 801.12,
+    "duration": 4.48
+  },
+  {
+    "text": "entire vocabulary",
+    "start": 803.6,
+    "duration": 5.359
+  },
+  {
+    "text": "with some weight matrix. So distribution",
+    "start": 805.6,
+    "duration": 6.64
+  },
+  {
+    "text": "of which uh token is likely to be next",
+    "start": 808.959,
+    "duration": 6.721
+  },
+  {
+    "text": "that fits in into that context and uh",
+    "start": 812.24,
+    "duration": 5.279
+  },
+  {
+    "text": "this is the other part that can be",
+    "start": 815.68,
+    "duration": 4.48
+  },
+  {
+    "text": "absolutely huge compared to the rest of",
+    "start": 817.519,
+    "duration": 5.521
+  },
+  {
+    "text": "the model if the vocabulary is big and",
+    "start": 820.16,
+    "duration": 4.72
+  },
+  {
+    "text": "the model is small. So this weight",
+    "start": 823.04,
+    "duration": 3.84
+  },
+  {
+    "text": "matrix that transforms that's hidden",
+    "start": 824.88,
+    "duration": 4.24
+  },
+  {
+    "text": "state times",
+    "start": 826.88,
+    "duration": 5.12
+  },
+  {
+    "text": "um vocabulary can be big and if you",
+    "start": 829.12,
+    "duration": 4.399
+  },
+  {
+    "text": "remember at the beginning of the",
+    "start": 832.0,
+    "duration": 4.32
+  },
+  {
+    "text": "transformer we also had vocabulary times",
+    "start": 833.519,
+    "duration": 4.961
+  },
+  {
+    "text": "hidden state or hidden state is actually",
+    "start": 836.32,
+    "duration": 4.4
+  },
+  {
+    "text": "vector embedding. So you can actually",
+    "start": 838.48,
+    "duration": 5.2
+  },
+  {
+    "text": "use uh this same weight matrix for both",
+    "start": 840.72,
+    "duration": 5.919
+  },
+  {
+    "text": "of them. So the vocabulary the picking",
+    "start": 843.68,
+    "duration": 6.88
+  },
+  {
+    "text": "the uh vector for each token and at the",
+    "start": 846.639,
+    "duration": 7.121
+  },
+  {
+    "text": "end here generating",
+    "start": 850.56,
+    "duration": 6.32
+  },
+  {
+    "text": "probability distribution you can use the",
+    "start": 853.76,
+    "duration": 5.519
+  },
+  {
+    "text": "exact same matrix and it works well",
+    "start": 856.88,
+    "duration": 4.959
+  },
+  {
+    "text": "depending on the architecture um they",
+    "start": 859.279,
+    "duration": 4.961
+  },
+  {
+    "text": "use it here and then you save a lot of",
+    "start": 861.839,
+    "duration": 4.401
+  },
+  {
+    "text": "parameters that you can use at different",
+    "start": 864.24,
+    "duration": 3.68
+  },
+  {
+    "text": "places.",
+    "start": 866.24,
+    "duration": 4.8
+  },
+  {
+    "text": "Another part is RMS norm. So this is",
+    "start": 867.92,
+    "duration": 6.159
+  },
+  {
+    "text": "just going to normalize a vector. So you",
+    "start": 871.04,
+    "duration": 5.76
+  },
+  {
+    "text": "see how we have like a a very different",
+    "start": 874.079,
+    "duration": 4.801
+  },
+  {
+    "text": "number here than these and neural",
+    "start": 876.8,
+    "duration": 4.399
+  },
+  {
+    "text": "networks and ma the way neural networks",
+    "start": 878.88,
+    "duration": 5.04
+  },
+  {
+    "text": "back propagate and do math calculations",
+    "start": 881.199,
+    "duration": 4.961
+  },
+  {
+    "text": "uh this can mess with the calculations",
+    "start": 883.92,
+    "duration": 5.12
+  },
+  {
+    "text": "make the weights explode make them very",
+    "start": 886.16,
+    "duration": 6.479
+  },
+  {
+    "text": "tiny or uh this can carry all of the",
+    "start": 889.04,
+    "duration": 5.599
+  },
+  {
+    "text": "weight and then make these irrelevant",
+    "start": 892.639,
+    "duration": 3.921
+  },
+  {
+    "text": "because this is so much bigger. So",
+    "start": 894.639,
+    "duration": 4.32
+  },
+  {
+    "text": "usually you want to make the numbers",
+    "start": 896.56,
+    "duration": 6.079
+  },
+  {
+    "text": "around 1 minus one zero uh and uh",
+    "start": 898.959,
+    "duration": 6.401
+  },
+  {
+    "text": "similar in scale and then these numbers",
+    "start": 902.639,
+    "duration": 4.56
+  },
+  {
+    "text": "will not go crazy when you multiply so",
+    "start": 905.36,
+    "duration": 4.719
+  },
+  {
+    "text": "many of them in a row.",
+    "start": 907.199,
+    "duration": 6.0
+  },
+  {
+    "text": "So this is positional encoding. So how",
+    "start": 910.079,
+    "duration": 6.401
+  },
+  {
+    "text": "does transformer know which token comes",
+    "start": 913.199,
+    "duration": 5.841
+  },
+  {
+    "text": "after which one? Because in attention in",
+    "start": 916.48,
+    "duration": 6.799
+  },
+  {
+    "text": "attention mechanism uh you have tokens",
+    "start": 919.04,
+    "duration": 6.799
+  },
+  {
+    "text": "multiplied by other tokens but you don't",
+    "start": 923.279,
+    "duration": 5.92
+  },
+  {
+    "text": "know the order of tokens in the prompt.",
+    "start": 925.839,
+    "duration": 7.521
+  },
+  {
+    "text": "So each of the token vectors is rotated.",
+    "start": 929.199,
+    "duration": 6.961
+  },
+  {
+    "text": "For example, if you have some vector,",
+    "start": 933.36,
+    "duration": 4.8
+  },
+  {
+    "text": "you take pairs of dimensions and rotate",
+    "start": 936.16,
+    "duration": 6.72
+  },
+  {
+    "text": "each pair and depending on where",
+    "start": 938.16,
+    "duration": 7.119
+  },
+  {
+    "text": "uh the number of like where in the",
+    "start": 942.88,
+    "duration": 5.199
+  },
+  {
+    "text": "sequence that pair is and where the",
+    "start": 945.279,
+    "duration": 4.881
+  },
+  {
+    "text": "token is in the sequence of tokens,",
+    "start": 948.079,
+    "duration": 3.44
+  },
+  {
+    "text": "you're going to have a bit different",
+    "start": 950.16,
+    "duration": 4.32
+  },
+  {
+    "text": "rotations. So, transformer will learn",
+    "start": 951.519,
+    "duration": 6.56
+  },
+  {
+    "text": "based on how rotated these vectors are",
+    "start": 954.48,
+    "duration": 5.76
+  },
+  {
+    "text": "uh their position.",
+    "start": 958.079,
+    "duration": 5.921
+  },
+  {
+    "text": "So in GLM they are using nope that's a",
+    "start": 960.24,
+    "duration": 7.12
+  },
+  {
+    "text": "version of rope in main model and then",
+    "start": 964.0,
+    "duration": 6.56
+  },
+  {
+    "text": "rope in the sparse indexer. This sparse",
+    "start": 967.36,
+    "duration": 6.56
+  },
+  {
+    "text": "indexer uh is checking in the attention",
+    "start": 970.56,
+    "duration": 5.279
+  },
+  {
+    "text": "which part we should it should attend to",
+    "start": 973.92,
+    "duration": 3.919
+  },
+  {
+    "text": "which part it should not attend to",
+    "start": 975.839,
+    "duration": 5.12
+  },
+  {
+    "text": "because the way attention works here is",
+    "start": 977.839,
+    "duration": 5.521
+  },
+  {
+    "text": "it's not going to attend to everything",
+    "start": 980.959,
+    "duration": 4.88
+  },
+  {
+    "text": "uh entire attent.",
+    "start": 983.36,
+    "duration": 4.399
+  },
+  {
+    "text": "So this token will just attend to most",
+    "start": 985.839,
+    "duration": 5.44
+  },
+  {
+    "text": "relevant tokens. So this indexer is",
+    "start": 987.759,
+    "duration": 5.121
+  },
+  {
+    "text": "going to search for the most relevant",
+    "start": 991.279,
+    "duration": 5.041
+  },
+  {
+    "text": "tokens for this token to attend to and",
+    "start": 992.88,
+    "duration": 6.48
+  },
+  {
+    "text": "indexer is also attention mechanism but",
+    "start": 996.32,
+    "duration": 5.439
+  },
+  {
+    "text": "a lot lighter a lot cheaper a lot faster",
+    "start": 999.36,
+    "duration": 5.2
+  },
+  {
+    "text": "attention mechanism and it just looks",
+    "start": 1001.759,
+    "duration": 5.281
+  },
+  {
+    "text": "for relevance and it doesn't need to do",
+    "start": 1004.56,
+    "duration": 4.56
+  },
+  {
+    "text": "so much computation that regular",
+    "start": 1007.04,
+    "duration": 4.56
+  },
+  {
+    "text": "attention does. So it picks most",
+    "start": 1009.12,
+    "duration": 4.079
+  },
+  {
+    "text": "relevant tokens and then only those",
+    "start": 1011.6,
+    "duration": 4.08
+  },
+  {
+    "text": "tokens are computed with the full",
+    "start": 1013.199,
+    "duration": 4.961
+  },
+  {
+    "text": "regular attention.",
+    "start": 1015.68,
+    "duration": 5.68
+  },
+  {
+    "text": "So for each token in the attention",
+    "start": 1018.16,
+    "duration": 6.72
+  },
+  {
+    "text": "mechanism, it's going to pick uh n most",
+    "start": 1021.36,
+    "duration": 5.52
+  },
+  {
+    "text": "relevant tokens. It can be 2,000 most",
+    "start": 1024.88,
+    "duration": 3.76
+  },
+  {
+    "text": "relevant tokens or thousand most",
+    "start": 1026.88,
+    "duration": 4.0
+  },
+  {
+    "text": "relevant tokens and then do attention",
+    "start": 1028.64,
+    "duration": 4.96
+  },
+  {
+    "text": "with that. And then here the attention",
+    "start": 1030.88,
+    "duration": 5.039
+  },
+  {
+    "text": "is just scaling based on this small",
+    "start": 1033.6,
+    "duration": 4.88
+  },
+  {
+    "text": "indexer. So this small indexer, so",
+    "start": 1035.919,
+    "duration": 4.561
+  },
+  {
+    "text": "instead of scaling like this, it's going",
+    "start": 1038.48,
+    "duration": 5.359
+  },
+  {
+    "text": "to scale a lot slower because because",
+    "start": 1040.48,
+    "duration": 5.28
+  },
+  {
+    "text": "the attention size is always fixed. it",
+    "start": 1043.839,
+    "duration": 3.681
+  },
+  {
+    "text": "doesn't scale but the indexer scales",
+    "start": 1045.76,
+    "duration": 4.0
+  },
+  {
+    "text": "with the sequence length sequence",
+    "start": 1047.52,
+    "duration": 4.159
+  },
+  {
+    "text": "length.",
+    "start": 1049.76,
+    "duration": 4.88
+  },
+  {
+    "text": "So I'm talking about how compute scales",
+    "start": 1051.679,
+    "duration": 6.081
+  },
+  {
+    "text": "with sequence length and uh it's going",
+    "start": 1054.64,
+    "duration": 5.919
+  },
+  {
+    "text": "to scale a lot slower with sequence",
+    "start": 1057.76,
+    "duration": 6.72
+  },
+  {
+    "text": "length a lot less compute because this",
+    "start": 1060.559,
+    "duration": 6.161
+  },
+  {
+    "text": "sparse indexer is a lot lighter type of",
+    "start": 1064.48,
+    "duration": 4.24
+  },
+  {
+    "text": "attention and does a lot less",
+    "start": 1066.72,
+    "duration": 3.92
+  },
+  {
+    "text": "computation just needs to find relevant",
+    "start": 1068.72,
+    "duration": 3.6
+  },
+  {
+    "text": "tokens.",
+    "start": 1070.64,
+    "duration": 4.88
+  },
+  {
+    "text": "So as you can see uh so the linear",
+    "start": 1072.32,
+    "duration": 6.16
+  },
+  {
+    "text": "attention it's different from this",
+    "start": 1075.52,
+    "duration": 5.92
+  },
+  {
+    "text": "standard quadratic attention",
+    "start": 1078.48,
+    "duration": 6.16
+  },
+  {
+    "text": "it keeps so not to confuse you let me",
+    "start": 1081.44,
+    "duration": 5.76
+  },
+  {
+    "text": "first explain that their attention",
+    "start": 1084.64,
+    "duration": 5.12
+  },
+  {
+    "text": "mechanism does not contain positional",
+    "start": 1087.2,
+    "duration": 4.88
+  },
+  {
+    "text": "encodings",
+    "start": 1089.76,
+    "duration": 5.039
+  },
+  {
+    "text": "and uh only the sparse indexer contains",
+    "start": 1092.08,
+    "duration": 5.04
+  },
+  {
+    "text": "positional encodings",
+    "start": 1094.799,
+    "duration": 6.88
+  },
+  {
+    "text": "and so so nope means uh no positional",
+    "start": 1097.12,
+    "duration": 8.08
+  },
+  {
+    "text": "encoding things. So we apply rope in",
+    "start": 1101.679,
+    "duration": 6.161
+  },
+  {
+    "text": "attention and indexer just to make it",
+    "start": 1105.2,
+    "duration": 5.04
+  },
+  {
+    "text": "simpler for our model",
+    "start": 1107.84,
+    "duration": 5.199
+  },
+  {
+    "text": "and linear attention is just KDA linear",
+    "start": 1110.24,
+    "duration": 5.28
+  },
+  {
+    "text": "attention. So this is state space model.",
+    "start": 1113.039,
+    "duration": 5.52
+  },
+  {
+    "text": "I'll explain this. So we have linear",
+    "start": 1115.52,
+    "duration": 5.44
+  },
+  {
+    "text": "linear linear spars. So linears are",
+    "start": 1118.559,
+    "duration": 4.801
+  },
+  {
+    "text": "cheap. They always keep a constant",
+    "start": 1120.96,
+    "duration": 5.52
+  },
+  {
+    "text": "vector. So imagine that you have tokens.",
+    "start": 1123.36,
+    "duration": 5.92
+  },
+  {
+    "text": "You have this like state like a matrix",
+    "start": 1126.48,
+    "duration": 5.84
+  },
+  {
+    "text": "that that's like a memory of all of the",
+    "start": 1129.28,
+    "duration": 6.24
+  },
+  {
+    "text": "tokens and all of the tokens that as",
+    "start": 1132.32,
+    "duration": 5.52
+  },
+  {
+    "text": "they come they get fed into this state",
+    "start": 1135.52,
+    "duration": 4.32
+  },
+  {
+    "text": "into this memory and it's always same",
+    "start": 1137.84,
+    "duration": 4.32
+  },
+  {
+    "text": "size. It's like just adding it in there.",
+    "start": 1139.84,
+    "duration": 4.4
+  },
+  {
+    "text": "And so linears are going to remember",
+    "start": 1142.16,
+    "duration": 3.519
+  },
+  {
+    "text": "recent tokens. They're not going to",
+    "start": 1144.24,
+    "duration": 4.559
+  },
+  {
+    "text": "remember past tokens because the further",
+    "start": 1145.679,
+    "duration": 5.201
+  },
+  {
+    "text": "away token is, the more it's been",
+    "start": 1148.799,
+    "duration": 3.601
+  },
+  {
+    "text": "modified. has been messed up by the",
+    "start": 1150.88,
+    "duration": 4.32
+  },
+  {
+    "text": "newer tokens. So this is for the recent",
+    "start": 1152.4,
+    "duration": 5.68
+  },
+  {
+    "text": "tokens and these are so fast a lot",
+    "start": 1155.2,
+    "duration": 5.76
+  },
+  {
+    "text": "faster than attention and attention is",
+    "start": 1158.08,
+    "duration": 6.32
+  },
+  {
+    "text": "for uh long range any tokens anywhere in",
+    "start": 1160.96,
+    "duration": 5.599
+  },
+  {
+    "text": "the context window.",
+    "start": 1164.4,
+    "duration": 4.56
+  },
+  {
+    "text": "So by my experience this trains a lot",
+    "start": 1166.559,
+    "duration": 5.36
+  },
+  {
+    "text": "faster and inferences a lot faster",
+    "start": 1168.96,
+    "duration": 4.959
+  },
+  {
+    "text": "as opposed to attention. That's why this",
+    "start": 1171.919,
+    "duration": 4.401
+  },
+  {
+    "text": "is optimized for inference.",
+    "start": 1173.919,
+    "duration": 5.601
+  },
+  {
+    "text": "So linear layers carry compressed",
+    "start": 1176.32,
+    "duration": 6.239
+  },
+  {
+    "text": "history cheaply memory. Sparse layers",
+    "start": 1179.52,
+    "duration": 6.08
+  },
+  {
+    "text": "periodically recover exact distant",
+    "start": 1182.559,
+    "duration": 6.0
+  },
+  {
+    "text": "details.",
+    "start": 1185.6,
+    "duration": 4.959
+  },
+  {
+    "text": "Here is the code for the layers and",
+    "start": 1188.559,
+    "duration": 3.921
+  },
+  {
+    "text": "attention. So let me show you. It's very",
+    "start": 1190.559,
+    "duration": 4.641
+  },
+  {
+    "text": "simple. So you're just going to take",
+    "start": 1192.48,
+    "duration": 6.319
+  },
+  {
+    "text": "every fourth layer and set it a sparse",
+    "start": 1195.2,
+    "duration": 5.359
+  },
+  {
+    "text": "attention.",
+    "start": 1198.799,
+    "duration": 3.601
+  },
+  {
+    "text": "And this is linear attention. So you",
+    "start": 1200.559,
+    "duration": 4.401
+  },
+  {
+    "text": "have some tokens and they all get into",
+    "start": 1202.4,
+    "duration": 5.04
+  },
+  {
+    "text": "this matrix memory matrix. They call",
+    "start": 1204.96,
+    "duration": 6.24
+  },
+  {
+    "text": "this running key value state.",
+    "start": 1207.44,
+    "duration": 6.239
+  },
+  {
+    "text": "So as context grows, sequence length",
+    "start": 1211.2,
+    "duration": 6.16
+  },
+  {
+    "text": "grows, this state stays fixed. So this",
+    "start": 1213.679,
+    "duration": 6.321
+  },
+  {
+    "text": "is a way to remember stuff without",
+    "start": 1217.36,
+    "duration": 5.12
+  },
+  {
+    "text": "scaling quadratically.",
+    "start": 1220.0,
+    "duration": 4.0
+  },
+  {
+    "text": "The trade-off is you lose some",
+    "start": 1222.48,
+    "duration": 3.12
+  },
+  {
+    "text": "information because you are compressing",
+    "start": 1224.0,
+    "duration": 4.4
+  },
+  {
+    "text": "it. So sparse attention usually in",
+    "start": 1225.6,
+    "duration": 5.36
+  },
+  {
+    "text": "sparse attention you look at fixed",
+    "start": 1228.4,
+    "duration": 5.84
+  },
+  {
+    "text": "window of last n tokens last 2,000",
+    "start": 1230.96,
+    "duration": 6.48
+  },
+  {
+    "text": "tokens and then you can uh look at",
+    "start": 1234.24,
+    "duration": 4.72
+  },
+  {
+    "text": "regular",
+    "start": 1237.44,
+    "duration": 4.64
+  },
+  {
+    "text": "spaces or you can search for relevant",
+    "start": 1238.96,
+    "duration": 6.16
+  },
+  {
+    "text": "tokens uh behind",
+    "start": 1242.08,
+    "duration": 5.28
+  },
+  {
+    "text": "and then we have mixture of experts. For",
+    "start": 1245.12,
+    "duration": 3.919
+  },
+  {
+    "text": "example,",
+    "start": 1247.36,
+    "duration": 5.84
+  },
+  {
+    "text": "uh in GLM, you uh you have 288",
+    "start": 1249.039,
+    "duration": 7.76
+  },
+  {
+    "text": "uh chosen experts and it's going to",
+    "start": 1253.2,
+    "duration": 5.599
+  },
+  {
+    "text": "choose each token will pass through",
+    "start": 1256.799,
+    "duration": 5.601
+  },
+  {
+    "text": "eight out of 288 and there is one shared",
+    "start": 1258.799,
+    "duration": 5.36
+  },
+  {
+    "text": "expert.",
+    "start": 1262.4,
+    "duration": 3.68
+  },
+  {
+    "text": "Every token passes through the shared",
+    "start": 1264.159,
+    "duration": 5.361
+  },
+  {
+    "text": "expert and that expert will uh learn",
+    "start": 1266.08,
+    "duration": 5.599
+  },
+  {
+    "text": "some common information for every token.",
+    "start": 1269.52,
+    "duration": 4.32
+  },
+  {
+    "text": "So other experts don't need to waste",
+    "start": 1271.679,
+    "duration": 5.841
+  },
+  {
+    "text": "capacity on that. So we may have uh",
+    "start": 1273.84,
+    "duration": 7.52
+  },
+  {
+    "text": "eight routed and two uh two out of eight",
+    "start": 1277.52,
+    "duration": 6.399
+  },
+  {
+    "text": "chosen and then one shared in our small",
+    "start": 1281.36,
+    "duration": 4.88
+  },
+  {
+    "text": "model. I also had I can have a model",
+    "start": 1283.919,
+    "duration": 5.281
+  },
+  {
+    "text": "with just two experts and one routed. I",
+    "start": 1286.24,
+    "duration": 5.439
+  },
+  {
+    "text": "mean one chosen. Here I show you the",
+    "start": 1289.2,
+    "duration": 5.2
+  },
+  {
+    "text": "model configuration for our training",
+    "start": 1291.679,
+    "duration": 5.761
+  },
+  {
+    "text": "model. We already mentioned uh this. So",
+    "start": 1294.4,
+    "duration": 7.6
+  },
+  {
+    "text": "eight experts 12 layers etc. So there",
+    "start": 1297.44,
+    "duration": 7.44
+  },
+  {
+    "text": "are these four hyper connections. Then",
+    "start": 1302.0,
+    "duration": 6.159
+  },
+  {
+    "text": "you have uh inside of attention. So",
+    "start": 1304.88,
+    "duration": 5.52
+  },
+  {
+    "text": "between attention and",
+    "start": 1308.159,
+    "duration": 4.161
+  },
+  {
+    "text": "so they kind of merge into attention.",
+    "start": 1310.4,
+    "duration": 3.92
+  },
+  {
+    "text": "Then they expand back and then merge",
+    "start": 1312.32,
+    "duration": 5.52
+  },
+  {
+    "text": "back intoe. And then so so here they are",
+    "start": 1314.32,
+    "duration": 6.56
+  },
+  {
+    "text": "connected like residuals and here they",
+    "start": 1317.84,
+    "duration": 5.04
+  },
+  {
+    "text": "are also connected like residuals. So",
+    "start": 1320.88,
+    "duration": 6.48
+  },
+  {
+    "text": "they passe and they go through as well.",
+    "start": 1322.88,
+    "duration": 6.96
+  },
+  {
+    "text": "So attention moves information between",
+    "start": 1327.36,
+    "duration": 5.76
+  },
+  {
+    "text": "token positions. Moe applies specialist",
+    "start": 1329.84,
+    "duration": 5.44
+  },
+  {
+    "text": "transformations to each position.",
+    "start": 1333.12,
+    "duration": 4.08
+  },
+  {
+    "text": "Residual attentions preserve the",
+    "start": 1335.28,
+    "duration": 4.08
+  },
+  {
+    "text": "previous representation while adding",
+    "start": 1337.2,
+    "duration": 4.8
+  },
+  {
+    "text": "both updates and multiple connections",
+    "start": 1339.36,
+    "duration": 5.12
+  },
+  {
+    "text": "preserve different type of information.",
+    "start": 1342.0,
+    "duration": 6.24
+  },
+  {
+    "text": "So input and output share one matrix. So",
+    "start": 1344.48,
+    "duration": 6.319
+  },
+  {
+    "text": "the output weights and embedding weights",
+    "start": 1348.24,
+    "duration": 5.12
+  },
+  {
+    "text": "are the same matrix as I mentioned",
+    "start": 1350.799,
+    "duration": 6.481
+  },
+  {
+    "text": "earlier. So read by tokens and predict",
+    "start": 1353.36,
+    "duration": 6.96
+  },
+  {
+    "text": "next bite the same weight matrix. one",
+    "start": 1357.28,
+    "duration": 5.12
+  },
+  {
+    "text": "matrix learns both token embeddings and",
+    "start": 1360.32,
+    "duration": 4.96
+  },
+  {
+    "text": "output logits or I should say the weight",
+    "start": 1362.4,
+    "duration": 6.159
+  },
+  {
+    "text": "matrix that transforms them into those.",
+    "start": 1365.28,
+    "duration": 6.24
+  },
+  {
+    "text": "So weight tying this is how it's called",
+    "start": 1368.559,
+    "duration": 6.48
+  },
+  {
+    "text": "removes second large matrix and makes",
+    "start": 1371.52,
+    "duration": 6.08
+  },
+  {
+    "text": "reading and predicting bytes use the",
+    "start": 1375.039,
+    "duration": 5.361
+  },
+  {
+    "text": "same learn geometry. So maybe there is",
+    "start": 1377.6,
+    "duration": 5.04
+  },
+  {
+    "text": "some benefit there as well. I don't know",
+    "start": 1380.4,
+    "duration": 4.08
+  },
+  {
+    "text": "if there is research probably there is",
+    "start": 1382.64,
+    "duration": 4.8
+  },
+  {
+    "text": "maybe you also can do some so there is",
+    "start": 1384.48,
+    "duration": 8.319
+  },
+  {
+    "text": "also vision in uh GLM flash and uh it so",
+    "start": 1387.44,
+    "duration": 6.8
+  },
+  {
+    "text": "there is image it's going to convert",
+    "start": 1392.799,
+    "duration": 3.681
+  },
+  {
+    "text": "that image into some patch embeddings",
+    "start": 1394.24,
+    "duration": 5.2
+  },
+  {
+    "text": "convert those into tokens and then mix",
+    "start": 1396.48,
+    "duration": 7.439
+  },
+  {
+    "text": "them into uh the main model for images",
+    "start": 1399.44,
+    "duration": 6.32
+  },
+  {
+    "text": "it's going to get divided to patches",
+    "start": 1403.919,
+    "duration": 5.841
+  },
+  {
+    "text": "each patch is a token so uh it has uh",
+    "start": 1405.76,
+    "duration": 6.399
+  },
+  {
+    "text": "this 2D positional",
+    "start": 1409.76,
+    "duration": 5.68
+  },
+  {
+    "text": "rotary embeddings",
+    "start": 1412.159,
+    "duration": 6.481
+  },
+  {
+    "text": "similar to rope is just 2D. So let's say",
+    "start": 1415.44,
+    "duration": 6.08
+  },
+  {
+    "text": "you have image number eight. It's 32x 32",
+    "start": 1418.64,
+    "duration": 6.32
+  },
+  {
+    "text": "RGB image and it's going to get divided",
+    "start": 1421.52,
+    "duration": 8.48
+  },
+  {
+    "text": "into 8 by8 patches in this case.",
+    "start": 1424.96,
+    "duration": 8.079
+  },
+  {
+    "text": "So uh there are two vision blocks in our",
+    "start": 1430.0,
+    "duration": 6.799
+  },
+  {
+    "text": "small version that we coded that all of",
+    "start": 1433.039,
+    "duration": 6.481
+  },
+  {
+    "text": "this code is in the GitHub by the way.",
+    "start": 1436.799,
+    "duration": 4.401
+  },
+  {
+    "text": "all of the code right here in the",
+    "start": 1439.52,
+    "duration": 4.32
+  },
+  {
+    "text": "GitHub. So you can check it. These are",
+    "start": 1441.2,
+    "duration": 4.56
+  },
+  {
+    "text": "the experiments.",
+    "start": 1443.84,
+    "duration": 4.88
+  },
+  {
+    "text": "So each of those patches, four patches",
+    "start": 1445.76,
+    "duration": 5.84
+  },
+  {
+    "text": "are going to become one vector, one",
+    "start": 1448.72,
+    "duration": 5.28
+  },
+  {
+    "text": "token embedding vector.",
+    "start": 1451.6,
+    "duration": 5.36
+  },
+  {
+    "text": "So 2x2 merge",
+    "start": 1454.0,
+    "duration": 6.64
+  },
+  {
+    "text": "and so we will get 4x4 at the end which",
+    "start": 1456.96,
+    "duration": 8.719
+  },
+  {
+    "text": "is 16 tokens from this 32x32 image. So",
+    "start": 1460.64,
+    "duration": 6.96
+  },
+  {
+    "text": "if you have some other image that's not",
+    "start": 1465.679,
+    "duration": 5.041
+  },
+  {
+    "text": "32x 32, it must be resized into this",
+    "start": 1467.6,
+    "duration": 6.72
+  },
+  {
+    "text": "shape and padded or or cropped. So this",
+    "start": 1470.72,
+    "duration": 6.8
+  },
+  {
+    "text": "is just for our encoder. GPT has uh any",
+    "start": 1474.32,
+    "duration": 5.92
+  },
+  {
+    "text": "image encoder you know these uh other",
+    "start": 1477.52,
+    "duration": 5.039
+  },
+  {
+    "text": "models and we can also make any I just",
+    "start": 1480.24,
+    "duration": 5.28
+  },
+  {
+    "text": "made this one very quickly. So image",
+    "start": 1482.559,
+    "duration": 5.921
+  },
+  {
+    "text": "tokens are going to have some mark like",
+    "start": 1485.52,
+    "duration": 5.759
+  },
+  {
+    "text": "image starts here and then all of the 16",
+    "start": 1488.48,
+    "duration": 5.76
+  },
+  {
+    "text": "image tokens and then image ends here.",
+    "start": 1491.279,
+    "duration": 5.121
+  },
+  {
+    "text": "So this is how they get added into the",
+    "start": 1494.24,
+    "duration": 6.16
+  },
+  {
+    "text": "context window. There are these marks",
+    "start": 1496.4,
+    "duration": 7.279
+  },
+  {
+    "text": "and you may have a uh text around. So",
+    "start": 1500.4,
+    "duration": 5.279
+  },
+  {
+    "text": "this beginning of sequence by the way I",
+    "start": 1503.679,
+    "duration": 4.961
+  },
+  {
+    "text": "didn't mention this is special token uh",
+    "start": 1505.679,
+    "duration": 5.6
+  },
+  {
+    "text": "in the vocabulary it just shows this is",
+    "start": 1508.64,
+    "duration": 5.36
+  },
+  {
+    "text": "beginning of sequence of a conversation.",
+    "start": 1511.279,
+    "duration": 5.76
+  },
+  {
+    "text": "And then you can append text to all of",
+    "start": 1514.0,
+    "duration": 4.799
+  },
+  {
+    "text": "these tokens.",
+    "start": 1517.039,
+    "duration": 3.681
+  },
+  {
+    "text": "And then the next here the next one",
+    "start": 1518.799,
+    "duration": 4.0
+  },
+  {
+    "text": "would be for example number seven",
+    "start": 1520.72,
+    "duration": 5.28
+  },
+  {
+    "text": "predicted token. if this image is of uh",
+    "start": 1522.799,
+    "duration": 7.12
+  },
+  {
+    "text": "image is a digit seven. So we trained a",
+    "start": 1526.0,
+    "duration": 6.48
+  },
+  {
+    "text": "small transformer to look at the image",
+    "start": 1529.919,
+    "duration": 5.041
+  },
+  {
+    "text": "of a digit and tell us which digit it",
+    "start": 1532.48,
+    "duration": 5.92
+  },
+  {
+    "text": "is. So if you are interested more about",
+    "start": 1534.96,
+    "duration": 6.079
+  },
+  {
+    "text": "the nitty-gritty details, you just tell",
+    "start": 1538.4,
+    "duration": 5.04
+  },
+  {
+    "text": "your codeex or cloud code to clone this",
+    "start": 1541.039,
+    "duration": 4.64
+  },
+  {
+    "text": "repository. You can ask it about the",
+    "start": 1543.44,
+    "duration": 4.0
+  },
+  {
+    "text": "code, about everything, how everything",
+    "start": 1545.679,
+    "duration": 3.841
+  },
+  {
+    "text": "works. You can also tell it to draw",
+    "start": 1547.44,
+    "duration": 5.04
+  },
+  {
+    "text": "these graphs like I did here. So these",
+    "start": 1549.52,
+    "duration": 4.96
+  },
+  {
+    "text": "are examples. Now, of course, it's very",
+    "start": 1552.48,
+    "duration": 3.76
+  },
+  {
+    "text": "visible to us. It's very easy for us to",
+    "start": 1554.48,
+    "duration": 4.88
+  },
+  {
+    "text": "see. Anyways, our vision encoder, our",
+    "start": 1556.24,
+    "duration": 5.439
+  },
+  {
+    "text": "vision transformer was successfully",
+    "start": 1559.36,
+    "duration": 5.12
+  },
+  {
+    "text": "recognizing digits using this method",
+    "start": 1561.679,
+    "duration": 5.041
+  },
+  {
+    "text": "that I explained. If you want do some",
+    "start": 1564.48,
+    "duration": 4.96
+  },
+  {
+    "text": "research, you can make this a lot harder",
+    "start": 1566.72,
+    "duration": 5.36
+  },
+  {
+    "text": "and then try to see at which point it's",
+    "start": 1569.44,
+    "duration": 5.28
+  },
+  {
+    "text": "not able to recognize them. So, let's",
+    "start": 1572.08,
+    "duration": 5.04
+  },
+  {
+    "text": "look at the pre-training. So we have",
+    "start": 1574.72,
+    "duration": 5.68
+  },
+  {
+    "text": "some prompt that is a Python function",
+    "start": 1577.12,
+    "duration": 5.679
+  },
+  {
+    "text": "and then we have this completion which",
+    "start": 1580.4,
+    "duration": 5.12
+  },
+  {
+    "text": "is model generated uh because the task",
+    "start": 1582.799,
+    "duration": 6.721
+  },
+  {
+    "text": "is return x + one. Now uh in",
+    "start": 1585.52,
+    "duration": 6.48
+  },
+  {
+    "text": "pre-training it's not uh thinking of",
+    "start": 1589.52,
+    "duration": 5.279
+  },
+  {
+    "text": "this answer. It's just repeating what",
+    "start": 1592.0,
+    "duration": 5.679
+  },
+  {
+    "text": "the data is. So it's just repeating uh",
+    "start": 1594.799,
+    "duration": 4.401
+  },
+  {
+    "text": "these. That's how it's learning. It",
+    "start": 1597.679,
+    "duration": 4.0
+  },
+  {
+    "text": "already has all of these. So it's",
+    "start": 1599.2,
+    "duration": 4.64
+  },
+  {
+    "text": "similar to imitation learning. It's",
+    "start": 1601.679,
+    "duration": 3.681
+  },
+  {
+    "text": "imitating. Now, in pre-training, it's",
+    "start": 1603.84,
+    "duration": 3.6
+  },
+  {
+    "text": "imitating to write. It's learning what",
+    "start": 1605.36,
+    "duration": 3.6
+  },
+  {
+    "text": "all of these tokens, all of these",
+    "start": 1607.44,
+    "duration": 3.44
+  },
+  {
+    "text": "characters mean, so it can generate",
+    "start": 1608.96,
+    "duration": 4.4
+  },
+  {
+    "text": "them. And then in reinforcement",
+    "start": 1610.88,
+    "duration": 3.679
+  },
+  {
+    "text": "learning, it's going to learn to",
+    "start": 1613.36,
+    "duration": 4.0
+  },
+  {
+    "text": "generate to think about which answers",
+    "start": 1614.559,
+    "duration": 7.36
+  },
+  {
+    "text": "are actually correct. So, it's learning",
+    "start": 1617.36,
+    "duration": 7.12
+  },
+  {
+    "text": "in uh post training. It's learning to be",
+    "start": 1621.919,
+    "duration": 5.841
+  },
+  {
+    "text": "intelligent more. So, you have red, it",
+    "start": 1624.48,
+    "duration": 5.199
+  },
+  {
+    "text": "predicts you, it you have return,",
+    "start": 1627.76,
+    "duration": 4.159
+  },
+  {
+    "text": "predicts the space. You have so many",
+    "start": 1629.679,
+    "duration": 5.441
+  },
+  {
+    "text": "training examples just from one prompt.",
+    "start": 1631.919,
+    "duration": 5.041
+  },
+  {
+    "text": "This is the classic pre-training",
+    "start": 1635.12,
+    "duration": 4.4
+  },
+  {
+    "text": "pipeline. Probabilities, cross entropy,",
+    "start": 1636.96,
+    "duration": 5.28
+  },
+  {
+    "text": "assigned weights and then optimizer is",
+    "start": 1639.52,
+    "duration": 4.56
+  },
+  {
+    "text": "going to update all the parameters based",
+    "start": 1642.24,
+    "duration": 6.72
+  },
+  {
+    "text": "on um result next token correctness. Uh",
+    "start": 1644.08,
+    "duration": 8.719
+  },
+  {
+    "text": "so Adam W most of people are using muon",
+    "start": 1648.96,
+    "duration": 6.16
+  },
+  {
+    "text": "but I just did it for simplicity. So we",
+    "start": 1652.799,
+    "duration": 5.601
+  },
+  {
+    "text": "don't use both we just use W. You see",
+    "start": 1655.12,
+    "duration": 5.919
+  },
+  {
+    "text": "how gradients go from wrong probability",
+    "start": 1658.4,
+    "duration": 5.36
+  },
+  {
+    "text": "distribution to more correct one. They",
+    "start": 1661.039,
+    "duration": 5.601
+  },
+  {
+    "text": "are literally moving the choice. It's",
+    "start": 1663.76,
+    "duration": 4.56
+  },
+  {
+    "text": "going to change millions of weights. So",
+    "start": 1666.64,
+    "duration": 4.159
+  },
+  {
+    "text": "correct bite becomes a bit more likely",
+    "start": 1668.32,
+    "duration": 5.12
+  },
+  {
+    "text": "each time. You see how in the beginning",
+    "start": 1670.799,
+    "duration": 4.24
+  },
+  {
+    "text": "before pre-training it was just",
+    "start": 1673.44,
+    "duration": 5.76
+  },
+  {
+    "text": "generating some random uh characters if",
+    "start": 1675.039,
+    "duration": 6.961
+  },
+  {
+    "text": "this is this is the prompt",
+    "start": 1679.2,
+    "duration": 6.32
+  },
+  {
+    "text": "but later it learned to generate this.",
+    "start": 1682.0,
+    "duration": 5.44
+  },
+  {
+    "text": "Now let's see some research questions",
+    "start": 1685.52,
+    "duration": 4.48
+  },
+  {
+    "text": "and experiments I did. So this is how",
+    "start": 1687.44,
+    "duration": 5.68
+  },
+  {
+    "text": "they do research. This is very standard",
+    "start": 1690.0,
+    "duration": 6.08
+  },
+  {
+    "text": "example. So you see if you have less uh",
+    "start": 1693.12,
+    "duration": 5.2
+  },
+  {
+    "text": "data and you repeat the data it's going",
+    "start": 1696.08,
+    "duration": 6.0
+  },
+  {
+    "text": "to learn faster in the beginning but",
+    "start": 1698.32,
+    "duration": 7.839
+  },
+  {
+    "text": "later more data will just overtake.",
+    "start": 1702.08,
+    "duration": 6.24
+  },
+  {
+    "text": "So diversity is not useful if you do",
+    "start": 1706.159,
+    "duration": 5.681
+  },
+  {
+    "text": "like just a few steps but then at 200",
+    "start": 1708.32,
+    "duration": 6.4
+  },
+  {
+    "text": "steps it becomes more and more useful.",
+    "start": 1711.84,
+    "duration": 4.88
+  },
+  {
+    "text": "Okay. Now let's say you have uh three",
+    "start": 1714.72,
+    "duration": 4.48
+  },
+  {
+    "text": "different types of data type A, type B",
+    "start": 1716.72,
+    "duration": 6.48
+  },
+  {
+    "text": "and type C. Is it better to uh first",
+    "start": 1719.2,
+    "duration": 6.64
+  },
+  {
+    "text": "train on type A then type B then type C",
+    "start": 1723.2,
+    "duration": 7.52
+  },
+  {
+    "text": "or interle them? So uh you will see that",
+    "start": 1725.84,
+    "duration": 7.36
+  },
+  {
+    "text": "if you train it like this then as it",
+    "start": 1730.72,
+    "duration": 4.24
+  },
+  {
+    "text": "starts to learn C it's going to start",
+    "start": 1733.2,
+    "duration": 5.359
+  },
+  {
+    "text": "forgetting A and B.",
+    "start": 1734.96,
+    "duration": 6.4
+  },
+  {
+    "text": "So it's better to interle them. And you",
+    "start": 1738.559,
+    "duration": 4.321
+  },
+  {
+    "text": "can show this with an experiment as",
+    "start": 1741.36,
+    "duration": 4.08
+  },
+  {
+    "text": "well. So you can do this experiment if",
+    "start": 1742.88,
+    "duration": 5.84
+  },
+  {
+    "text": "you want. So interle data will improve",
+    "start": 1745.44,
+    "duration": 5.52
+  },
+  {
+    "text": "generation as well as well as prevent",
+    "start": 1748.72,
+    "duration": 4.079
+  },
+  {
+    "text": "catastrophic forgetting of previously",
+    "start": 1750.96,
+    "duration": 5.839
+  },
+  {
+    "text": "learned data. So homogeneous uh blocks",
+    "start": 1752.799,
+    "duration": 6.081
+  },
+  {
+    "text": "likely increased recency bias or",
+    "start": 1756.799,
+    "duration": 4.0
+  },
+  {
+    "text": "forgetting. But you need to know what",
+    "start": 1758.88,
+    "duration": 3.919
+  },
+  {
+    "text": "your experiment is measuring here. We're",
+    "start": 1760.799,
+    "duration": 3.6
+  },
+  {
+    "text": "just measuring performance. We're not",
+    "start": 1762.799,
+    "duration": 3.201
+  },
+  {
+    "text": "I'm not measuring if it's increasing",
+    "start": 1764.399,
+    "duration": 3.601
+  },
+  {
+    "text": "recency bias or forgetting. So I cannot",
+    "start": 1766.0,
+    "duration": 4.08
+  },
+  {
+    "text": "make those claims. I can just suggest",
+    "start": 1768.0,
+    "duration": 4.799
+  },
+  {
+    "text": "that might be the case. How about this?",
+    "start": 1770.08,
+    "duration": 5.52
+  },
+  {
+    "text": "What if we first teach it repeated",
+    "start": 1772.799,
+    "duration": 5.921
+  },
+  {
+    "text": "patterns, simple patterns and then after",
+    "start": 1775.6,
+    "duration": 5.12
+  },
+  {
+    "text": "uh teach it more diverse data? So maybe",
+    "start": 1778.72,
+    "duration": 4.319
+  },
+  {
+    "text": "in the beginning it's simpler things to",
+    "start": 1780.72,
+    "duration": 5.439
+  },
+  {
+    "text": "learn and then later uh more complex. So",
+    "start": 1783.039,
+    "duration": 5.841
+  },
+  {
+    "text": "we are comparing that to only simple",
+    "start": 1786.159,
+    "duration": 5.601
+  },
+  {
+    "text": "things and only complex things. And so",
+    "start": 1788.88,
+    "duration": 5.44
+  },
+  {
+    "text": "we already know that uh simple things",
+    "start": 1791.76,
+    "duration": 4.96
+  },
+  {
+    "text": "they underperform only simple only same",
+    "start": 1794.32,
+    "duration": 5.359
+  },
+  {
+    "text": "data it overfits. And here curriculum",
+    "start": 1796.72,
+    "duration": 7.04
+  },
+  {
+    "text": "did not uh make substantial progress as",
+    "start": 1799.679,
+    "duration": 6.24
+  },
+  {
+    "text": "opposed to just training for the comp",
+    "start": 1803.76,
+    "duration": 4.08
+  },
+  {
+    "text": "the complex data from the start. Maybe",
+    "start": 1805.919,
+    "duration": 4.081
+  },
+  {
+    "text": "this complex data was also too simple.",
+    "start": 1807.84,
+    "duration": 3.76
+  },
+  {
+    "text": "So I need to think carefully about my",
+    "start": 1810.0,
+    "duration": 4.08
+  },
+  {
+    "text": "experiment setup. Also this difference",
+    "start": 1811.6,
+    "duration": 4.88
+  },
+  {
+    "text": "may not be statistically significant",
+    "start": 1814.08,
+    "duration": 4.319
+  },
+  {
+    "text": "depending on how many times I measured,",
+    "start": 1816.48,
+    "duration": 3.76
+  },
+  {
+    "text": "how I measured. I need to think about",
+    "start": 1818.399,
+    "duration": 3.841
+  },
+  {
+    "text": "all of these things and AI can help you",
+    "start": 1820.24,
+    "duration": 4.24
+  },
+  {
+    "text": "understand and think about all of these",
+    "start": 1822.24,
+    "duration": 4.96
+  },
+  {
+    "text": "uh things and setup of your experiment.",
+    "start": 1824.48,
+    "duration": 3.919
+  },
+  {
+    "text": "Now let's take a look at the",
+    "start": 1827.2,
+    "duration": 3.359
+  },
+  {
+    "text": "reinforcement learning. So here",
+    "start": 1828.399,
+    "duration": 3.601
+  },
+  {
+    "text": "reinforcement learning is different than",
+    "start": 1830.559,
+    "duration": 3.12
+  },
+  {
+    "text": "pre-training. Pre-training is just",
+    "start": 1832.0,
+    "duration": 3.919
+  },
+  {
+    "text": "learning to repeat text and it's",
+    "start": 1833.679,
+    "duration": 4.321
+  },
+  {
+    "text": "learning what each token means. In",
+    "start": 1835.919,
+    "duration": 4.0
+  },
+  {
+    "text": "reinforcement learning it's trying to",
+    "start": 1838.0,
+    "duration": 4.88
+  },
+  {
+    "text": "generate answers and then we reward",
+    "start": 1839.919,
+    "duration": 6.081
+  },
+  {
+    "text": "correct answers. So in some way I don't",
+    "start": 1842.88,
+    "duration": 4.64
+  },
+  {
+    "text": "know how but it's learning to think",
+    "start": 1846.0,
+    "duration": 3.52
+  },
+  {
+    "text": "somehow and if you can figure out how",
+    "start": 1847.52,
+    "duration": 4.32
+  },
+  {
+    "text": "you'll be the most famous AI researcher.",
+    "start": 1849.52,
+    "duration": 4.72
+  },
+  {
+    "text": "But in reinforcement learning it's",
+    "start": 1851.84,
+    "duration": 4.4
+  },
+  {
+    "text": "learning to use its thinking throughout",
+    "start": 1854.24,
+    "duration": 4.559
+  },
+  {
+    "text": "transformer to figure out correct",
+    "start": 1856.24,
+    "duration": 5.76
+  },
+  {
+    "text": "answer. Right now reinforcement learning",
+    "start": 1858.799,
+    "duration": 5.921
+  },
+  {
+    "text": "traces single roll out single task",
+    "start": 1862.0,
+    "duration": 5.76
+  },
+  {
+    "text": "completion is taking maybe even days in",
+    "start": 1864.72,
+    "duration": 6.079
+  },
+  {
+    "text": "frontier labs like open aanthropic.",
+    "start": 1867.76,
+    "duration": 4.72
+  },
+  {
+    "text": "If you want the model, if you want to",
+    "start": 1870.799,
+    "duration": 4.161
+  },
+  {
+    "text": "teach the model to work for days, you're",
+    "start": 1872.48,
+    "duration": 4.72
+  },
+  {
+    "text": "going to during the training, you're",
+    "start": 1874.96,
+    "duration": 6.16
+  },
+  {
+    "text": "going to let it um try to complete tasks",
+    "start": 1877.2,
+    "duration": 7.44
+  },
+  {
+    "text": "that take days. So, this is just by the",
+    "start": 1881.12,
+    "duration": 6.96
+  },
+  {
+    "text": "way if you are if you want to help these",
+    "start": 1884.64,
+    "duration": 5.2
+  },
+  {
+    "text": "labs, you can also work on inference.",
+    "start": 1888.08,
+    "duration": 4.24
+  },
+  {
+    "text": "Faster inference means you are",
+    "start": 1889.84,
+    "duration": 4.959
+  },
+  {
+    "text": "generating data faster. You are you can",
+    "start": 1892.32,
+    "duration": 5.68
+  },
+  {
+    "text": "train faster. So generate code, run",
+    "start": 1894.799,
+    "duration": 5.6
+  },
+  {
+    "text": "tests, score which is correct, which is",
+    "start": 1898.0,
+    "duration": 4.08
+  },
+  {
+    "text": "incorrect. Now different ways of",
+    "start": 1900.399,
+    "duration": 3.601
+  },
+  {
+    "text": "scoring. You can score only correct or",
+    "start": 1902.08,
+    "duration": 4.16
+  },
+  {
+    "text": "partial results for example and then",
+    "start": 1904.0,
+    "duration": 4.799
+  },
+  {
+    "text": "update the model weights. You will not",
+    "start": 1906.24,
+    "duration": 4.72
+  },
+  {
+    "text": "show tests to the model. You will just",
+    "start": 1908.799,
+    "duration": 4.401
+  },
+  {
+    "text": "evaluate its result because if you show",
+    "start": 1910.96,
+    "duration": 5.04
+  },
+  {
+    "text": "test it can uh reward hack which means",
+    "start": 1913.2,
+    "duration": 4.959
+  },
+  {
+    "text": "like maybe reading the results instead",
+    "start": 1916.0,
+    "duration": 4.08
+  },
+  {
+    "text": "of learning how to solve them. uh",
+    "start": 1918.159,
+    "duration": 3.681
+  },
+  {
+    "text": "learning how to hack into hugging face",
+    "start": 1920.08,
+    "duration": 4.319
+  },
+  {
+    "text": "or different systems what happened and",
+    "start": 1921.84,
+    "duration": 5.04
+  },
+  {
+    "text": "uh in our post training of a small",
+    "start": 1924.399,
+    "duration": 5.76
+  },
+  {
+    "text": "example we went from 4% correct answers",
+    "start": 1926.88,
+    "duration": 5.84
+  },
+  {
+    "text": "to 45% correct answers after the",
+    "start": 1930.159,
+    "duration": 6.161
+  },
+  {
+    "text": "training so uh usually you can just tell",
+    "start": 1932.72,
+    "duration": 7.76
+  },
+  {
+    "text": "fable op fable and opus and soul to do",
+    "start": 1936.32,
+    "duration": 6.479
+  },
+  {
+    "text": "this post training for you uh this is",
+    "start": 1940.48,
+    "duration": 4.079
+  },
+  {
+    "text": "what you need to learn what oppus and",
+    "start": 1942.799,
+    "duration": 4.801
+  },
+  {
+    "text": "fable they don't know is get the",
+    "start": 1944.559,
+    "duration": 4.641
+  },
+  {
+    "text": "experiment direction get the experiment",
+    "start": 1947.6,
+    "duration": 4.48
+  },
+  {
+    "text": "experiment ideas. So they can do",
+    "start": 1949.2,
+    "duration": 5.04
+  },
+  {
+    "text": "reinforcement learning train uh training",
+    "start": 1952.08,
+    "duration": 3.92
+  },
+  {
+    "text": "simply because it's been done so many",
+    "start": 1954.24,
+    "duration": 3.279
+  },
+  {
+    "text": "times on the internet. They know how to",
+    "start": 1956.0,
+    "duration": 4.559
+  },
+  {
+    "text": "do it. But your judgment right now your",
+    "start": 1957.519,
+    "duration": 4.64
+  },
+  {
+    "text": "judgment for experiments is what you",
+    "start": 1960.559,
+    "duration": 3.761
+  },
+  {
+    "text": "need to practice what kind of ideas and",
+    "start": 1962.159,
+    "duration": 4.721
+  },
+  {
+    "text": "then it can do the experiments.",
+    "start": 1964.32,
+    "duration": 4.719
+  },
+  {
+    "text": "So before reinforcement learning zero",
+    "start": 1966.88,
+    "duration": 4.399
+  },
+  {
+    "text": "out of 24 after reinforcement learning",
+    "start": 1969.039,
+    "duration": 5.841
+  },
+  {
+    "text": "16 out of 24 uh questions pass at one",
+    "start": 1971.279,
+    "duration": 6.24
+  },
+  {
+    "text": "means you just give it one try and then",
+    "start": 1974.88,
+    "duration": 4.32
+  },
+  {
+    "text": "judge if it's correct or incorrect when",
+    "start": 1977.519,
+    "duration": 4.4
+  },
+  {
+    "text": "you are testing it. If you have pass at",
+    "start": 1979.2,
+    "duration": 4.8
+  },
+  {
+    "text": "eight it means you are giving it eight",
+    "start": 1981.919,
+    "duration": 5.441
+  },
+  {
+    "text": "tries and if any one of eight is correct",
+    "start": 1984.0,
+    "duration": 6.24
+  },
+  {
+    "text": "so you take it as correctly answered. I",
+    "start": 1987.36,
+    "duration": 4.559
+  },
+  {
+    "text": "mean you just give it same question let",
+    "start": 1990.24,
+    "duration": 4.96
+  },
+  {
+    "text": "it try to answer multiple times but here",
+    "start": 1991.919,
+    "duration": 5.201
+  },
+  {
+    "text": "we just let it answer once and then see",
+    "start": 1995.2,
+    "duration": 4.4
+  },
+  {
+    "text": "if it's correct or incorrect. Of course",
+    "start": 1997.12,
+    "duration": 4.64
+  },
+  {
+    "text": "you will always need to see how you are",
+    "start": 1999.6,
+    "duration": 4.559
+  },
+  {
+    "text": "measuring your results. For example in",
+    "start": 2001.76,
+    "duration": 5.84
+  },
+  {
+    "text": "this case uh we are testing it on",
+    "start": 2004.159,
+    "duration": 6.961
+  },
+  {
+    "text": "similar tasks that it learned uh during",
+    "start": 2007.6,
+    "duration": 6.079
+  },
+  {
+    "text": "training. It's not same but similar",
+    "start": 2011.12,
+    "duration": 3.919
+  },
+  {
+    "text": "because then it's going to learn",
+    "start": 2013.679,
+    "duration": 2.801
+  },
+  {
+    "text": "templates. is going to learn how to do",
+    "start": 2015.039,
+    "duration": 3.12
+  },
+  {
+    "text": "these tasks and then it's just going to",
+    "start": 2016.48,
+    "duration": 3.76
+  },
+  {
+    "text": "learn to apply to different numbers",
+    "start": 2018.159,
+    "duration": 4.88
+  },
+  {
+    "text": "maybe different operations. Now the more",
+    "start": 2020.24,
+    "duration": 5.039
+  },
+  {
+    "text": "diversity you want, the more uh",
+    "start": 2023.039,
+    "duration": 3.76
+  },
+  {
+    "text": "generality you want, you need to scale",
+    "start": 2025.279,
+    "duration": 3.041
+  },
+  {
+    "text": "the model, more parameters, more",
+    "start": 2026.799,
+    "duration": 3.76
+  },
+  {
+    "text": "compute, more data, and then it's going",
+    "start": 2028.32,
+    "duration": 3.92
+  },
+  {
+    "text": "to become more general, more more",
+    "start": 2030.559,
+    "duration": 3.201
+  },
+  {
+    "text": "diverse.",
+    "start": 2032.24,
+    "duration": 3.12
+  },
+  {
+    "text": "But don't worry about that. You can",
+    "start": 2033.76,
+    "duration": 3.68
+  },
+  {
+    "text": "always do research. I think you can do",
+    "start": 2035.36,
+    "duration": 5.439
+  },
+  {
+    "text": "good research even on a CPU. I feel like",
+    "start": 2037.44,
+    "duration": 5.68
+  },
+  {
+    "text": "um if you want to get a job at OpenAI",
+    "start": 2040.799,
+    "duration": 5.041
+  },
+  {
+    "text": "Anthropic, you don't need GPUs. You want",
+    "start": 2043.12,
+    "duration": 5.44
+  },
+  {
+    "text": "to learn, you want to teach yourself how",
+    "start": 2045.84,
+    "duration": 4.239
+  },
+  {
+    "text": "to construct environments for",
+    "start": 2048.56,
+    "duration": 3.2
+  },
+  {
+    "text": "reinforcement learning, how to think",
+    "start": 2050.079,
+    "duration": 3.76
+  },
+  {
+    "text": "about them. Check if model is learning",
+    "start": 2051.76,
+    "duration": 4.0
+  },
+  {
+    "text": "in those environments. That's important.",
+    "start": 2053.839,
+    "duration": 4.881
+  },
+  {
+    "text": "It's not important that you uh scale",
+    "start": 2055.76,
+    "duration": 4.879
+  },
+  {
+    "text": "unless you are working explicitly on",
+    "start": 2058.72,
+    "duration": 5.359
+  },
+  {
+    "text": "scaling or pre-training. If the task is",
+    "start": 2060.639,
+    "duration": 6.641
+  },
+  {
+    "text": "return 2 * x before reinforcement",
+    "start": 2064.079,
+    "duration": 6.401
+  },
+  {
+    "text": "learning, it would return x and after",
+    "start": 2067.28,
+    "duration": 5.359
+  },
+  {
+    "text": "reinforcement learning, it would return",
+    "start": 2070.48,
+    "duration": 4.56
+  },
+  {
+    "text": "x * 2. So here it generated correctly.",
+    "start": 2072.639,
+    "duration": 4.96
+  },
+  {
+    "text": "It learned. So what reinforcement",
+    "start": 2075.04,
+    "duration": 4.639
+  },
+  {
+    "text": "learning did is increase probability",
+    "start": 2077.599,
+    "duration": 4.08
+  },
+  {
+    "text": "that the correct answer will generate",
+    "start": 2079.679,
+    "duration": 4.4
+  },
+  {
+    "text": "based on all of the parameters.",
+    "start": 2081.679,
+    "duration": 4.641
+  },
+  {
+    "text": "There are many ways in which you can uh",
+    "start": 2084.079,
+    "duration": 4.161
+  },
+  {
+    "text": "structure rewards. For example, you can",
+    "start": 2086.32,
+    "duration": 5.68
+  },
+  {
+    "text": "say plus one for all tests passed uh",
+    "start": 2088.24,
+    "duration": 9.359
+  },
+  {
+    "text": "zero for valid format but wrong number",
+    "start": 2092.0,
+    "duration": 8.24
+  },
+  {
+    "text": "and maybe minus one for invalid Python",
+    "start": 2097.599,
+    "duration": 5.281
+  },
+  {
+    "text": "syntax. So this is just one way you can",
+    "start": 2100.24,
+    "duration": 5.359
+  },
+  {
+    "text": "just give zero for invalid",
+    "start": 2102.88,
+    "duration": 5.28
+  },
+  {
+    "text": "uh or wrong and then one all tests. You",
+    "start": 2105.599,
+    "duration": 5.76
+  },
+  {
+    "text": "can also give one if it writes a correct",
+    "start": 2108.16,
+    "duration": 5.36
+  },
+  {
+    "text": "format as well. If it writes correct",
+    "start": 2111.359,
+    "duration": 3.76
+  },
+  {
+    "text": "Python you can reward. So there are many",
+    "start": 2113.52,
+    "duration": 4.16
+  },
+  {
+    "text": "different ways and this is",
+    "start": 2115.119,
+    "duration": 6.72
+  },
+  {
+    "text": "experimentation empirical evidence um in",
+    "start": 2117.68,
+    "duration": 7.2
+  },
+  {
+    "text": "but I also think like it's a lot more",
+    "start": 2121.839,
+    "duration": 4.721
+  },
+  {
+    "text": "data is a lot more important than the",
+    "start": 2124.88,
+    "duration": 4.16
+  },
+  {
+    "text": "structure of these algorithms. So you",
+    "start": 2126.56,
+    "duration": 4.799
+  },
+  {
+    "text": "will find a good enough algorithm and",
+    "start": 2129.04,
+    "duration": 5.2
+  },
+  {
+    "text": "then you will uh have a diminishing",
+    "start": 2131.359,
+    "duration": 4.881
+  },
+  {
+    "text": "returns on thinking about the algorithm",
+    "start": 2134.24,
+    "duration": 4.0
+  },
+  {
+    "text": "as opposed to thinking about data. You",
+    "start": 2136.24,
+    "duration": 4.16
+  },
+  {
+    "text": "will improve the model a lot more if you",
+    "start": 2138.24,
+    "duration": 4.08
+  },
+  {
+    "text": "are thinking about what am I teaching",
+    "start": 2140.4,
+    "duration": 3.84
+  },
+  {
+    "text": "it? What is the environment? What is it",
+    "start": 2142.32,
+    "duration": 3.68
+  },
+  {
+    "text": "trying to do? Can it do it? Can it learn",
+    "start": 2144.24,
+    "duration": 4.64
+  },
+  {
+    "text": "it? So setting up question for the",
+    "start": 2146.0,
+    "duration": 4.72
+  },
+  {
+    "text": "environment for the data and what is it",
+    "start": 2148.88,
+    "duration": 4.8
+  },
+  {
+    "text": "learning is more important",
+    "start": 2150.72,
+    "duration": 5.04
+  },
+  {
+    "text": "is the most important thing once you",
+    "start": 2153.68,
+    "duration": 3.84
+  },
+  {
+    "text": "have good enough algorithm. This is why",
+    "start": 2155.76,
+    "duration": 4.64
+  },
+  {
+    "text": "deepseek is no longer uh putting",
+    "start": 2157.52,
+    "duration": 6.319
+  },
+  {
+    "text": "substantial effort into gRPO. GRPO their",
+    "start": 2160.4,
+    "duration": 5.199
+  },
+  {
+    "text": "reinforcement learning algorithm is good",
+    "start": 2163.839,
+    "duration": 4.881
+  },
+  {
+    "text": "enough. If they put more effort, it will",
+    "start": 2165.599,
+    "duration": 5.76
+  },
+  {
+    "text": "not yield as good returns as if they put",
+    "start": 2168.72,
+    "duration": 4.399
+  },
+  {
+    "text": "more effort into data training post-",
+    "start": 2171.359,
+    "duration": 3.921
+  },
+  {
+    "text": "training environments.",
+    "start": 2173.119,
+    "duration": 4.0
+  },
+  {
+    "text": "The verifier is going to run hidden",
+    "start": 2175.28,
+    "duration": 4.079
+  },
+  {
+    "text": "tests. Now you don't show these tests to",
+    "start": 2177.119,
+    "duration": 5.121
+  },
+  {
+    "text": "the model. Now you have like GPT, Fable,",
+    "start": 2179.359,
+    "duration": 5.041
+  },
+  {
+    "text": "Astra. they are going to they are",
+    "start": 2182.24,
+    "duration": 5.92
+  },
+  {
+    "text": "possibly going to hack and see your uh",
+    "start": 2184.4,
+    "duration": 6.24
+  },
+  {
+    "text": "verifiers. So this is something that's",
+    "start": 2188.16,
+    "duration": 4.8
+  },
+  {
+    "text": "happening right now. So there are",
+    "start": 2190.64,
+    "duration": 3.76
+  },
+  {
+    "text": "different ways you can do this. So for",
+    "start": 2192.96,
+    "duration": 4.879
+  },
+  {
+    "text": "example uh in gRPO and other algorithms",
+    "start": 2194.4,
+    "duration": 7.6
+  },
+  {
+    "text": "you can give the same question and let",
+    "start": 2197.839,
+    "duration": 6.961
+  },
+  {
+    "text": "model generate 16 answers and then you",
+    "start": 2202.0,
+    "duration": 4.8
+  },
+  {
+    "text": "can reward each answer based on if it's",
+    "start": 2204.8,
+    "duration": 5.52
+  },
+  {
+    "text": "correct, incorrect, wrong, Python etc.",
+    "start": 2206.8,
+    "duration": 7.039
+  },
+  {
+    "text": "And then we want to calculate how much",
+    "start": 2210.32,
+    "duration": 5.68
+  },
+  {
+    "text": "each of the answers is better or worse",
+    "start": 2213.839,
+    "duration": 5.441
+  },
+  {
+    "text": "than other answers than the average.",
+    "start": 2216.0,
+    "duration": 6.72
+  },
+  {
+    "text": "So they call this advantage. So reward",
+    "start": 2219.28,
+    "duration": 6.88
+  },
+  {
+    "text": "is just your one zero or minus 0.1.",
+    "start": 2222.72,
+    "duration": 6.72
+  },
+  {
+    "text": "That's your reward minus mean of other",
+    "start": 2226.16,
+    "duration": 5.36
+  },
+  {
+    "text": "rewards.",
+    "start": 2229.44,
+    "duration": 5.04
+  },
+  {
+    "text": "So it's just going to calculate is this",
+    "start": 2231.52,
+    "duration": 4.4
+  },
+  {
+    "text": "better than average and how much is it",
+    "start": 2234.48,
+    "duration": 3.68
+  },
+  {
+    "text": "better or worse than average. So better",
+    "start": 2235.92,
+    "duration": 4.0
+  },
+  {
+    "text": "ones are going to become more likely and",
+    "start": 2238.16,
+    "duration": 4.64
+  },
+  {
+    "text": "worse ones will become less likely. This",
+    "start": 2239.92,
+    "duration": 5.52
+  },
+  {
+    "text": "is good because you don't need separate",
+    "start": 2242.8,
+    "duration": 5.44
+  },
+  {
+    "text": "critic like separate model to uh review",
+    "start": 2245.44,
+    "duration": 4.88
+  },
+  {
+    "text": "the results and score the results. You",
+    "start": 2248.24,
+    "duration": 4.96
+  },
+  {
+    "text": "don't need humans to do it. You can just",
+    "start": 2250.32,
+    "duration": 4.64
+  },
+  {
+    "text": "let it generate multiple times and",
+    "start": 2253.2,
+    "duration": 4.72
+  },
+  {
+    "text": "compare them to each other.",
+    "start": 2254.96,
+    "duration": 4.96
+  },
+  {
+    "text": "So I'm not going to update the entire",
+    "start": 2257.92,
+    "duration": 4.24
+  },
+  {
+    "text": "model with these reinforcement learning",
+    "start": 2259.92,
+    "duration": 4.96
+  },
+  {
+    "text": "signals. I'm just going to update last",
+    "start": 2262.16,
+    "duration": 6.56
+  },
+  {
+    "text": "block final normalization layer and the",
+    "start": 2264.88,
+    "duration": 5.76
+  },
+  {
+    "text": "output head. Those are tied weights",
+    "start": 2268.72,
+    "duration": 3.6
+  },
+  {
+    "text": "between input and output as I mentioned",
+    "start": 2270.64,
+    "duration": 4.719
+  },
+  {
+    "text": "earlier. But just the end because this",
+    "start": 2272.32,
+    "duration": 5.6
+  },
+  {
+    "text": "way first of all we are not changing",
+    "start": 2275.359,
+    "duration": 4.24
+  },
+  {
+    "text": "previous layers that have some other",
+    "start": 2277.92,
+    "duration": 4.159
+  },
+  {
+    "text": "knowledge and then they might be they",
+    "start": 2279.599,
+    "duration": 4.081
+  },
+  {
+    "text": "might experience forgetting of other",
+    "start": 2282.079,
+    "duration": 3.361
+  },
+  {
+    "text": "knowledge because now we are just",
+    "start": 2283.68,
+    "duration": 3.6
+  },
+  {
+    "text": "changing on this new data. We are not",
+    "start": 2285.44,
+    "duration": 4.72
+  },
+  {
+    "text": "training it on the old data. We so it",
+    "start": 2287.28,
+    "duration": 5.44
+  },
+  {
+    "text": "might change stuff too much. And this is",
+    "start": 2290.16,
+    "duration": 6.32
+  },
+  {
+    "text": "also faster updating less weights. So",
+    "start": 2292.72,
+    "duration": 6.24
+  },
+  {
+    "text": "you can also use Lora, you can use",
+    "start": 2296.48,
+    "duration": 4.16
+  },
+  {
+    "text": "different techniques, you can update the",
+    "start": 2298.96,
+    "duration": 3.36
+  },
+  {
+    "text": "whole model. So there are different",
+    "start": 2300.64,
+    "duration": 4.0
+  },
+  {
+    "text": "techniques here. Um you are going to",
+    "start": 2302.32,
+    "duration": 4.799
+  },
+  {
+    "text": "look into this if you want. You can also",
+    "start": 2304.64,
+    "duration": 4.24
+  },
+  {
+    "text": "do research and experiments and try",
+    "start": 2307.119,
+    "duration": 4.161
+  },
+  {
+    "text": "different ways of updating a few blocks",
+    "start": 2308.88,
+    "duration": 6.56
+  },
+  {
+    "text": "and try to understand why. So so try to",
+    "start": 2311.28,
+    "duration": 6.319
+  },
+  {
+    "text": "when you do experiments uh use toy",
+    "start": 2315.44,
+    "duration": 4.72
+  },
+  {
+    "text": "examples. And this is what MIT says. MIT",
+    "start": 2317.599,
+    "duration": 4.24
+  },
+  {
+    "text": "says you need to use start from small",
+    "start": 2320.16,
+    "duration": 3.28
+  },
+  {
+    "text": "toy examples so you can understand",
+    "start": 2321.839,
+    "duration": 4.0
+  },
+  {
+    "text": "what's going on. It's better than doing",
+    "start": 2323.44,
+    "duration": 4.399
+  },
+  {
+    "text": "huge experiments complex that you don't",
+    "start": 2325.839,
+    "duration": 4.24
+  },
+  {
+    "text": "know what's going on.",
+    "start": 2327.839,
+    "duration": 5.361
+  },
+  {
+    "text": "R L is the algorithm I'm using. So",
+    "start": 2330.079,
+    "duration": 5.28
+  },
+  {
+    "text": "algorithms as I said doesn't matter too",
+    "start": 2333.2,
+    "duration": 4.48
+  },
+  {
+    "text": "much. Data is what matters. What is it",
+    "start": 2335.359,
+    "duration": 4.24
+  },
+  {
+    "text": "going to learn is based on which data we",
+    "start": 2337.68,
+    "duration": 6.0
+  },
+  {
+    "text": "give it. So because our model was small",
+    "start": 2339.599,
+    "duration": 6.321
+  },
+  {
+    "text": "we are able to improve it only around",
+    "start": 2343.68,
+    "duration": 5.679
+  },
+  {
+    "text": "similar tasks that we train it on.",
+    "start": 2345.92,
+    "duration": 5.919
+  },
+  {
+    "text": "But on the other hand, if you have big",
+    "start": 2349.359,
+    "duration": 4.48
+  },
+  {
+    "text": "models like OpenAI, they are also going",
+    "start": 2351.839,
+    "duration": 4.081
+  },
+  {
+    "text": "to train it on all of the different",
+    "start": 2353.839,
+    "duration": 4.801
+  },
+  {
+    "text": "tasks. So you could say that they might",
+    "start": 2355.92,
+    "duration": 4.8
+  },
+  {
+    "text": "also only improve it on tasks they",
+    "start": 2358.64,
+    "duration": 3.92
+  },
+  {
+    "text": "trained on, but they train on",
+    "start": 2360.72,
+    "duration": 4.72
+  },
+  {
+    "text": "everything. And this is a joke uh that",
+    "start": 2362.56,
+    "duration": 6.72
+  },
+  {
+    "text": "people complain that LLMs only learn",
+    "start": 2365.44,
+    "duration": 6.639
+  },
+  {
+    "text": "what it's is in training data and then",
+    "start": 2369.28,
+    "duration": 4.24
+  },
+  {
+    "text": "the other guy says then we'll put",
+    "start": 2372.079,
+    "duration": 3.841
+  },
+  {
+    "text": "everything into training data. So we had",
+    "start": 2373.52,
+    "duration": 4.8
+  },
+  {
+    "text": "these operations, Python operations. So",
+    "start": 2375.92,
+    "duration": 5.28
+  },
+  {
+    "text": "increment double even u these are just",
+    "start": 2378.32,
+    "duration": 5.36
+  },
+  {
+    "text": "some Python tasks and it improved on",
+    "start": 2381.2,
+    "duration": 4.159
+  },
+  {
+    "text": "these now interestingly it didn't",
+    "start": 2383.68,
+    "duration": 3.76
+  },
+  {
+    "text": "improve on this one I don't know why I",
+    "start": 2385.359,
+    "duration": 4.961
+  },
+  {
+    "text": "need to maybe check it so so here maybe",
+    "start": 2387.44,
+    "duration": 5.36
+  },
+  {
+    "text": "it's a bug in my code or bug that AI",
+    "start": 2390.32,
+    "duration": 4.4
+  },
+  {
+    "text": "generated or bug in my experiment or",
+    "start": 2392.8,
+    "duration": 5.039
+  },
+  {
+    "text": "something or if it's not a bug then it's",
+    "start": 2394.72,
+    "duration": 4.96
+  },
+  {
+    "text": "even more interesting but it's probably",
+    "start": 2397.839,
+    "duration": 4.961
+  },
+  {
+    "text": "a bug and then ones that it didn't train",
+    "start": 2399.68,
+    "duration": 7.52
+  },
+  {
+    "text": "on it uh didn't improve it may even have",
+    "start": 2402.8,
+    "duration": 5.279
+  },
+  {
+    "text": "regressed",
+    "start": 2407.2,
+    "duration": 3.52
+  },
+  {
+    "text": "Now depending on how we calculated the",
+    "start": 2408.079,
+    "duration": 4.161
+  },
+  {
+    "text": "statistical significance, you need to",
+    "start": 2410.72,
+    "duration": 3.68
+  },
+  {
+    "text": "always be careful. Did it actually",
+    "start": 2412.24,
+    "duration": 4.08
+  },
+  {
+    "text": "regress? Do you have enough samples? Did",
+    "start": 2414.4,
+    "duration": 3.92
+  },
+  {
+    "text": "you calculate it properly? Did you",
+    "start": 2416.32,
+    "duration": 4.4
+  },
+  {
+    "text": "sample maybe multiple times to see the",
+    "start": 2418.32,
+    "duration": 6.96
+  },
+  {
+    "text": "average around different uh percentages?",
+    "start": 2420.72,
+    "duration": 7.119
+  },
+  {
+    "text": "So two previously strong families",
+    "start": 2425.28,
+    "duration": 4.48
+  },
+  {
+    "text": "regressed because only a narrow",
+    "start": 2427.839,
+    "duration": 4.801
+  },
+  {
+    "text": "parameter surface was optimized for the",
+    "start": 2429.76,
+    "duration": 5.92
+  },
+  {
+    "text": "practice reward distribution.",
+    "start": 2432.64,
+    "duration": 5.36
+  },
+  {
+    "text": "But it did improve in the things we",
+    "start": 2435.68,
+    "duration": 5.12
+  },
+  {
+    "text": "trained it based on our environment. And",
+    "start": 2438.0,
+    "duration": 4.88
+  },
+  {
+    "text": "this means that you can teach it",
+    "start": 2440.8,
+    "duration": 4.0
+  },
+  {
+    "text": "whatever you want to teach it and know",
+    "start": 2442.88,
+    "duration": 5.12
+  },
+  {
+    "text": "how to construct environments. So when",
+    "start": 2444.8,
+    "duration": 5.52
+  },
+  {
+    "text": "experimenting, you want to change just",
+    "start": 2448.0,
+    "duration": 5.28
+  },
+  {
+    "text": "one variable at a time. So let's say you",
+    "start": 2450.32,
+    "duration": 4.32
+  },
+  {
+    "text": "have all of these different variables",
+    "start": 2453.28,
+    "duration": 4.079
+  },
+  {
+    "text": "like reward uh how you're rewarding the",
+    "start": 2454.64,
+    "duration": 6.0
+  },
+  {
+    "text": "group size, how many uh answers you are",
+    "start": 2457.359,
+    "duration": 5.121
+  },
+  {
+    "text": "generating at once, for example, eight",
+    "start": 2460.64,
+    "duration": 4.24
+  },
+  {
+    "text": "per prompt. temperature is randomness or",
+    "start": 2462.48,
+    "duration": 5.28
+  },
+  {
+    "text": "penalty negative rewards. So you want to",
+    "start": 2464.88,
+    "duration": 4.88
+  },
+  {
+    "text": "just if you're doing research, you want",
+    "start": 2467.76,
+    "duration": 5.2
+  },
+  {
+    "text": "to do one uh experiment, one variable",
+    "start": 2469.76,
+    "duration": 5.04
+  },
+  {
+    "text": "per time.",
+    "start": 2472.96,
+    "duration": 3.68
+  },
+  {
+    "text": "Here I did a bunch of different",
+    "start": 2474.8,
+    "duration": 4.64
+  },
+  {
+    "text": "experiments. You see if I set for",
+    "start": 2476.64,
+    "duration": 5.04
+  },
+  {
+    "text": "example group size four, it performs",
+    "start": 2479.44,
+    "duration": 5.52
+  },
+  {
+    "text": "very well, better than group size 16.",
+    "start": 2481.68,
+    "duration": 6.32
+  },
+  {
+    "text": "Then temperature 0.2 is more",
+    "start": 2484.96,
+    "duration": 4.879
+  },
+  {
+    "text": "deterministic, less random, performs",
+    "start": 2488.0,
+    "duration": 4.4
+  },
+  {
+    "text": "better than more random temperature. And",
+    "start": 2489.839,
+    "duration": 5.041
+  },
+  {
+    "text": "then uh here in these experiments about",
+    "start": 2492.4,
+    "duration": 6.4
+  },
+  {
+    "text": "reward binary like 01 or other partial",
+    "start": 2494.88,
+    "duration": 6.08
+  },
+  {
+    "text": "rewards or no invalid penalty, hard",
+    "start": 2498.8,
+    "duration": 4.08
+  },
+  {
+    "text": "invalid penalty, they all perform same",
+    "start": 2500.96,
+    "duration": 4.56
+  },
+  {
+    "text": "on my data set. Now you don't want to",
+    "start": 2502.88,
+    "duration": 3.92
+  },
+  {
+    "text": "just have five. You want to have like",
+    "start": 2505.52,
+    "duration": 5.28
+  },
+  {
+    "text": "500 or 5,000 of these to get better",
+    "start": 2506.8,
+    "duration": 5.68
+  },
+  {
+    "text": "insights.",
+    "start": 2510.8,
+    "duration": 4.559
+  },
+  {
+    "text": "But check out this horror.",
+    "start": 2512.48,
+    "duration": 6.16
+  },
+  {
+    "text": "You see group size four one over group",
+    "start": 2515.359,
+    "duration": 6.881
+  },
+  {
+    "text": "size eight on this seed. but lost on",
+    "start": 2518.64,
+    "duration": 6.08
+  },
+  {
+    "text": "this seed and lost on this seed. Okay,",
+    "start": 2522.24,
+    "duration": 5.28
+  },
+  {
+    "text": "so this is this means that first of all",
+    "start": 2524.72,
+    "duration": 4.8
+  },
+  {
+    "text": "this doesn't have much influence based",
+    "start": 2527.52,
+    "duration": 4.4
+  },
+  {
+    "text": "on my setup my training data. Secondly,",
+    "start": 2529.52,
+    "duration": 4.079
+  },
+  {
+    "text": "we yeah we need to train more to see",
+    "start": 2531.92,
+    "duration": 5.28
+  },
+  {
+    "text": "actual statistical significance. Um and",
+    "start": 2533.599,
+    "duration": 6.961
+  },
+  {
+    "text": "then also it could be that it's not so",
+    "start": 2537.2,
+    "duration": 5.6
+  },
+  {
+    "text": "important",
+    "start": 2540.56,
+    "duration": 4.88
+  },
+  {
+    "text": "but if you are training huge models then",
+    "start": 2542.8,
+    "duration": 5.279
+  },
+  {
+    "text": "even small differences could mean a lot",
+    "start": 2545.44,
+    "duration": 4.96
+  },
+  {
+    "text": "of money saved. your model is training a",
+    "start": 2548.079,
+    "duration": 3.841
+  },
+  {
+    "text": "bit faster which is going to save a lot",
+    "start": 2550.4,
+    "duration": 4.32
+  },
+  {
+    "text": "of money. So this is why when people are",
+    "start": 2551.92,
+    "duration": 4.32
+  },
+  {
+    "text": "reviewing your papers they will tell you",
+    "start": 2554.72,
+    "duration": 4.24
+  },
+  {
+    "text": "to test on three seats and all three",
+    "start": 2556.24,
+    "duration": 4.879
+  },
+  {
+    "text": "seeds should have a clear conclusion",
+    "start": 2558.96,
+    "duration": 4.32
+  },
+  {
+    "text": "like all three seats you should say that",
+    "start": 2561.119,
+    "duration": 4.881
+  },
+  {
+    "text": "group four is better than group eight.",
+    "start": 2563.28,
+    "duration": 5.2
+  },
+  {
+    "text": "So none of my experiments produce",
+    "start": 2566.0,
+    "duration": 4.8
+  },
+  {
+    "text": "statistically significant improvements.",
+    "start": 2568.48,
+    "duration": 4.08
+  },
+  {
+    "text": "Maybe my experiments are very small.",
+    "start": 2570.8,
+    "duration": 3.84
+  },
+  {
+    "text": "Maybe as you probably as you train",
+    "start": 2572.56,
+    "duration": 5.44
+  },
+  {
+    "text": "bigger models, you're going to have uh",
+    "start": 2574.64,
+    "duration": 6.4
+  },
+  {
+    "text": "clearer and clearer exact setup of",
+    "start": 2578.0,
+    "duration": 5.76
+  },
+  {
+    "text": "parameters that's going to be best. And",
+    "start": 2581.04,
+    "duration": 5.68
+  },
+  {
+    "text": "here we can review each part. So",
+    "start": 2583.76,
+    "duration": 4.8
+  },
+  {
+    "text": "pre-training is going to teach it to",
+    "start": 2586.72,
+    "duration": 4.48
+  },
+  {
+    "text": "write Python. Vision is going to teach",
+    "start": 2588.56,
+    "duration": 5.759
+  },
+  {
+    "text": "it to add recognize images into the",
+    "start": 2591.2,
+    "duration": 5.68
+  },
+  {
+    "text": "transformer into the language model. and",
+    "start": 2594.319,
+    "duration": 4.881
+  },
+  {
+    "text": "reinforcement learning will uh in our",
+    "start": 2596.88,
+    "duration": 3.92
+  },
+  {
+    "text": "case improved increment and double",
+    "start": 2599.2,
+    "duration": 3.36
+  },
+  {
+    "text": "operations.",
+    "start": 2600.8,
+    "duration": 4.96
+  },
+  {
+    "text": "So I encourage you to just go talk to",
+    "start": 2602.56,
+    "duration": 5.84
+  },
+  {
+    "text": "codeex or cloud code. You can tell it",
+    "start": 2605.76,
+    "duration": 5.359
+  },
+  {
+    "text": "which kind of experiments can I do here",
+    "start": 2608.4,
+    "duration": 4.88
+  },
+  {
+    "text": "and don't be so concerned about scaling.",
+    "start": 2611.119,
+    "duration": 3.761
+  },
+  {
+    "text": "I just want you to learn how to do some",
+    "start": 2613.28,
+    "duration": 3.92
+  },
+  {
+    "text": "experiments, how to learn scientific",
+    "start": 2614.88,
+    "duration": 4.479
+  },
+  {
+    "text": "thinking, how to measure properly, how",
+    "start": 2617.2,
+    "duration": 4.399
+  },
+  {
+    "text": "to conclude properly. So you can post",
+    "start": 2619.359,
+    "duration": 4.0
+  },
+  {
+    "text": "your experiments on social media as",
+    "start": 2621.599,
+    "duration": 3.441
+  },
+  {
+    "text": "well. If you want to become AI",
+    "start": 2623.359,
+    "duration": 3.441
+  },
+  {
+    "text": "researcher, I recommend you just keep",
+    "start": 2625.04,
+    "duration": 3.6
+  },
+  {
+    "text": "posting your experiments every day or",
+    "start": 2626.8,
+    "duration": 4.96
+  },
+  {
+    "text": "every week on social media. Consistency",
+    "start": 2628.64,
+    "duration": 6.08
+  },
+  {
+    "text": "is more important than intensity.",
+    "start": 2631.76,
+    "duration": 5.28
+  },
+  {
+    "text": "So if you post five days in a row, but",
+    "start": 2634.72,
+    "duration": 3.92
+  },
+  {
+    "text": "then you stop, it's not good. If you",
+    "start": 2637.04,
+    "duration": 4.16
+  },
+  {
+    "text": "post once a week forever, it's a lot",
+    "start": 2638.64,
+    "duration": 5.6
+  },
+  {
+    "text": "better. And it's better to just do",
+    "start": 2641.2,
+    "duration": 5.44
+  },
+  {
+    "text": "experiments and train",
+    "start": 2644.24,
+    "duration": 4.4
+  },
+  {
+    "text": "model for a few seconds. You don't want",
+    "start": 2646.64,
+    "duration": 3.679
+  },
+  {
+    "text": "to wait a few minutes, a few hours",
+    "start": 2648.64,
+    "duration": 4.0
+  },
+  {
+    "text": "because it's wasted time. You need to be",
+    "start": 2650.319,
+    "duration": 4.721
+  },
+  {
+    "text": "thinking how to need to be practicing",
+    "start": 2652.64,
+    "duration": 4.479
+  },
+  {
+    "text": "how to design experiments, environments,",
+    "start": 2655.04,
+    "duration": 3.76
+  },
+  {
+    "text": "questions. You don't need to wait for",
+    "start": 2657.119,
+    "duration": 4.081
+  },
+  {
+    "text": "the model because you you cannot train a",
+    "start": 2658.8,
+    "duration": 4.16
+  },
+  {
+    "text": "model that's going to outco compete",
+    "start": 2661.2,
+    "duration": 3.44
+  },
+  {
+    "text": "these companies that people are going to",
+    "start": 2662.96,
+    "duration": 4.08
+  },
+  {
+    "text": "use.",
+    "start": 2664.64,
+    "duration": 2.4
+  }
+]
