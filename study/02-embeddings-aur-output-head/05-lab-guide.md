@@ -1,3 +1,7 @@
+<!-- nav:top -->
+[🏠 Course](../README.md) › [Topic 02 — Embeddings, Output Head aur Weight Tying](README.md) › Reading 5 / 6
+<!-- /nav:top -->
+
 # 05 · Code Lab — `lab_embeddings.py`
 
 ## Run (~15 sec, CPU pe)
@@ -49,3 +53,11 @@ print(m.parameter_counts())
 print('tied:', m.output.weight is m.embedding.weight)"
 ```
 Expected: `{'total': 25730592, 'active_per_token_estimate': 9805344}` aur `tied: True`
+
+<!-- nav:bottom -->
+---
+
+| ⬅️ Pichla | 📚 Topic | Agla ➡️ |
+|:--|:-:|--:|
+| ⬅️ [04 · Weight Tying — ek matrix, do kaam](04-weight-tying.md) | 📚 [Topic 02 overview](README.md) | [06 · Recap + Quiz](06-recap-quiz.md) ➡️ |
+<!-- /nav:bottom -->

@@ -1,3 +1,7 @@
+<!-- nav:top -->
+[🏠 Course](../README.md) › [Topic 07 — Mixture of Experts (MoE)](README.md) › Reading 4 / 6
+<!-- /nav:top -->
+
 # 04 · Load balancing, ek repo bug 🐛, aur Real-life
 
 ## Problem: Expert collapse ("rich get richer")
@@ -78,3 +82,11 @@ Order (token) aata hai, aur algorithm (router) 2 nearest delivery partners (top-
 
 ---
 🎬 **Video:** 20:42–21:30, 39:50 (bug wala comment) · 📁 `scripts/train_pretrain.py` line 94
+
+<!-- nav:bottom -->
+---
+
+| ⬅️ Pichla | 📚 Topic | Agla ➡️ |
+|:--|:-:|--:|
+| ⬅️ [03 · Practical — Repo code aur total vs active params](03-practical-code-and-params.md) | 📚 [Topic 07 overview](README.md) | [05 · Code Lab — `lab_moe.py`](05-lab-guide.md) ➡️ |
+<!-- /nav:bottom -->

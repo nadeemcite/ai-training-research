@@ -1,3 +1,7 @@
+<!-- nav:top -->
+[🏠 Course](../README.md) › [Topic 01 — Tokens aur Tokenizer](README.md) › Reading 4 / 6
+<!-- /nav:top -->
+
 # 04 · Real-life — Hindi me zyada tokens kyun lagte hain?
 
 ## UTF-8 ek minute me
@@ -40,3 +44,11 @@ Generation me ye sach me hota hai: byte model kabhi-kabhi adhoora character gene
 
 ---
 🎬 Video me Hindi example nahi hai. Ye extra real-life context hai, video ke 05:16 wale BPE part se juda hua.
+
+<!-- nav:bottom -->
+---
+
+| ⬅️ Pichla | 📚 Topic | Agla ➡️ |
+|:--|:-:|--:|
+| ⬅️ [03 · Practical — BPE vs Byte tokens](03-bpe-vs-byte.md) | 📚 [Topic 01 overview](README.md) | [05 · Code Lab — `lab_tokenizer.py`](05-lab-guide.md) ➡️ |
+<!-- /nav:bottom -->

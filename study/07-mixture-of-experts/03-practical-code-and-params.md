@@ -1,3 +1,7 @@
+<!-- nav:top -->
+[🏠 Course](../README.md) › [Topic 07 — Mixture of Experts (MoE)](README.md) › Reading 3 / 6
+<!-- /nav:top -->
+
 # 03 · Practical — Repo code aur total vs active params
 
 ## `SparseMoE.forward`, line by line
@@ -64,3 +68,11 @@ def forward(self, x):
 
 ---
 🎬 **Video:** 20:42–22:30 · 📊 Slides 37–40 · 📁 `model.py` lines 145–188
+
+<!-- nav:bottom -->
+---
+
+| ⬅️ Pichla | 📚 Topic | Agla ➡️ |
+|:--|:-:|--:|
+| ⬅️ [02 · Definitions — Expert, router, top-k, gate](02-definitions.md) | 📚 [Topic 07 overview](README.md) | [04 · Load balancing, ek repo bug 🐛, aur Real-life](04-load-balancing-real-life.md) ➡️ |
+<!-- /nav:bottom -->

@@ -1,3 +1,7 @@
+<!-- nav:top -->
+[🏠 Course](../README.md) › [Topic 05 — Attention basics → Linear attention](README.md) › Reading 1 / 6
+<!-- /nav:top -->
+
 # 01 · Concept — Attention = "kisse kitna sunna hai"
 
 ## Problem
@@ -60,3 +64,11 @@ Har row ka sum = 1 (softmax).
 
 ---
 🎬 **Video:** 16:17–17:00 (attention aur indexer ka idea) · 📊 Slide 25
+
+<!-- nav:bottom -->
+---
+
+| ⬅️ Pichla | 📚 Topic | Agla ➡️ |
+|:--|:-:|--:|
+| ⬅️ [Topic 05 — Attention basics → Linear attention](README.md) | 📚 [Topic 05 overview](README.md) | [02 · Definitions — Q, K, V, heads, aur T² problem](02-definitions-and-cost.md) ➡️ |
+<!-- /nav:bottom -->

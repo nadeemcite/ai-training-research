@@ -1,3 +1,7 @@
+<!-- nav:top -->
+[🏠 Course](../README.md) › [Topic 03 — RMSNorm: numbers ko control me rakhna](README.md) › Reading 2 / 6
+<!-- /nav:top -->
+
 # 02 · Definitions — RMS, epsilon, gamma
 
 ## Definitions
@@ -60,3 +64,11 @@ Params: har RMSNorm me sirf **192** (ek γ per dimension).
 
 ---
 📁 `model.py` lines 33–41
+
+<!-- nav:bottom -->
+---
+
+| ⬅️ Pichla | 📚 Topic | Agla ➡️ |
+|:--|:-:|--:|
+| ⬅️ [01 · Concept — Numbers ko "explode" hone se bachana](01-concept.md) | 📚 [Topic 03 overview](README.md) | [03 · Practical — Pre-norm, aur LayerNorm se fark](03-practical-pre-norm.md) ➡️ |
+<!-- /nav:bottom -->

@@ -1,3 +1,7 @@
+<!-- nav:top -->
+[🏠 Course](../README.md) › [Topic 01 — Tokens aur Tokenizer](README.md) › Reading 1 / 6
+<!-- /nav:top -->
+
 # 01 · Concept — LLM bas "agla token" guess karta hai
 
 ## Ek line me
@@ -49,3 +53,11 @@ Model "sochta" hai ya nahi, ye alag debate hai. **Mechanically** wo bas har baar
 ---
 🎬 **Video:** 04:50–05:15 ("LLMs are going to predict next word or next token...")
 📊 **Slide:** "Learn by predicting the next token"
+
+<!-- nav:bottom -->
+---
+
+| ⬅️ Pichla | 📚 Topic | Agla ➡️ |
+|:--|:-:|--:|
+| ⬅️ [Topic 01 — Tokens aur Tokenizer](README.md) | 📚 [Topic 01 overview](README.md) | [02 · Definitions — exact words ka matlab](02-definitions.md) ➡️ |
+<!-- /nav:bottom -->

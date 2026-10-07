@@ -1,3 +1,7 @@
+<!-- nav:top -->
+[🏠 Course](../README.md) › [Topic 06 — Sparse attention + 3:1 hybrid rhythm](README.md) › Reading 3 / 6
+<!-- /nav:top -->
+
 # 03 · Practical — Kitna sasta? Fixed vs Indexer
 
 ## Lab Exp 2: Kitne (query, key) pairs? (repo config: W=32, S=32)
@@ -60,3 +64,11 @@ Hamare chhote 192-token context me ye kaafi hai. 1M tokens pe indexer zaroori ho
 
 ---
 🎬 **Video:** 17:04–17:48 · 📊 Slides 36, 42
+
+<!-- nav:bottom -->
+---
+
+| ⬅️ Pichla | 📚 Topic | Agla ➡️ |
+|:--|:-:|--:|
+| ⬅️ [02 · Definitions — Window, anchor, stride, indexer](02-definitions-window-anchor-indexer.md) | 📚 [Topic 06 overview](README.md) | [04 · Hybrid rhythm (3:1) + Real-life](04-hybrid-rhythm-real-life.md) ➡️ |
+<!-- /nav:bottom -->

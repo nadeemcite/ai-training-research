@@ -1,3 +1,7 @@
+<!-- nav:top -->
+[🏠 Course](../README.md) › [Topic 06 — Sparse attention + 3:1 hybrid rhythm](README.md) › Reading 4 / 6
+<!-- /nav:top -->
+
 # 04 · Hybrid rhythm (3:1) + Real-life
 
 ## Code: ek expression, poora rhythm
@@ -62,3 +66,11 @@ Guard 100 cameras ek saath nahi dekhta:
 
 ---
 🎬 **Video:** 18:38–20:00 · 📊 Slides 32–34 "Our 12 layers: 3 linear + 1 sparse"
+
+<!-- nav:bottom -->
+---
+
+| ⬅️ Pichla | 📚 Topic | Agla ➡️ |
+|:--|:-:|--:|
+| ⬅️ [03 · Practical — Kitna sasta? Fixed vs Indexer](03-practical-cost-and-indexer.md) | 📚 [Topic 06 overview](README.md) | [05 · Code Lab — `lab_sparse_attention.py`](05-lab-guide.md) ➡️ |
+<!-- /nav:bottom -->

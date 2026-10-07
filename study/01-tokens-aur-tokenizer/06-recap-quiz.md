@@ -1,3 +1,7 @@
+<!-- nav:top -->
+[🏠 Course](../README.md) › [Topic 01 — Tokens aur Tokenizer](README.md) › Reading 6 / 6
+<!-- /nav:top -->
+
 # 06 · Recap + Quiz
 
 ## 5-line recap
@@ -34,3 +38,11 @@
 8. Example: Lambe sequences ki wajah se 192-token context me kam code fit hota hai. **Experiment:** Same data pe byte-model vs chhota-BPE (vocab ~1k) model train karo. Same parameter count aur same steps rakho, aur dev pass-rate compare karo. Multiple seeds use karo!
 
 </details>
+
+<!-- nav:bottom -->
+---
+
+| ⬅️ Pichla | 📚 Topic | Agla ➡️ |
+|:--|:-:|--:|
+| ⬅️ [05 · Code Lab — `lab_tokenizer.py`](05-lab-guide.md) | 📚 [Topic 01 overview](README.md) | [Topic 02 — Embeddings, Output Head aur Weight Tying](../02-embeddings-aur-output-head/README.md) ➡️ |
+<!-- /nav:bottom -->

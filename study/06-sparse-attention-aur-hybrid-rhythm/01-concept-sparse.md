@@ -1,3 +1,7 @@
+<!-- nav:top -->
+[🏠 Course](../README.md) › [Topic 06 — Sparse attention + 3:1 hybrid rhythm](README.md) › Reading 1 / 6
+<!-- /nav:top -->
+
 # 01 · Concept — "Sab mat dekho, sahi cheezein dekho"
 
 ## Observation
@@ -54,3 +58,11 @@ Lab Exp 4 me tum dekhoge ki fixed pattern "needle" miss kar deta hai, aur indexe
 
 ---
 🎬 **Video:** 16:17–17:48, 20:25–20:45 · 📊 Slide 36 "Sparse attention retrieves selected positions"
+
+<!-- nav:bottom -->
+---
+
+| ⬅️ Pichla | 📚 Topic | Agla ➡️ |
+|:--|:-:|--:|
+| ⬅️ [Topic 06 — Sparse attention + 3:1 hybrid rhythm](README.md) | 📚 [Topic 06 overview](README.md) | [02 · Definitions — Window, anchor, stride, indexer](02-definitions-window-anchor-indexer.md) ➡️ |
+<!-- /nav:bottom -->

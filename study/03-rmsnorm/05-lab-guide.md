@@ -1,3 +1,7 @@
+<!-- nav:top -->
+[🏠 Course](../README.md) › [Topic 03 — RMSNorm: numbers ko control me rakhna](README.md) › Reading 5 / 6
+<!-- /nav:top -->
+
 # 05 · Code Lab — `lab_rmsnorm.py`
 
 ## Run (~3 sec)
@@ -57,3 +61,11 @@ n = [x for x in m.modules() if isinstance(x, RMSNorm)]
 print(len(n), 'RMSNorms,', sum(x.weight.numel() for x in n), 'params')"
 ```
 Expected: `25 RMSNorms, 4800 params`
+
+<!-- nav:bottom -->
+---
+
+| ⬅️ Pichla | 📚 Topic | Agla ➡️ |
+|:--|:-:|--:|
+| ⬅️ [04 · Real-life — Normalization har jagah hai](04-real-life.md) | 📚 [Topic 03 overview](README.md) | [06 · Recap + Quiz](06-recap-quiz.md) ➡️ |
+<!-- /nav:bottom -->

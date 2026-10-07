@@ -1,3 +1,7 @@
+<!-- nav:top -->
+[🏠 Course](../README.md) › [Topic 07 — Mixture of Experts (MoE)](README.md) › Reading 6 / 6
+<!-- /nav:top -->
+
 # 06 · Recap + Quiz
 
 ## 5-line recap
@@ -35,6 +39,10 @@
 
 </details>
 
+<!-- nav:bottom -->
 ---
 
-✅ **Topics 01–07 complete!** Review ke baad Topic 08 (Hyper-connections) shuru karenge.
+| ⬅️ Pichla | 📚 Topic | Agla ➡️ |
+|:--|:-:|--:|
+| ⬅️ [05 · Code Lab — `lab_moe.py`](05-lab-guide.md) | 📚 [Topic 07 overview](README.md) | [Course home](../README.md) 🏁 *(agle topics jald aa rahe hain)* |
+<!-- /nav:bottom -->

@@ -1,3 +1,7 @@
+<!-- nav:top -->
+[🏠 Course](../README.md) › [Topic 01 — Tokens aur Tokenizer](README.md) › Reading 3 / 6
+<!-- /nav:top -->
+
 # 03 · Practical — BPE vs Byte tokens
 
 ## Real LLMs: BPE (Byte-Pair Encoding)
@@ -54,3 +58,11 @@ Ye ek valid experiment hai jo tum CPU pe kar sakte ho.
 
 ---
 🎬 **Video:** 05:16–07:00 · 📊 Slides 15–16
+
+<!-- nav:bottom -->
+---
+
+| ⬅️ Pichla | 📚 Topic | Agla ➡️ |
+|:--|:-:|--:|
+| ⬅️ [02 · Definitions — exact words ka matlab](02-definitions.md) | 📚 [Topic 01 overview](README.md) | [04 · Real-life — Hindi me zyada tokens kyun lagte hain?](04-real-life-hindi-utf8.md) ➡️ |
+<!-- /nav:bottom -->

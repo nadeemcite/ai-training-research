@@ -1,3 +1,7 @@
+<!-- nav:top -->
+[🏠 Course](../README.md) › [Topic 02 — Embeddings, Output Head aur Weight Tying](README.md) › Reading 6 / 6
+<!-- /nav:top -->
+
 # 06 · Recap + Quiz
 
 ## 5-line recap
@@ -35,6 +39,10 @@
 
 </details>
 
+<!-- nav:bottom -->
 ---
 
-✅ **Topic 02 complete!** Agla: Topic 03 (RMSNorm).
+| ⬅️ Pichla | 📚 Topic | Agla ➡️ |
+|:--|:-:|--:|
+| ⬅️ [05 · Code Lab — `lab_embeddings.py`](05-lab-guide.md) | 📚 [Topic 02 overview](README.md) | [Topic 03 — RMSNorm: numbers ko control me rakhna](../03-rmsnorm/README.md) ➡️ |
+<!-- /nav:bottom -->

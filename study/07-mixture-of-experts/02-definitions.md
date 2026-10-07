@@ -1,3 +1,7 @@
+<!-- nav:top -->
+[🏠 Course](../README.md) › [Topic 07 — Mixture of Experts (MoE)](README.md) › Reading 2 / 6
+<!-- /nav:top -->
+
 # 02 · Definitions — Expert, router, top-k, gate
 
 ## Definitions
@@ -57,3 +61,11 @@ Har token ne alag pair chuna. Yahi "routing" hai.
 
 ---
 📁 `model.py` lines 134–174 · 🎬 Video 20:42–21:30
+
+<!-- nav:bottom -->
+---
+
+| ⬅️ Pichla | 📚 Topic | Agla ➡️ |
+|:--|:-:|--:|
+| ⬅️ [01 · Concept — Ek bada dimaag vs bahut saare specialists](01-concept.md) | 📚 [Topic 07 overview](README.md) | [03 · Practical — Repo code aur total vs active params](03-practical-code-and-params.md) ➡️ |
+<!-- /nav:bottom -->

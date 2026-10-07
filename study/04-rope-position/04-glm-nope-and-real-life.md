@@ -1,3 +1,7 @@
+<!-- nav:top -->
+[🏠 Course](../README.md) › [Topic 04 — RoPE: model ko position kaise pata chalti hai](README.md) › Reading 4 / 6
+<!-- /nav:top -->
+
 # 04 · Released GLM ka twist (NoPE) + Real-life
 
 ## Released GLM-5.3 me position kahan hai?
@@ -49,3 +53,11 @@ RoPE ke 16 pairs = 16 suiyan, alag-alag speed pe. Tez pairs paas ki position bat
 
 ---
 🎬 **Video:** 16:00–18:30 · 📊 Slide 31 "Where released GLM uses position"
+
+<!-- nav:bottom -->
+---
+
+| ⬅️ Pichla | 📚 Topic | Agla ➡️ |
+|:--|:-:|--:|
+| ⬅️ [03 · Practical — Score sirf **doori** pe depend karta hai](03-practical-relative-position.md) | 📚 [Topic 04 overview](README.md) | [05 · Code Lab — `lab_rope.py`](05-lab-guide.md) ➡️ |
+<!-- /nav:bottom -->

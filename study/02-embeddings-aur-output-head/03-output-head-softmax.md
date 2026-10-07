@@ -1,3 +1,7 @@
+<!-- nav:top -->
+[🏠 Course](../README.md) › [Topic 02 — Embeddings, Output Head aur Weight Tying](README.md) › Reading 3 / 6
+<!-- /nav:top -->
+
 # 03 · Practical — Output head: vector se "agla token" tak
 
 ## Kya chahiye
@@ -64,3 +68,11 @@ Ye top-k sorted probabilities hi hain, aur concept same hai.
 
 ---
 🎬 **Video:** 07:40–08:30, 13:20–13:50 · 📊 Slide "The pretraining step" (`cross_entropy(logits, labels)`)
+
+<!-- nav:bottom -->
+---
+
+| ⬅️ Pichla | 📚 Topic | Agla ➡️ |
+|:--|:-:|--:|
+| ⬅️ [02 · Definitions — Embedding table aur tensor shapes](02-definitions-shapes.md) | 📚 [Topic 02 overview](README.md) | [04 · Weight Tying — ek matrix, do kaam](04-weight-tying.md) ➡️ |
+<!-- /nav:bottom -->

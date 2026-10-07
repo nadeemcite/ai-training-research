@@ -1,3 +1,7 @@
+<!-- nav:top -->
+[🏠 Course](../README.md) › [Topic 02 — Embeddings, Output Head aur Weight Tying](README.md) › Reading 1 / 6
+<!-- /nav:top -->
+
 # 01 · Concept — Embedding = token ka "meaning vector"
 
 ## Problem
@@ -47,3 +51,11 @@ Prompt ke har token ka vector ban gaya. Ab ye **sequence of vectors** transforme
 
 ---
 🎬 **Video:** 07:00–08:30 · 📊 Slide 25 "How one byte becomes a prediction"
+
+<!-- nav:bottom -->
+---
+
+| ⬅️ Pichla | 📚 Topic | Agla ➡️ |
+|:--|:-:|--:|
+| ⬅️ [Topic 02 — Embeddings, Output Head aur Weight Tying](README.md) | 📚 [Topic 02 overview](README.md) | [02 · Definitions — Embedding table aur tensor shapes](02-definitions-shapes.md) ➡️ |
+<!-- /nav:bottom -->

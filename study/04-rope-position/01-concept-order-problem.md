@@ -1,3 +1,7 @@
+<!-- nav:top -->
+[🏠 Course](../README.md) › [Topic 04 — RoPE: model ko position kaise pata chalti hai](README.md) › Reading 1 / 6
+<!-- /nav:top -->
+
 # 01 · Concept — Attention "order-blind" hai
 
 ## Problem
@@ -49,3 +53,11 @@ Rotation ki 2 khoobiyan hain:
 
 ---
 🎬 **Video:** 15:10–15:55 · 📊 Slide 30 "RoPE writes position into queries and keys"
+
+<!-- nav:bottom -->
+---
+
+| ⬅️ Pichla | 📚 Topic | Agla ➡️ |
+|:--|:-:|--:|
+| ⬅️ [Topic 04 — RoPE: model ko position kaise pata chalti hai](README.md) | 📚 [Topic 04 overview](README.md) | [02 · Definitions — Rotation, pairs, frequency](02-definitions-rotation.md) ➡️ |
+<!-- /nav:bottom -->

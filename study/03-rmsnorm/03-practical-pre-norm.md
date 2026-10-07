@@ -1,3 +1,7 @@
+<!-- nav:top -->
+[🏠 Course](../README.md) › [Topic 03 — RMSNorm: numbers ko control me rakhna](README.md) › Reading 3 / 6
+<!-- /nav:top -->
+
 # 03 · Practical — Pre-norm, aur LayerNorm se fark
 
 ## Repo me RMSNorm kahan lagta hai?
@@ -51,3 +55,11 @@ Lab Exp 4: `[5, 6, 7, 8]` ke saath
 
 ---
 🎬 **Video:** 14:27–15:07 · 📁 `model.py` → `HybridBlock`, `GLM53FlashFromScratch.final_norm`
+
+<!-- nav:bottom -->
+---
+
+| ⬅️ Pichla | 📚 Topic | Agla ➡️ |
+|:--|:-:|--:|
+| ⬅️ [02 · Definitions — RMS, epsilon, gamma](02-definitions-formula.md) | 📚 [Topic 03 overview](README.md) | [04 · Real-life — Normalization har jagah hai](04-real-life.md) ➡️ |
+<!-- /nav:bottom -->

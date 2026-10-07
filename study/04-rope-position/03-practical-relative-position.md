@@ -1,3 +1,7 @@
+<!-- nav:top -->
+[🏠 Course](../README.md) › [Topic 04 — RoPE: model ko position kaise pata chalti hai](README.md) › Reading 3 / 6
+<!-- /nav:top -->
+
 # 03 · Practical — Score sirf **doori** pe depend karta hai
 
 ## RoPE ka sabse important property
@@ -55,3 +59,11 @@ Dono attention types me lagta hai. Ek subtle baat: linear attention me RoPE ke b
 
 ---
 🎬 **Video:** 15:25–15:55 · 📊 Slide 30
+
+<!-- nav:bottom -->
+---
+
+| ⬅️ Pichla | 📚 Topic | Agla ➡️ |
+|:--|:-:|--:|
+| ⬅️ [02 · Definitions — Rotation, pairs, frequency](02-definitions-rotation.md) | 📚 [Topic 04 overview](README.md) | [04 · Released GLM ka twist (NoPE) + Real-life](04-glm-nope-and-real-life.md) ➡️ |
+<!-- /nav:bottom -->

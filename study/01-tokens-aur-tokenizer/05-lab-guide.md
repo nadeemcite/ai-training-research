@@ -1,3 +1,7 @@
+<!-- nav:top -->
+[🏠 Course](../README.md) › [Topic 01 — Tokens aur Tokenizer](README.md) › Reading 5 / 6
+<!-- /nav:top -->
+
 # 05 · Code Lab — `lab_tokenizer.py`
 
 ## Run
@@ -51,3 +55,11 @@ Exp 5  BPE 150k       embedding params =   28,800,000  (~112.1% of 25.7M)
 ## Break karke seekho 🔨
 
 - `byte_offset = 4` ko `0` kar do aur Exp 1 dobara chalao. Assert fail hoga. Socho: agar offset 0 hota to byte value `0x01` aur `BOS=1` me confusion kaise hota?
+
+<!-- nav:bottom -->
+---
+
+| ⬅️ Pichla | 📚 Topic | Agla ➡️ |
+|:--|:-:|--:|
+| ⬅️ [04 · Real-life — Hindi me zyada tokens kyun lagte hain?](04-real-life-hindi-utf8.md) | 📚 [Topic 01 overview](README.md) | [06 · Recap + Quiz](06-recap-quiz.md) ➡️ |
+<!-- /nav:bottom -->

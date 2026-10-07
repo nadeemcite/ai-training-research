@@ -1,3 +1,7 @@
+<!-- nav:top -->
+[🏠 Course](../README.md) › [Topic 05 — Attention basics → Linear attention](README.md) › Reading 4 / 6
+<!-- /nav:top -->
+
 # 04 · Trade-off — Compressed memory ki keemat
 
 ## Free lunch nahi hota
@@ -61,3 +65,11 @@ Lab Exp 5 (γ = 0.8, 32 pairs): `·······················�
 
 ---
 🎬 **Video:** 18:38–19:40 · 📊 Slide 35
+
+<!-- nav:bottom -->
+---
+
+| ⬅️ Pichla | 📚 Topic | Agla ➡️ |
+|:--|:-:|--:|
+| ⬅️ [03 · Practical — Linear attention: brackets badlo, T² hatao](03-linear-attention.md) | 📚 [Topic 05 overview](README.md) | [05 · Code Lab — `lab_linear_attention.py`](05-lab-guide.md) ➡️ |
+<!-- /nav:bottom -->

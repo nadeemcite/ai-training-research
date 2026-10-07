@@ -1,3 +1,7 @@
+<!-- nav:top -->
+[🏠 Course](../README.md) › [Topic 01 — Tokens aur Tokenizer](README.md) › Reading 2 / 6
+<!-- /nav:top -->
+
 # 02 · Definitions — exact words ka matlab
 
 | Term | Simple Hinglish definition | Hamare model me |
@@ -50,3 +54,11 @@ class ByteTokenizer:
 
 ---
 🎬 **Video:** 05:16–06:10 · 📁 `sources/repo/glm53_flash/tokenizer.py`
+
+<!-- nav:bottom -->
+---
+
+| ⬅️ Pichla | 📚 Topic | Agla ➡️ |
+|:--|:-:|--:|
+| ⬅️ [01 · Concept — LLM bas "agla token" guess karta hai](01-concept-next-token.md) | 📚 [Topic 01 overview](README.md) | [03 · Practical — BPE vs Byte tokens](03-bpe-vs-byte.md) ➡️ |
+<!-- /nav:bottom -->

@@ -1,3 +1,7 @@
+<!-- nav:top -->
+[🏠 Course](../README.md) › [Topic 02 — Embeddings, Output Head aur Weight Tying](README.md) › Reading 4 / 6
+<!-- /nav:top -->
+
 # 04 · Weight Tying — ek matrix, do kaam
 
 ## Observation
@@ -60,3 +64,11 @@ Ek hi **dictionary** se tum English → Hindi bhi dekhte ho aur Hindi → Englis
 
 ---
 🎬 **Video:** 13:50–14:27 aur 22:28–23:00 · 📊 Slide 41 "The input and output share one matrix"
+
+<!-- nav:bottom -->
+---
+
+| ⬅️ Pichla | 📚 Topic | Agla ➡️ |
+|:--|:-:|--:|
+| ⬅️ [03 · Practical — Output head: vector se "agla token" tak](03-output-head-softmax.md) | 📚 [Topic 02 overview](README.md) | [05 · Code Lab — `lab_embeddings.py`](05-lab-guide.md) ➡️ |
+<!-- /nav:bottom -->

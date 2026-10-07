@@ -104,6 +104,7 @@ sources/
   SLIDES_VS_TRANSCRIPT.md   which slide deck matches the video, and the gaps between them
 scripts/
   fetch_transcript.py       uv run scripts/fetch_transcript.py <url> [out_dir]
+  build_nav.py              uv run scripts/build_nav.py   (re-run after adding a chapter or reading)
 study/          (Hinglish) chapters 01–07: tokens → embeddings → RMSNorm → RoPE → linear/sparse attention → MoE
 ```
 

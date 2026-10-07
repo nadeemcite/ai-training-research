@@ -1,3 +1,7 @@
+<!-- nav:top -->
+[🏠 Course](../README.md) › [Topic 07 — Mixture of Experts (MoE)](README.md) › Reading 5 / 6
+<!-- /nav:top -->
+
 # 05 · Code Lab — `lab_moe.py`
 
 ## Run (~12 sec, CPU pe)
@@ -62,3 +66,11 @@ Exp 5  balance_weight=1.0  seed=2  usage=[0.15, 0.14, 0.13, 0.11, 0.12, 0.11, 0.
    print('usage.requires_grad =', usage.requires_grad)"
    ```
    Expected: `False`. Ab socho: fix kaise karoge? (Hint: `SparseMoE.forward` me `torch.softmax(logits, -1).mean(0)` bhi return karo.)
+
+<!-- nav:bottom -->
+---
+
+| ⬅️ Pichla | 📚 Topic | Agla ➡️ |
+|:--|:-:|--:|
+| ⬅️ [04 · Load balancing, ek repo bug 🐛, aur Real-life](04-load-balancing-real-life.md) | 📚 [Topic 07 overview](README.md) | [06 · Recap + Quiz](06-recap-quiz.md) ➡️ |
+<!-- /nav:bottom -->

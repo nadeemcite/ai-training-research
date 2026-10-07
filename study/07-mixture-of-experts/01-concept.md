@@ -1,3 +1,7 @@
+<!-- nav:top -->
+[🏠 Course](../README.md) › [Topic 07 — Mixture of Experts (MoE)](README.md) › Reading 1 / 6
+<!-- /nav:top -->
+
 # 01 · Concept — Ek bada dimaag vs bahut saare specialists
 
 ## Normal transformer: Dense FFN
@@ -57,3 +61,11 @@ Naam se lagta hai ki ek expert "maths" ka hoga aur ek "Hindi" ka. Asliyat me spe
 
 ---
 🎬 **Video:** 20:42–21:30 · 📊 Slide 37 "Each token chooses experts"
+
+<!-- nav:bottom -->
+---
+
+| ⬅️ Pichla | 📚 Topic | Agla ➡️ |
+|:--|:-:|--:|
+| ⬅️ [Topic 07 — Mixture of Experts (MoE)](README.md) | 📚 [Topic 07 overview](README.md) | [02 · Definitions — Expert, router, top-k, gate](02-definitions.md) ➡️ |
+<!-- /nav:bottom -->

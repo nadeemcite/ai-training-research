@@ -1,3 +1,7 @@
+<!-- nav:top -->
+[🏠 Course](../README.md) › [Topic 04 — RoPE: model ko position kaise pata chalti hai](README.md) › Reading 2 / 6
+<!-- /nav:top -->
+
 # 02 · Definitions — Rotation, pairs, frequency
 
 ## 2D rotation (school wala)
@@ -71,3 +75,11 @@ Upar wala 2D formula hi hai, bas 16 pairs pe ek saath lagaya gaya hai.
 
 ---
 📁 `model.py` lines 44–59 · 🎬 Video 15:25–15:55
+
+<!-- nav:bottom -->
+---
+
+| ⬅️ Pichla | 📚 Topic | Agla ➡️ |
+|:--|:-:|--:|
+| ⬅️ [01 · Concept — Attention "order-blind" hai](01-concept-order-problem.md) | 📚 [Topic 04 overview](README.md) | [03 · Practical — Score sirf **doori** pe depend karta hai](03-practical-relative-position.md) ➡️ |
+<!-- /nav:bottom -->

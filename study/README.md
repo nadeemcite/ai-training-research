@@ -8,6 +8,10 @@
 **Code:** `sources/repo/` (submodule) · **Transcript:** `sources/transcript/` · **Video:** `sources/video/` (download separately, see root README)
 **Slides vs transcript check:** `sources/SLIDES_VS_TRANSCRIPT.md`
 
+<!-- nav:start -->
+▶️ **Shuru karo:** [Topic 01 — Tokens aur Tokenizer](01-tokens-aur-tokenizer/README.md)
+<!-- /nav:start -->
+
 ## Is classroom ka rule
 
 - Har file **1–2 page** ki hai. Ek baar me ek hi file padho.
@@ -37,13 +41,13 @@ uv run study/07-mixture-of-experts/lab_moe.py
 
 | # | Topic | Video | Status |
 |---|---|---|---|
-| 01 | Tokens aur Tokenizer (BPE vs Byte) | 05:00–07:00 | ✅ |
-| 02 | Embeddings, Output Head aur Weight Tying | 07:00–08:30, 10:47–14:30 | ✅ |
-| 03 | RMSNorm: numbers ko control me rakhna | 14:27 | ✅ |
-| 04 | RoPE: position ka pata kaise chalta hai | 15:10 | ✅ |
-| 05 | Attention basics → Linear attention (running memory) | 16:00–19:00 | ✅ |
-| 06 | Sparse attention + the 3:1 hybrid rhythm | 18:38 | ✅ |
-| 07 | Mixture of Experts (router, top-k, shared expert) | 20:00 | ✅ |
+| 01 | [Tokens aur Tokenizer (BPE vs Byte)](01-tokens-aur-tokenizer/) | 05:00–07:00 | ✅ |
+| 02 | [Embeddings, Output Head aur Weight Tying](02-embeddings-aur-output-head/) | 07:00–08:30, 10:47–14:30 | ✅ |
+| 03 | [RMSNorm: numbers ko control me rakhna](03-rmsnorm/) | 14:27 | ✅ |
+| 04 | [RoPE: position ka pata kaise chalta hai](04-rope-position/) | 15:10 | ✅ |
+| 05 | [Attention basics → Linear attention (running memory)](05-attention-aur-linear-attention/) | 16:00–19:00 | ✅ |
+| 06 | [Sparse attention + the 3:1 hybrid rhythm](06-sparse-attention-aur-hybrid-rhythm/) | 18:38 | ✅ |
+| 07 | [Mixture of Experts (router, top-k, shared expert)](07-mixture-of-experts/) | 20:00 | ✅ |
 | 08 | Hyper-connections (4 residual streams) | 11:30, 21:30 | ⏳ |
 | 09 | Vision: image → 16 tokens | 23:07 | ⏳ |
 | 10 | Pretraining loop: cross-entropy, AdamW, grad clipping | 26:14 | ⏳ |

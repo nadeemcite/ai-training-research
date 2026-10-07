@@ -1,3 +1,7 @@
+<!-- nav:top -->
+[🏠 Course](../README.md) › [Topic 06 — Sparse attention + 3:1 hybrid rhythm](README.md) › Reading 6 / 6
+<!-- /nav:top -->
+
 # 06 · Recap + Quiz
 
 ## 5-line recap
@@ -34,3 +38,11 @@
 8. Hypothesis: "Har 4th pe spread karne se info baar-baar refresh hoti hai, jabki end me cluster karne se shuruaati layers ko kabhi exact context nahi milta." Dono variants same params/steps/data ke saath train karo. Measure karo pretraining loss aur lambi-doori wale tasks (prompt ki instruction 100+ tokens peeche ho) ka dev pass-rate, 3+ seeds pe.
 
 </details>
+
+<!-- nav:bottom -->
+---
+
+| ⬅️ Pichla | 📚 Topic | Agla ➡️ |
+|:--|:-:|--:|
+| ⬅️ [05 · Code Lab — `lab_sparse_attention.py`](05-lab-guide.md) | 📚 [Topic 06 overview](README.md) | [Topic 07 — Mixture of Experts (MoE)](../07-mixture-of-experts/README.md) ➡️ |
+<!-- /nav:bottom -->

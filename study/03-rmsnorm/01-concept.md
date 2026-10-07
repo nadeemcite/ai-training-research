@@ -1,3 +1,7 @@
+<!-- nav:top -->
+[🏠 Course](../README.md) › [Topic 03 — RMSNorm: numbers ko control me rakhna](README.md) › Reading 1 / 6
+<!-- /nav:top -->
+
 # 01 · Concept — Numbers ko "explode" hone se bachana
 
 ## Problem
@@ -42,3 +46,11 @@ Meaning **direction** me hai, size me nahi.
 
 ---
 🎬 **Video:** 14:27–15:07 · 📊 Slide 29 "RMSNorm sets the scale before each sublayer"
+
+<!-- nav:bottom -->
+---
+
+| ⬅️ Pichla | 📚 Topic | Agla ➡️ |
+|:--|:-:|--:|
+| ⬅️ [Topic 03 — RMSNorm: numbers ko control me rakhna](README.md) | 📚 [Topic 03 overview](README.md) | [02 · Definitions — RMS, epsilon, gamma](02-definitions-formula.md) ➡️ |
+<!-- /nav:bottom -->

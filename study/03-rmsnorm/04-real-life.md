@@ -1,3 +1,7 @@
+<!-- nav:top -->
+[🏠 Course](../README.md) › [Topic 03 — RMSNorm: numbers ko control me rakhna](README.md) › Reading 4 / 6
+<!-- /nav:top -->
+
 # 04 · Real-life — Normalization har jagah hai
 
 ## 1. Spotify / YouTube Music ka "Volume Normalization" 🎧
@@ -34,3 +38,11 @@ Model me bhi vector ka size kabhi-kabhi kuch matlab rakhta hai, jaise confidence
 
 ---
 🎬 Video me ye examples nahi hain. Ye extra context hai, video ke 14:27 wale part se juda hua.
+
+<!-- nav:bottom -->
+---
+
+| ⬅️ Pichla | 📚 Topic | Agla ➡️ |
+|:--|:-:|--:|
+| ⬅️ [03 · Practical — Pre-norm, aur LayerNorm se fark](03-practical-pre-norm.md) | 📚 [Topic 03 overview](README.md) | [05 · Code Lab — `lab_rmsnorm.py`](05-lab-guide.md) ➡️ |
+<!-- /nav:bottom -->

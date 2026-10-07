@@ -1,3 +1,7 @@
+<!-- nav:top -->
+[🏠 Course](../README.md) › [Topic 05 — Attention basics → Linear attention](README.md) › Reading 3 / 6
+<!-- /nav:top -->
+
 # 03 · Practical — Linear attention: brackets badlo, T² hatao
 
 ## Trick: matrix multiplication me brackets
@@ -69,3 +73,11 @@ Video: *"By my experience this trains a lot faster and inferences a lot faster .
 
 ---
 🎬 **Video:** 18:38–20:25 · 📊 Slide 35 "Linear attention carries a running memory" · 📁 `model.py` lines 62–86
+
+<!-- nav:bottom -->
+---
+
+| ⬅️ Pichla | 📚 Topic | Agla ➡️ |
+|:--|:-:|--:|
+| ⬅️ [02 · Definitions — Q, K, V, heads, aur T² problem](02-definitions-and-cost.md) | 📚 [Topic 05 overview](README.md) | [04 · Trade-off — Compressed memory ki keemat](04-tradeoff-real-life.md) ➡️ |
+<!-- /nav:bottom -->

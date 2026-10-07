@@ -1,3 +1,7 @@
+<!-- nav:top -->
+[🏠 Course](../README.md) › [Topic 03 — RMSNorm: numbers ko control me rakhna](README.md) › Reading 6 / 6
+<!-- /nav:top -->
+
 # 06 · Recap + Quiz
 
 ## 5-line recap
@@ -34,3 +38,11 @@
 8. Do model train karo jo γ ke alawa bilkul same hon: same data, steps aur LR. **Kai seeds** pe chalao. Measure karo: final loss, dev pass-rate, aur training stability (koi loss spike?). Ek seed pe jeet ko discovery mat maano (video 41:19+).
 
 </details>
+
+<!-- nav:bottom -->
+---
+
+| ⬅️ Pichla | 📚 Topic | Agla ➡️ |
+|:--|:-:|--:|
+| ⬅️ [05 · Code Lab — `lab_rmsnorm.py`](05-lab-guide.md) | 📚 [Topic 03 overview](README.md) | [Topic 04 — RoPE: model ko position kaise pata chalti hai](../04-rope-position/README.md) ➡️ |
+<!-- /nav:bottom -->

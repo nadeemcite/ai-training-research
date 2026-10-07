@@ -1,3 +1,7 @@
+<!-- nav:top -->
+[🏠 Course](../README.md) › [Topic 04 — RoPE: model ko position kaise pata chalti hai](README.md) › Reading 5 / 6
+<!-- /nav:top -->
+
 # 05 · Code Lab — `lab_rope.py`
 
 ## Run (~3 sec)
@@ -58,3 +62,11 @@ q = torch.randn(1, 10, 6, 32); rq, rk = apply_rope(q, q)
 print('shape same:', rq.shape == q.shape, '| pos 0 unchanged:', torch.allclose(rq[:, 0], q[:, 0]))"
 ```
 Expected: `shape same: True | pos 0 unchanged: True` (position 0 pe angle 0 hai, to koi rotation nahi)
+
+<!-- nav:bottom -->
+---
+
+| ⬅️ Pichla | 📚 Topic | Agla ➡️ |
+|:--|:-:|--:|
+| ⬅️ [04 · Released GLM ka twist (NoPE) + Real-life](04-glm-nope-and-real-life.md) | 📚 [Topic 04 overview](README.md) | [06 · Recap + Quiz](06-recap-quiz.md) ➡️ |
+<!-- /nav:bottom -->

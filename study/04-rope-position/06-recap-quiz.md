@@ -1,3 +1,7 @@
+<!-- nav:top -->
+[🏠 Course](../README.md) › [Topic 04 — RoPE: model ko position kaise pata chalti hai](README.md) › Reading 6 / 6
+<!-- /nav:top -->
+
 # 06 · Recap + Quiz
 
 ## 5-line recap
@@ -34,3 +38,11 @@
 8. Hypothesis: "Linear layers recent context ko compress karti hain. Shayad unhe position ki zaroorat nahi, aur sparse layers ka RoPE kaafi hai." Measure karo: pretraining loss, aur dev par order-sensitive tasks (jaise `x - 1` vs `1 - x`) ka pass-rate. Baaki sab same rakho aur 3+ seeds pe chalao.
 
 </details>
+
+<!-- nav:bottom -->
+---
+
+| ⬅️ Pichla | 📚 Topic | Agla ➡️ |
+|:--|:-:|--:|
+| ⬅️ [05 · Code Lab — `lab_rope.py`](05-lab-guide.md) | 📚 [Topic 04 overview](README.md) | [Topic 05 — Attention basics → Linear attention](../05-attention-aur-linear-attention/README.md) ➡️ |
+<!-- /nav:bottom -->

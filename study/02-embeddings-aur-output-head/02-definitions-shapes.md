@@ -1,3 +1,7 @@
+<!-- nav:top -->
+[🏠 Course](../README.md) › [Topic 02 — Embeddings, Output Head aur Weight Tying](README.md) › Reading 2 / 6
+<!-- /nav:top -->
+
 # 02 · Definitions — Embedding table aur tensor shapes
 
 ## Definitions
@@ -67,3 +71,11 @@ Byte vocab ki wajah se embedding ka share bahut chhota hai, isliye lagbhag saare
 ---
 🎬 **Video:** 10:47–11:30 ("first you have embedding and then passing input ID...")
 📁 `model.py` → `GLM53FlashFromScratch.__init__` aur `forward_embeddings`
+
+<!-- nav:bottom -->
+---
+
+| ⬅️ Pichla | 📚 Topic | Agla ➡️ |
+|:--|:-:|--:|
+| ⬅️ [01 · Concept — Embedding = token ka "meaning vector"](01-concept-embedding.md) | 📚 [Topic 02 overview](README.md) | [03 · Practical — Output head: vector se "agla token" tak](03-output-head-softmax.md) ➡️ |
+<!-- /nav:bottom -->

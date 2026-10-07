@@ -1,3 +1,7 @@
+<!-- nav:top -->
+[🏠 Course](../README.md) › [Topic 06 — Sparse attention + 3:1 hybrid rhythm](README.md) › Reading 2 / 6
+<!-- /nav:top -->
+
 # 02 · Definitions — Window, anchor, stride, indexer
 
 ## Definitions
@@ -55,3 +59,11 @@ Lab Exp 4 me indexer sirf **4 dims** use karta hai (32 ki jagah), phir bhi needl
 
 ---
 📁 `model.py` lines 89–131 · 🎬 Video 16:17–17:48
+
+<!-- nav:bottom -->
+---
+
+| ⬅️ Pichla | 📚 Topic | Agla ➡️ |
+|:--|:-:|--:|
+| ⬅️ [01 · Concept — "Sab mat dekho, sahi cheezein dekho"](01-concept-sparse.md) | 📚 [Topic 06 overview](README.md) | [03 · Practical — Kitna sasta? Fixed vs Indexer](03-practical-cost-and-indexer.md) ➡️ |
+<!-- /nav:bottom -->

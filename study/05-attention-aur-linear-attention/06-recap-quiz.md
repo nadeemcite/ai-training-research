@@ -1,3 +1,7 @@
+<!-- nav:top -->
+[🏠 Course](../README.md) › [Topic 05 — Attention basics → Linear attention](README.md) › Reading 6 / 6
+<!-- /nav:top -->
+
 # 06 · Recap + Quiz
 
 ## 5-line recap
@@ -34,3 +38,11 @@
 8. Hypothesis: "Decay recent context pe focus badhayega aur next-token loss kam karega, kyunki code me aksar paas ke tokens zyada relevant hote hain." Baaki sab same rakho, γ ∈ {1.0, 0.99, 0.95} try karo, aur pretraining loss + dev pass-rate measure karo, 3+ seeds pe. Ye bhi check karo ki lambi-doori dependencies (jaise comment me "one" → code me `1`) pe nuksaan to nahi hua.
 
 </details>
+
+<!-- nav:bottom -->
+---
+
+| ⬅️ Pichla | 📚 Topic | Agla ➡️ |
+|:--|:-:|--:|
+| ⬅️ [05 · Code Lab — `lab_linear_attention.py`](05-lab-guide.md) | 📚 [Topic 05 overview](README.md) | [Topic 06 — Sparse attention + 3:1 hybrid rhythm](../06-sparse-attention-aur-hybrid-rhythm/README.md) ➡️ |
+<!-- /nav:bottom -->

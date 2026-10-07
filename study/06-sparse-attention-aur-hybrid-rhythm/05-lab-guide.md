@@ -1,3 +1,7 @@
+<!-- nav:top -->
+[🏠 Course](../README.md) › [Topic 06 — Sparse attention + 3:1 hybrid rhythm](README.md) › Reading 5 / 6
+<!-- /nav:top -->
+
 # 05 · Code Lab — `lab_sparse_attention.py`
 
 ## Run (~3 sec)
@@ -56,3 +60,11 @@ sa = SparseAttention(ModelConfig()); idx, valid = sa._indices(192, 'cpu')
 print('position 191 dekhta hai', int(valid[191].sum()), 'keys (full hota to 192)')"
 ```
 Expected: `position 191 dekhta hai 37 keys (full hota to 192)`
+
+<!-- nav:bottom -->
+---
+
+| ⬅️ Pichla | 📚 Topic | Agla ➡️ |
+|:--|:-:|--:|
+| ⬅️ [04 · Hybrid rhythm (3:1) + Real-life](04-hybrid-rhythm-real-life.md) | 📚 [Topic 06 overview](README.md) | [06 · Recap + Quiz](06-recap-quiz.md) ➡️ |
+<!-- /nav:bottom -->

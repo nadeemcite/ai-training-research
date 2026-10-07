@@ -1,3 +1,7 @@
+<!-- nav:top -->
+[🏠 Course](../README.md) › [Topic 05 — Attention basics → Linear attention](README.md) › Reading 5 / 6
+<!-- /nav:top -->
+
 # 05 · Code Lab — `lab_linear_attention.py`
 
 ## Run (~3 sec)
@@ -75,3 +79,11 @@ y1 = la(x); y2 = la(torch.cat([x, torch.randn(1, 5, 192)], 1))[:, :20]
 print('causal (future se past nahi badla):', torch.allclose(y1, y2, atol=1e-5))"
 ```
 Expected: `causal (future se past nahi badla): True`
+
+<!-- nav:bottom -->
+---
+
+| ⬅️ Pichla | 📚 Topic | Agla ➡️ |
+|:--|:-:|--:|
+| ⬅️ [04 · Trade-off — Compressed memory ki keemat](04-tradeoff-real-life.md) | 📚 [Topic 05 overview](README.md) | [06 · Recap + Quiz](06-recap-quiz.md) ➡️ |
+<!-- /nav:bottom -->

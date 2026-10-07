@@ -1,3 +1,7 @@
+<!-- nav:top -->
+[🏠 Course](../README.md) › [Topic 05 — Attention basics → Linear attention](README.md) › Reading 2 / 6
+<!-- /nav:top -->
+
 # 02 · Definitions — Q, K, V, heads, aur T² problem
 
 ## Definitions
@@ -53,3 +57,11 @@ Do raaste hain (GLM-5.3 dono use karta hai):
 
 ---
 🎬 **Video:** 17:04–17:48 (compute scaling) · 19:55–20:25 (running state)
+
+<!-- nav:bottom -->
+---
+
+| ⬅️ Pichla | 📚 Topic | Agla ➡️ |
+|:--|:-:|--:|
+| ⬅️ [01 · Concept — Attention = "kisse kitna sunna hai"](01-concept-attention.md) | 📚 [Topic 05 overview](README.md) | [03 · Practical — Linear attention: brackets badlo, T² hatao](03-linear-attention.md) ➡️ |
+<!-- /nav:bottom -->
