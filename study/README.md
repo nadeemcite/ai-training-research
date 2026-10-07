@@ -1,6 +1,6 @@
 # 🎓 GLM-5.3-Flash Classroom — AI Research seekho, chhote steps me
 
-**Main source:** [Build & Train GLM-5.3-Flash From Scratch](https://www.youtube.com/watch?v=-gfgQfw2g_E) by **Vuk Rosić** ([@vukrosic](https://www.youtube.com/@vukrosic)), published free by **[freeCodeCamp.org](https://www.freecodecamp.org)** 🙏 (full credits in the [root README](../README.md#️-credits--gratitude))
+**Main source:** [Build & Train GLM-5.3-Flash From Scratch](https://www.youtube.com/watch?v=-gfgQfw2g_E) by **Vuk Rosić** ([@vukrosic](https://www.youtube.com/@vukrosic)), published free by **[freeCodeCamp.org](https://www.freecodecamp.org)** 🙏 (full credits in the [root README](../README.md))
 **Code:** `sources/repo/` (submodule) · **Transcript:** `sources/transcript/` · **Video:** `sources/video/` (download separately, see root README)
 **Slides vs transcript check:** `sources/SLIDES_VS_TRANSCRIPT.md`
 
