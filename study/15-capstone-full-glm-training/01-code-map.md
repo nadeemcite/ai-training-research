@@ -14,7 +14,7 @@
 | `apply_rope` | Pairs ko position × frequency se ghumao | [04](../04-rope-position/) |
 | `LinearAttention` | φ = elu+1, cumsum running state | [05](../05-attention-aur-linear-attention/) |
 | `SparseAttention` | Local window + strided anchors, causal | [06](../06-sparse-attention-aur-hybrid-rhythm/) |
-| `Expert`, `SparseMoE` | SwiGLU experts, top-2 router, shared expert, **[FIX-07]** balance loss | [07](../07-mixture-of-experts/) |
+| `Expert`, `SparseMoE` | SwiGLU experts (batched, GPU-friendly), top-2 router, shared expert, **[FIX-07]** balance loss | [07](../07-mixture-of-experts/) |
 | `HybridBlock`, `HyperConnection` | 4 streams, read/write, **[FIX-08]** identity once | [08](../08-hyper-connections/) |
 | `GLM53Flash` | Tied embeddings, `(i+1) % 4 == 0` → sparse | [02](../02-embeddings-aur-output-head/), [06](../06-sparse-attention-aur-hybrid-rhythm/) |
 | `VisionEncoder`, `digit_images` | Patches → ViT → 2×2 merge → projector → 16 tokens | [09](../09-vision-image-to-tokens/) |
@@ -31,6 +31,7 @@
 
 | Cheez | Repo | Capstone | Kyun |
 |---|---|---|---|
+| MoE | Python loop: har expert sirf apne tokens pe (`torch.where` + `index_add`) | **Batched**: saare experts ek matmul me + zero gates | Mac GPU pe 2.5× tez (Reading 03). Math same, lekin unchune experts ka compute bhi hota hai |
 | Sparse attention | Gather (sirf chuni keys ka compute) | Full T×T scores + **mask** | Code chhota hai aur math same hai. Compute bachat sirf gather me hoti hai |
 | Vision transformer | Custom blocks, Q/K norm | `nn.TransformerEncoderLayer` | Chhota code. Idea same (bidirectional) |
 | Vision LM | Same LM class, tiny config | Same `GLM53Flash`, tiny config | — |

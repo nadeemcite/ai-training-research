@@ -22,6 +22,34 @@ STAGE vision: held-out digits 0/200 -> 141/200
 
 Ye run do baar chalaya gaya, aur dono baar **bilkul same** numbers aaye.
 
+## Full 25.7M run on the Mac GPU (MPS, ~14 min)
+
+```bash
+uv run study/15-capstone-full-glm-training/glm53_full.py --preset full --eval-per-family 8
+```
+```
+model full on mps: 25,731,168 params, ~9,805,920 active/token
+pretrain 100 steps (~2 min)    loss 5.601 → 0.591
+RL 48 groups (~3 min)          exact rollouts 633/768 (82%!) — sirf 27 groups me update hua
+eval 24 + 64 tasks (~9 min)
+  RL families greedy pass@1: 21/24 -> 21/24   (gains 2, losses 2, McNemar p = 1.0)
+  all 8 families sampled pass@1 56.4% -> 71.7%,  pass@8 85.9% -> 95.3%
+    RL increment   60/64 -> 64/64 ↑      square       62/64 -> 64/64 ↑
+    RL double      40/64 -> 63/64 ↑      absolute     17/64 -> 34/64 ↑
+    RL even        27/64 -> 25/64 ↓      nonnegative  21/64 -> 41/64 ↑
+                                         reverse      10/64 -> 12/64 ↑
+                                         list_sum     52/64 -> 64/64 ↑
+```
+
+**Iska matlab (imaandaari se):**
+
+1. **Greedy pe RL ne kuch nahi kiya**, kyunki model pehle se 21/24 pe tha. Sudhaar ki jagah hi nahi thi (ceiling). Vuk ka checkpoint 100 sirf 2/8 dev pe tha. Hamara full model, same 100 steps pe, kaafi strong nikla. Kyun? Shayad FIX-08 / FIX-07, ya data/hardware ka fark. **Ye measure nahi hua** (1 seed).
+2. **Sampled accuracy sab families pe badhi**, un 5 pe bhi jin pe RL hua hi nahi (absolute 17 → 34, nonnegative 21 → 41). Ye Vuk ke result ka **ulta** hai, jahan untrained families giri thi. Ek likely explanation: RL ne model ko zyada **confident (sharp)** bana diya. Temperature 0.35 pe ab galat tokens kam sample hote hain, jabki greedy (sirf top token) waise bhi same rehta hai. Ye "distribution sharpening" hai, naya skill nahi.
+3. `even` phir se nahi sudhra (27 → 25). Teesri baar same pattern!
+4. RL ke dauraan 82% attempts pehle se sahi the, isliye 48 me se sirf 27 groups me signal mila (Topic 12 ka "sab barabar = update nahi").
+
+**Agla accha experiment:** Full model ko **kam pretraining** (jaise 40–60 steps) se RL me daalo, taaki greedy pe sudhaar ki jagah ho. Aur 3+ seeds chalao.
+
 ## Vuk ke repo ke result se tulna
 
 | | Repo (25.7M, GPU) | Hamara capstone (2.2M, CPU) |

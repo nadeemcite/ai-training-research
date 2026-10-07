@@ -1,7 +1,7 @@
 """GLM-5.3-Flash from scratch — poora pipeline, ek file me (Chapters 01–14 ka consolidation).
 
     uv run study/15-capstone-full-glm-training/glm53_full.py                       # tiny, CPU, ~5 min
-    uv run study/15-capstone-full-glm-training/glm53_full.py --preset full --device cuda   # 25.7M, GPU
+    uv run study/15-capstone-full-glm-training/glm53_full.py --preset full --eval-per-family 8   # 25.7M, Mac GPU (MPS) ~15 min
 
 Stages (default: pretrain,rl,eval):  --stages pretrain,rl,eval,vision
 
@@ -162,28 +162,37 @@ class Expert(nn.Module):
 
 
 class SparseMoE(nn.Module):
+    """Top-k routed experts + shared expert.
+
+    GPU-friendly "batched" form: saare experts ek hi batched matmul me chalte hain, aur ek
+    mostly-zero `gates` matrix sirf chune gaye top-k experts ka output rakhti hai. Math
+    repo ke loop version (torch.where + index_add) ke bilkul barabar hai (outputs aur
+    gradients verify kiye gaye), lekin Python loop / variable shapes nahi hain, isliye
+    Apple GPU (MPS) pe ~2.5x tez. Keemat: unchune experts ka compute bhi hota hai
+    (bade models me real systems isliye loop/grouped kernels use karte hain).
+    """
+
     def __init__(self, c: Config):
         super().__init__()
         self.k, self.n = c.top_k, c.experts
         self.router = nn.Linear(c.dim, c.experts, bias=False)
-        self.experts = nn.ModuleList(Expert(c.dim, c.expert_hidden) for _ in range(c.experts))
+        self.up = nn.Parameter(torch.empty(c.experts, c.dim, 2 * c.expert_hidden))      # har expert ka up (SwiGLU)
+        self.down = nn.Parameter(torch.empty(c.experts, c.expert_hidden, c.dim))        # har expert ka down
+        nn.init.normal_(self.up, std=0.02)
+        nn.init.normal_(self.down, std=0.02)
         self.shared = Expert(c.dim, c.expert_hidden)
 
     def forward(self, x):
-        flat = x.reshape(-1, x.shape[-1])
-        logits = self.router(flat)
+        flat = x.reshape(-1, x.shape[-1])                                  # [N, D]
+        logits = self.router(flat)                                         # [N, E]
         top_v, top_i = logits.topk(self.k, -1)
-        top_w = top_v.float().softmax(-1).to(flat.dtype)
-        out = self.shared(flat)
-        counts = torch.zeros(self.n, device=x.device)
-        for e, expert in enumerate(self.experts):
-            rows, slots = torch.where(top_i == e)
-            if rows.numel():
-                out = out.index_add(0, rows, expert(flat[rows]) * top_w[rows, slots, None])
-                counts[e] = rows.numel()
+        gates = torch.zeros_like(logits).scatter(1, top_i, top_v.float().softmax(-1).to(logits.dtype))  # [N, E]
+        gate, value = torch.einsum("nd,edh->enh", flat, self.up).chunk(2, -1)
+        expert_out = torch.einsum("enh,ehd->end", F.silu(gate) * value, self.down)      # [E, N, D]
+        out = self.shared(flat) + torch.einsum("ne,end->nd", gates, expert_out)
         # [FIX-07] Switch-Transformer style aux loss: fraction (counts) x mean router PROBABILITY.
         # probs differentiable hai, to router ko sach me balance karne ka gradient milta hai.
-        fraction = counts / max(1, flat.shape[0] * self.k)
+        fraction = (gates > 0).float().sum(0) / (flat.shape[0] * self.k)
         probs = logits.float().softmax(-1).mean(0)
         balance = self.n * (fraction * probs).sum()                     # perfect balance pe = 1
         return out.view(x.shape), balance, fraction
@@ -233,7 +242,7 @@ class GLM53Flash(nn.Module):
         self.head = nn.Linear(c.dim, c.vocab_size, bias=False)
         self.head.weight = self.embedding.weight                          # weight tying
         for mod in self.modules():
-            if isinstance(mod, (nn.Linear, nn.Embedding)):
+            if isinstance(mod, (nn.Linear, nn.Embedding)):  # expert up/down SparseMoE me khud init hote hain
                 nn.init.normal_(mod.weight, std=0.02)
 
     def forward_embeddings(self, emb):
@@ -251,7 +260,7 @@ class GLM53Flash(nn.Module):
 
     def param_counts(self) -> dict:
         total = sum(p.numel() for p in self.parameters())
-        routed = sum(p.numel() for layer in self.layers for e in layer.block.moe.experts for p in e.parameters())
+        routed = sum(layer.block.moe.up.numel() + layer.block.moe.down.numel() for layer in self.layers)
         return {"total": total, "active_per_token": total - routed + routed * self.c.top_k // self.c.experts}
 
 
@@ -617,15 +626,18 @@ def main() -> int:
     ap = argparse.ArgumentParser(description=__doc__, formatter_class=argparse.RawDescriptionHelpFormatter)
     ap.add_argument("--preset", choices=PRESETS, default="tiny")
     ap.add_argument("--stages", default="pretrain,rl,eval")
-    ap.add_argument("--device", default="cpu")
+    ap.add_argument("--device", default="auto", help="auto = cuda > mps (Apple GPU) > cpu")
     ap.add_argument("--seed", type=int, default=42)
     ap.add_argument("--pretrain-steps", type=int, default=None, help="default: tiny 200, full 100")
     ap.add_argument("--rl-groups", type=int, default=48)
     ap.add_argument("--group-size", type=int, default=16)
     ap.add_argument("--rl-families", default="increment,double,even")
+    ap.add_argument("--eval-per-family", type=int, default=4, help="confirm tasks per family (repo report: 8)")
     ap.add_argument("--out", type=Path, default=Path("runs/capstone"))
     args = ap.parse_args()
     stages = set(args.stages.split(","))
+    if args.device == "auto":
+        args.device = "cuda" if torch.cuda.is_available() else "mps" if torch.backends.mps.is_available() else "cpu"
     device = torch.device(args.device)
     tiny = args.preset == "tiny"
     steps = args.pretrain_steps or (200 if tiny else 100)
@@ -638,7 +650,7 @@ def main() -> int:
     config = Config(**PRESETS[args.preset])
     model = GLM53Flash(config).to(device)
     receipt["config"], receipt["params"] = asdict(config), model.param_counts()
-    log(f"model {args.preset}: {receipt['params']['total']:,} params, ~{receipt['params']['active_per_token']:,} active/token")
+    log(f"model {args.preset} on {device.type}: {receipt['params']['total']:,} params, ~{receipt['params']['active_per_token']:,} active/token")
 
     if "pretrain" in stages:
         log(f"STAGE pretrain ({steps} steps)")
@@ -653,12 +665,12 @@ def main() -> int:
 
     if "eval" in stages:
         log("STAGE eval (confirm split — sirf ek baar, aakhir me)")
-        after_eval = evaluate(model, "confirm", per_family=4, samples=8, seed=8675309)
+        after_eval = evaluate(model, "confirm", per_family=args.eval_per_family, samples=8, seed=8675309)
         after_state = {k: v.detach().clone() for k, v in model.state_dict().items()}  # copy! state_dict() sirf references deta hai
         model.load_state_dict(before_state)
-        before_eval = evaluate(model, "confirm", per_family=4, samples=8, seed=8675309)
+        before_eval = evaluate(model, "confirm", per_family=args.eval_per_family, samples=8, seed=8675309)
         model.load_state_dict(after_state)
-        ids = [t.task_id for t in tasks_for("confirm", 4, rl_families)]
+        ids = [t.task_id for t in tasks_for("confirm", args.eval_per_family, rl_families)]
         gains, losses, p = mcnemar([before_eval["greedy"][i] for i in ids], [after_eval["greedy"][i] for i in ids])
         log(f"  RL families greedy pass@1: {sum(before_eval['greedy'][i] for i in ids)}/{len(ids)} -> "
             f"{sum(after_eval['greedy'][i] for i in ids)}/{len(ids)}   (gains {gains}, losses {losses}, McNemar p = {p:.4f})")
@@ -666,7 +678,7 @@ def main() -> int:
             f"  pass@8 {before_eval['pass@8']:.1%} -> {after_eval['pass@8']:.1%}")
         for fam in before_eval["by_family"]:
             b, a = before_eval["by_family"][fam]["sampled"], after_eval["by_family"][fam]["sampled"]
-            log(f"    {'RL ' if fam in rl_families else '   '}{fam:12} sampled exact {b:>2}/32 -> {a:>2}/32 {'↑' if a > b else '↓' if a < b else '—'}")
+            log(f"    {'RL ' if fam in rl_families else '   '}{fam:12} sampled exact {b:>2}/{8 * args.eval_per_family} -> {a:>2}/{8 * args.eval_per_family} {'↑' if a > b else '↓' if a < b else '—'}")
         receipt["eval"] = {"before": {k: v for k, v in before_eval.items() if k != "greedy"},
                            "after": {k: v for k, v in after_eval.items() if k != "greedy"},
                            "mcnemar": {"gains": gains, "losses": losses, "p": p}}
