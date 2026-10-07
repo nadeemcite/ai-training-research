@@ -1,5 +1,5 @@
 <!-- nav:top -->
-[🏠 Course](../README.md) › **Topic 09 / 14** › ▶️ [Pehli reading shuru karo](01-concept-image-as-tokens.md)
+[🏠 Course](../README.md) › **Topic 09 / 15** › ▶️ [Pehli reading shuru karo](01-concept-image-as-tokens.md)
 <!-- /nav:top -->
 
 # Topic 09 — Vision: image ko tokens me badalna
@@ -40,5 +40,5 @@ text  → tokenizer → embeddings ───────────────
 
 | ⬅️ Pichla | 📚 Topic | Agla ➡️ |
 |:--|:-:|--:|
-| ⬅️ [06 · Recap + Quiz](../07-mixture-of-experts/06-recap-quiz.md) | 📚 [Topic 09 overview](README.md) | [01 · Concept — Image ko puzzle ke tukdon me todo](01-concept-image-as-tokens.md) ➡️ |
+| ⬅️ [06 · Recap + Quiz](../08-hyper-connections/06-recap-quiz.md) | 📚 [Topic 09 overview](README.md) | [01 · Concept — Image ko puzzle ke tukdon me todo](01-concept-image-as-tokens.md) ➡️ |
 <!-- /nav:bottom -->

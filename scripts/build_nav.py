@@ -65,7 +65,7 @@ def main() -> None:
         prev_cell = "⬅️ " + link(page, prev_page, title(prev_page))
         mid_cell = "📚 " + link(page, overview, f"Topic {num:02d} overview")
         next_cell = (link(page, nxt, title(nxt)) + " ➡️") if nxt else (
-            link(page, home, "Course home") + " 🏁 *(agle topics jald aa rahe hain)*")
+            link(page, home, "Course home") + " 🏁 *(course complete 🎉)*")
         bottom = ("\n\n<!-- nav:bottom -->\n---\n\n| ⬅️ Pichla | 📚 Topic | Agla ➡️ |\n|:--|:-:|--:|\n"
                   f"| {prev_cell} | {mid_cell} | {next_cell} |\n<!-- /nav:bottom -->\n")
 

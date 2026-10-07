@@ -1,5 +1,5 @@
 <!-- nav:top -->
-[🏠 Course](../README.md) › **Topic 12 / 14** › ▶️ [Pehli reading shuru karo](01-concept-imitation-vs-reward.md)
+[🏠 Course](../README.md) › **Topic 12 / 15** › ▶️ [Pehli reading shuru karo](01-concept-imitation-vs-reward.md)
 <!-- /nav:top -->
 
 # Topic 12 — RL with executable rewards + verifier

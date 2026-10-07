@@ -1,5 +1,5 @@
 <!-- nav:top -->
-[🏠 Course](../README.md) › **Topic 10 / 14** › ▶️ [Pehli reading shuru karo](01-concept-imitation.md)
+[🏠 Course](../README.md) › **Topic 10 / 15** › ▶️ [Pehli reading shuru karo](01-concept-imitation.md)
 <!-- /nav:top -->
 
 # Topic 10 — Pretraining loop: random weights se Python tak

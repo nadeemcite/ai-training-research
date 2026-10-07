@@ -15,7 +15,7 @@ A personal AI-research classroom built around one excellent free course. It has 
 >
 > What *is* language-independent here: the **code labs** (`study/*/lab_*.py`) are plain Python with English code. Only their comments and printed labels are in Hinglish. The [`SLIDES_VS_TRANSCRIPT.md`](sources/SLIDES_VS_TRANSCRIPT.md) analysis and this README are in English.
 
-**Start here → [`study/README.md`](study/README.md)** *(Hinglish)*
+**Start here → [`study/README.md`](study/README.md)** *(Hinglish)* · **Full pipeline in one file → [`glm53_full.py`](study/15-capstone-full-glm-training/glm53_full.py)**
 
 ---
 
@@ -76,7 +76,7 @@ This is an **unofficial, personal study companion**, not affiliated with or endo
 | [07:01](https://www.youtube.com/watch?v=-gfgQfw2g_E&t=421s) | Embeddings & Transformer Forward Pass | [02 · Embeddings](study/02-embeddings-aur-output-head/) |
 | [08:53](https://www.youtube.com/watch?v=-gfgQfw2g_E&t=533s) | GLM-5.3 Architecture Overview & Model Specifications | — |
 | [10:25](https://www.youtube.com/watch?v=-gfgQfw2g_E&t=625s) | Code Walkthrough: Embeddings & Token Representation | [02 · Embeddings](study/02-embeddings-aur-output-head/) |
-| [11:56](https://www.youtube.com/watch?v=-gfgQfw2g_E&t=716s) | Manifold Constrained Hyperconnections | 08 (coming) |
+| [11:56](https://www.youtube.com/watch?v=-gfgQfw2g_E&t=716s) | Manifold Constrained Hyperconnections | [08 · Hyper-connections](study/08-hyper-connections/) |
 | [13:27](https://www.youtube.com/watch?v=-gfgQfw2g_E&t=807s) | Output Projection & Weight Tying | [02 · Embeddings](study/02-embeddings-aur-output-head/) |
 | [14:27](https://www.youtube.com/watch?v=-gfgQfw2g_E&t=867s) | RMSNorm & Normalization Layers | [03 · RMSNorm](study/03-rmsnorm/) |
 | [15:10](https://www.youtube.com/watch?v=-gfgQfw2g_E&t=910s) | Positional Encodings (RoPE vs. NoPE) & Sparse Attention Indexer | [04 · RoPE](study/04-rope-position/) |
@@ -86,11 +86,11 @@ This is an **unofficial, personal study companion**, not affiliated with or endo
 | [26:14](https://www.youtube.com/watch?v=-gfgQfw2g_E&t=1574s) | Pre-Training Pipeline, Loss & AdamW | [10 · Pretraining](study/10-pretraining-loop/) |
 | [28:05](https://www.youtube.com/watch?v=-gfgQfw2g_E&t=1685s) | Pre-Training Experiments: Diversity, Interleaving, Curriculum | [11 · Data experiments](study/11-research-data-experiments/) |
 | [30:27](https://www.youtube.com/watch?v=-gfgQfw2g_E&t=1827s) | Post-Training & Reinforcement Learning Setup | [12 · RL rewards](study/12-rl-executable-rewards/) |
-| [34:44](https://www.youtube.com/watch?v=-gfgQfw2g_E&t=2084s) | Reward Functions & GRPO | [12 · RL rewards](study/12-rl-executable-rewards/), 13 (coming) |
-| [37:37](https://www.youtube.com/watch?v=-gfgQfw2g_E&t=2257s) | Parameter-Efficient RL Updates & Freezing Layers | 13 (coming) |
-| [39:35](https://www.youtube.com/watch?v=-gfgQfw2g_E&t=2375s) | Evaluating RL Results: Task Gains & Regression Risks | 14 (coming) |
-| [40:47](https://www.youtube.com/watch?v=-gfgQfw2g_E&t=2447s) | RL Hyperparameter Experiments: Group Size, Temperature & Seeds | 14 (coming) |
-| [43:03](https://www.youtube.com/watch?v=-gfgQfw2g_E&t=2583s) | Summary & Advice for Aspiring AI Researchers | — |
+| [34:44](https://www.youtube.com/watch?v=-gfgQfw2g_E&t=2084s) | Reward Functions & GRPO | [12 · RL rewards](study/12-rl-executable-rewards/), [13 · RLOO](study/13-rloo-advantage-last-block/) |
+| [37:37](https://www.youtube.com/watch?v=-gfgQfw2g_E&t=2257s) | Parameter-Efficient RL Updates & Freezing Layers | [13 · RLOO](study/13-rloo-advantage-last-block/) |
+| [39:35](https://www.youtube.com/watch?v=-gfgQfw2g_E&t=2375s) | Evaluating RL Results: Task Gains & Regression Risks | [14 · Evaluation](study/14-evaluation-honest-results/) |
+| [40:47](https://www.youtube.com/watch?v=-gfgQfw2g_E&t=2447s) | RL Hyperparameter Experiments: Group Size, Temperature & Seeds | [14 · Evaluation](study/14-evaluation-honest-results/) |
+| [43:03](https://www.youtube.com/watch?v=-gfgQfw2g_E&t=2583s) | Summary & Advice for Aspiring AI Researchers | [15 · Capstone](study/15-capstone-full-glm-training/) |
 
 ---
 
@@ -105,7 +105,7 @@ sources/
 scripts/
   fetch_transcript.py       uv run scripts/fetch_transcript.py <url> [out_dir]
   build_nav.py              uv run scripts/build_nav.py   (re-run after adding a chapter or reading)
-study/          (Hinglish) chapters 01–07, 09–12: tokens → … → MoE → vision → pretraining → data experiments → RL rewards
+study/          (Hinglish) chapters 01–15: architecture → vision → pretraining → research → RL → evaluation → capstone
 ```
 
 ## Setup

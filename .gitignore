@@ -25,3 +25,6 @@ sources/video/
 .env.*
 *.pem
 *.key
+
+# Local training outputs (capstone, bonus runs)
+runs/

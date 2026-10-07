@@ -44,5 +44,5 @@
 
 | ⬅️ Pichla | 📚 Topic | Agla ➡️ |
 |:--|:-:|--:|
-| ⬅️ [05 · Code Lab — `lab_moe.py`](05-lab-guide.md) | 📚 [Topic 07 overview](README.md) | [Topic 09 — Vision: image ko tokens me badalna](../09-vision-image-to-tokens/README.md) ➡️ |
+| ⬅️ [05 · Code Lab — `lab_moe.py`](05-lab-guide.md) | 📚 [Topic 07 overview](README.md) | [Topic 08 — Hyper-connections: ek highway ki jagah 4 lanes](../08-hyper-connections/README.md) ➡️ |
 <!-- /nav:bottom -->

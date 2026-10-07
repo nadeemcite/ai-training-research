@@ -44,5 +44,5 @@
 
 | ⬅️ Pichla | 📚 Topic | Agla ➡️ |
 |:--|:-:|--:|
-| ⬅️ [05 · Code Lab — `lab_rewards.py`](05-lab-guide.md) | 📚 [Topic 12 overview](README.md) | [Course home](../README.md) 🏁 *(agle topics jald aa rahe hain)* |
+| ⬅️ [05 · Code Lab — `lab_rewards.py`](05-lab-guide.md) | 📚 [Topic 12 overview](README.md) | [Topic 13 — RLOO: advantage se update tak, aur sirf last block train karna](../13-rloo-advantage-last-block/README.md) ➡️ |
 <!-- /nav:bottom -->

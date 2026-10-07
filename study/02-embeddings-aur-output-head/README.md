@@ -1,5 +1,5 @@
 <!-- nav:top -->
-[🏠 Course](../README.md) › **Topic 02 / 14** › ▶️ [Pehli reading shuru karo](01-concept-embedding.md)
+[🏠 Course](../README.md) › **Topic 02 / 15** › ▶️ [Pehli reading shuru karo](01-concept-embedding.md)
 <!-- /nav:top -->
 
 # Topic 02 — Embeddings, Output Head aur Weight Tying
